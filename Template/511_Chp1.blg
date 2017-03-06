@@ -1,0 +1,67 @@
+This is BibTeX, Version 0.99d (TeX Live 2013)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: 511_Chp1.aux
+The style file: plain.bst
+Database file #1: uwthesis.bib
+Warning--entry type for "2012arXiv1207.6716T" isn't style-file defined
+--line 83 of file uwthesis.bib
+Name 2 in "Schubert, Alexis G. and Wilkerson, John F. ," has a comma at the end for entry SchubertThesis
+while executing---line 1049 of file plain.bst
+Name 1 in "Johnson, Robert A. ," has a comma at the end for entry JohnsonThesis2010
+while executing---line 1049 of file plain.bst
+Warning--to sort, need editor, organization, or key in CuestaNOW2014
+Warning--to sort, need editor, organization, or key in XuGeWorkshop2015
+Warning--to sort, need editor, organization, or key in MertensGeWorkshop2015
+Warning--to sort, need editor, organization, or key in GuinnGeWorkshop2015
+Warning--can't use both volume and number fields in GuinnGeWorkshop2015
+Warning--can't use both volume and number fields in MertensGeWorkshop2015
+Warning--can't use both volume and number fields in XuGeWorkshop2015
+Warning--empty journal in CUORE2015
+Name 1 in "Johnson, Robert A. ," has a comma at the end for entry JohnsonThesis2010
+while executing---line 1090 of file plain.bst
+Warning--empty school in JohnsonThesis2010
+Name 2 in "Schubert, Alexis G. and Wilkerson, John F. ," has a comma at the end for entry SchubertThesis
+while executing---line 1090 of file plain.bst
+Warning--empty school in SchubertThesis
+You've used 17 entries,
+            2118 wiz_defined-function locations,
+            614 strings with 7100 characters,
+and the built_in function-call counts, 4925 in all, are:
+= -- 446
+> -- 256
+< -- 3
++ -- 103
+- -- 86
+* -- 387
+:= -- 835
+add.period$ -- 42
+call.type$ -- 17
+change.case$ -- 83
+chr.to.int$ -- 0
+cite$ -- 27
+duplicate$ -- 178
+empty$ -- 391
+format.name$ -- 86
+if$ -- 998
+int.to.chr$ -- 0
+int.to.str$ -- 17
+missing$ -- 10
+newline$ -- 79
+num.names$ -- 26
+pop$ -- 84
+preamble$ -- 1
+purify$ -- 72
+quote$ -- 0
+skip$ -- 127
+stack$ -- 0
+substring$ -- 253
+swap$ -- 22
+text.length$ -- 3
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 64
+warning$ -- 10
+while$ -- 35
+width$ -- 19
+write$ -- 165
+(There were 4 error messages)

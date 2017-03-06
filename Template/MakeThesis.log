@@ -1,0 +1,445 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  12 JUN 2016 22:23
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**MakeThesis.tex
+(./MakeThesis.tex
+LaTeX2e <2015/01/01>
+Babel <3.9l> and hyphenation patterns for 79 languages loaded.
+(./uwthesis.cls
+Document Class: uwthesis 2015/03/03
+\tf@not=\write3
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/bk12.clo
+File: bk12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+Formatting for ProQuest
+\botmargin=\dimen103
+\@@wholepage=\box26
+\@Chair=\count88
+\@Sign=\count89
+\abs@savebox=\box27
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 94.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count90
+))
+\Gin@req@height=\dimen104
+\Gin@req@width=\dimen105
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 57.
+\captionmargin=\dimen106
+\captionmargin@=\dimen107
+\captionwidth=\dimen108
+\caption@tempdima=\dimen109
+\caption@indent=\dimen110
+\caption@parindent=\dimen111
+\caption@hangindent=\dimen112
+)
+\c@ContinuedFloat=\count91
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2013/02/03 v1.1-62 Sub-captions (AR)
+\c@subfigure=\count92
+\c@subtable=\count93
+)
+\@input{JG_LocalDefs.aux}
+\openout2 = `JG_LocalDefs.aux'.
+
+(./JG_LocalDefs.tex
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/alltt.sty
+Package: alltt 1997/06/16 v2.0g defines alltt environment
+))
+(./MakeThesis.aux (./JG_prelim.aux) (./JG_Chp1.aux))
+\openout1 = `MakeThesis.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+
+(/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count94
+\scratchdimen=\dimen113
+\scratchbox=\box28
+\nofMPsegments=\count95
+\nofMParguments=\count96
+\everyMPshowfont=\toks15
+\MPscratchCnt=\count97
+\MPscratchDim=\dimen114
+\MPnumerator=\count98
+\makeMPintoPDFobject=\count99
+\everyMPtoPDFconversion=\toks16
+) (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: Incompatible package detected (regarding \caption).
+(caption)             \caption = macro:->\@ifnextchar ({\@specialcaption }{\@no
+rmalcaption }.
+Package caption Info: Incompatible package detected (regarding \@caption).
+(caption)             \@caption = \long macro:#1[#2]#3->\par \ifcaptiontotoc \a
+ddcontentsline {\csname ext@#1\endcsname }{#1}{\protect \numberline {\csname th
+e#1\endcsname }{\ignorespaces #2}}\fi \begingroup \@parboxrestore \def \baselin
+estretch {1.0} \normalsize \@makecaption {\csname fnum@#1\endcsname \thecaption
+letter }{\ignorespaces #3}\par \endgroup .
+
+
+Package caption Warning: Forced redefinition of \caption since the
+(caption)                unsupported(!) package option `compatibility=false'
+(caption)                was given.
+See the caption package documentation for explanation.
+
+Package caption Info: End \AtBeginDocument code.
+\openout2 = `JG_prelim.aux'.
+
+(./JG_prelim.tex
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 16.
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 16.
+
+[1
+
+
+
+
+{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+[-1
+
+] [0
+
+])
+\openout2 = `JG_Chp1.aux'.
+
+ (./JG_Chp1.tex
+<<1>>
+
+LaTeX Warning: Citation `Cowan1956' on page 1 undefined on input line 12.
+
+
+LaTeX Warning: Citation `Pauli1930' on page 1 undefined on input line 12.
+
+
+LaTeX Warning: Citation `PDG2014' on page 1 undefined on input line 14.
+
+[1
+
+
+
+
+
+
+
+
+]
+
+LaTeX Warning: Citation `Moe1987' on page 2 undefined on input line 18.
+
+<Chp1_Images/WeakDiagrams.png, id=21, 458.71375pt x 181.67876pt>
+File: Chp1_Images/WeakDiagrams.png Graphic file (type png)
+
+<use Chp1_Images/WeakDiagrams.png>
+Package pdftex.def Info: Chp1_Images/WeakDiagrams.png used on input line 26.
+(pdftex.def)             Requested size: 376.23743pt x 149.0191pt.
+
+
+LaTeX Warning: Citation `PDG2014' on page 2 undefined on input line 27.
+
+
+LaTeX Warning: Citation `PDG2014' on page 2 undefined on input line 27.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 31.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 31.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 31.
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 33.
+
+<Chp1_Images/MassHierarchy.png, id=23, 483.8075pt x 426.59375pt>
+File: Chp1_Images/MassHierarchy.png Graphic file (type png)
+
+<use Chp1_Images/MassHierarchy.png>
+Package pdftex.def Info: Chp1_Images/MassHierarchy.png used on input line 34.
+(pdftex.def)             Requested size: 188.11513pt x 165.86967pt.
+
+
+LaTeX Warning: Citation `Hewett2012' on page 2 undefined on input line 35.
+
+
+LaTeX Warning: Citation `Hewett2012' on page 2 undefined on input line 35.
+
+[2]
+
+LaTeX Warning: Citation `Eitel2005' on page 3 undefined on input line 39.
+
+
+LaTeX Warning: Citation `PlanckXVI_2013' on page 3 undefined on input line 39.
+
+
+LaTeX Warning: Citation `KATRIN2015' on page 3 undefined on input line 39.
+
+
+LaTeX Warning: Citation `Supergravity1979' on page 3 undefined on input line 42
+.
+
+
+LaTeX Warning: Citation `DiBari2012' on page 3 undefined on input line 42.
+
+[3 <./Chp1_Images/WeakDiagrams.png>] [4 <./Chp1_Images/MassHierarchy.png (PNG c
+opy)>] <Chp1_Plots/0nBB_Rate.png, id=41, 722.7pt x 556.0775pt>
+File: Chp1_Plots/0nBB_Rate.png Graphic file (type png)
+
+<use Chp1_Plots/0nBB_Rate.png>
+Package pdftex.def Info: Chp1_Plots/0nBB_Rate.png used on input line 56.
+(pdftex.def)             Requested size: 188.11513pt x 144.73795pt.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 57.
+
+
+LaTeX Warning: Citation `ZuberINT2015' on page 5 undefined on input line 57.
+
+
+LaTeX Warning: Citation `ZuberINT2015' on page 5 undefined on input line 57.
+
+<Chp1_Plots/DoubleBetaEnergy.png, id=42, 500.1084pt x 340.6326pt>
+File: Chp1_Plots/DoubleBetaEnergy.png Graphic file (type png)
+
+<use Chp1_Plots/DoubleBetaEnergy.png>
+Package pdftex.def Info: Chp1_Plots/DoubleBetaEnergy.png used on input line 62.
+
+(pdftex.def)             Requested size: 188.11513pt x 128.13193pt.
+
+
+LaTeX Warning: Citation `EXO2014' on page 5 undefined on input line 69.
+
+
+Underfull \vbox (badness 1668) has occurred while \output is active []
+
+ [5 <./Chp1_Plots/0nBB_Rate.png> <./Chp1_Plots/DoubleBetaEnergy.png>]
+
+LaTeX Warning: Citation `Simkovic2009' on page 6 undefined on input line 75.
+
+[6]
+Overfull \hbox (30.679pt too wide) in paragraph at lines 83--84
+[]\OT1/cmr/m/n/12 Surface Event Re-jec-tion and Fidu-cial Vol-ume Cuts: Gen-er-
+ally, the bulk of the source/detector
+ []
+
+
+LaTeX Warning: Citation `KK2001' on page 7 undefined on input line 90.
+
+[7] <Chp1_Plots/IH_Discovery.png, id=57, 689.57625pt x 544.0325pt>
+File: Chp1_Plots/IH_Discovery.png Graphic file (type png)
+
+<use Chp1_Plots/IH_Discovery.png>
+Package pdftex.def Info: Chp1_Plots/IH_Discovery.png used on input line 93.
+(pdftex.def)             Requested size: 282.17986pt x 222.62311pt.
+
+
+LaTeX Warning: Citation `Corbelli2000' on page 8 undefined on input line 102.
+
+
+LaTeX Warning: Citation `BulletCluster2004' on page 8 undefined on input line 1
+02.
+
+
+LaTeX Warning: Citation `PlanckXIV2015' on page 8 undefined on input line 102.
+
+[8 <./Chp1_Plots/IH_Discovery.png>]
+
+LaTeX Warning: Citation `LUX_2013' on page 9 undefined on input line 104.
+
+
+LaTeX Warning: Citation `COGENT2011' on page 9 undefined on input line 106.
+
+
+LaTeX Warning: Citation `CDMSLite2014' on page 9 undefined on input line 106.
+
+
+LaTeX Warning: Citation `Drukier1984' on page 9 undefined on input line 109.
+
+[9]
+
+LaTeX Warning: Citation `Luke1989' on page 10 undefined on input line 112.
+
+
+LaTeX Warning: Citation `Barbeau2007' on page 10 undefined on input line 114.
+
+
+LaTeX Warning: Citation `Barbeau2007' on page 10 undefined on input line 114.
+
+[10] <Chp1_Images/PPCField.jpg, id=70, 248.75334pt x 125.31618pt>
+File: Chp1_Images/PPCField.jpg Graphic file (type jpg)
+
+<use Chp1_Images/PPCField.jpg>
+Package pdftex.def Info: Chp1_Images/PPCField.jpg used on input line 122.
+(pdftex.def)             Requested size: 282.17986pt x 142.15631pt.
+
+
+LaTeX Warning: Citation `Aalseth2011' on page 11 undefined on input line 123.
+
+
+LaTeX Warning: Citation `Aalseth2011' on page 11 undefined on input line 123.
+
+
+LaTeX Warning: Citation `MALBEK2015' on page 11 undefined on input line 128.
+
+
+LaTeX Warning: Citation `COGENT2011' on page 11 undefined on input line 128.
+
+
+LaTeX Warning: Citation `BarbeauThesis' on page 11 undefined on input line 128.
+
+
+
+LaTeX Warning: Citation `CoherentSnowmassWP' on page 11 undefined on input line
+ 128.
+
+
+LaTeX Warning: Citation `JohnsonThesis2010' on page 11 undefined on input line 
+131.
+
+) [11 <./Chp1_Images/PPCField.jpg>] [12] (./MakeThesis.aux (./JG_prelim.aux)
+(./JG_Chp1.aux))
+
+LaTeX Warning: There were undefined references.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 2888 strings out of 493089
+ 45288 string characters out of 6134842
+ 105596 words of memory out of 5000000
+ 6336 multiletter control sequences out of 15000+600000
+ 10215 words of font info for 35 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 38i,7n,43p,1143b,482s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
+</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxsl10.pfb
+></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
+</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
+/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></
+usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></us
+r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/
+local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/lo
+cal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/loca
+l/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/
+texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/tex
+live/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texl
+ive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texliv
+e/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive
+/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on MakeThesis.pdf (15 pages, 605517 bytes).
+PDF statistics:
+ 128 PDF objects out of 1000 (max. 8388607)
+ 84 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+

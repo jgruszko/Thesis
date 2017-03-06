@@ -1,0 +1,29 @@
+% ==========   Local defs and mods
+%
+
+% --- sample stuff only -----
+% These format the sample code in this document
+
+\usepackage{alltt}  % 
+\newenvironment{demo}
+  {\begin{alltt}\leftskip3em
+     \def\\{\ttfamily\char`\\}%
+     \def\{{\ttfamily\char`\{}%
+     \def\}{\ttfamily\char`\}}}
+  {\end{alltt}}
+ 
+  % Definitions and macros
+\newcommand{\degrees}{$^{\circ}$}                                         % makes a correct degree symbol
+\newcommand{\cpp}{C\protect\raisebox{.25ex}{++}\ }               % formats C++ correctly
+\newcommand{\MJ}{M{\footnotesize AJORANA}}                        % this works for bolding in titles and the toc
+\newcommand{\MJDemo}{D{\footnotesize EMON\-STRAT\-OR}} 	% this works for bolding in titles and the toc
+\newcommand{\snop}{SNO\protect\raisebox{.25ex}{+}}             % formats SNO+ nicely
+\newcommand{\nonubb}  {${0 \nu \beta \beta}$}                       % neutrinoless double beta decay in math mode
+\newcommand{\iso}[2]{$^{#1}$#2}                                        % Makes a properly formatted isotope symbol e.g. \iso{28}{Si}
+
+% metafont font.  If logo not available, use the second form
+%
+% \font\mffont=logosl10 scaled\magstep1
+\let\mffont=\sf
+% --- end-of-sample-stuff ---
+ 

@@ -1,0 +1,50 @@
+This is BibTeX, Version 0.99d (TeX Live 2013)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: MakeThesis.aux
+A level-1 auxiliary file: JG_prelim.aux
+A level-1 auxiliary file: JG_Chp1.aux
+The style file: plain.bst
+Database file #1: JG_bib.bib
+Warning--empty school in JohnsonThesis2010
+You've used 28 entries,
+            2118 wiz_defined-function locations,
+            707 strings with 15225 characters,
+and the built_in function-call counts, 19523 in all, are:
+= -- 1540
+> -- 2168
+< -- 0
++ -- 866
+- -- 836
+* -- 2052
+:= -- 3612
+add.period$ -- 85
+call.type$ -- 28
+change.case$ -- 495
+chr.to.int$ -- 0
+cite$ -- 29
+duplicate$ -- 293
+empty$ -- 670
+format.name$ -- 836
+if$ -- 3515
+int.to.chr$ -- 0
+int.to.str$ -- 28
+missing$ -- 23
+newline$ -- 143
+num.names$ -- 57
+pop$ -- 467
+preamble$ -- 1
+purify$ -- 471
+quote$ -- 0
+skip$ -- 201
+stack$ -- 0
+substring$ -- 553
+swap$ -- 29
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 111
+warning$ -- 1
+while$ -- 79
+width$ -- 30
+write$ -- 304
+(There was 1 warning)
