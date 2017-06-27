@@ -19,6 +19,9 @@
 \usepackage{fancyhdr}
 \usepackage{afterpage}
 \usepackage{siunitx}
+\usepackage{booktabs}
+\usepackage{subcaption}
+\usepackage{physics}
 \fancypagestyle{uniheader}
 {
 \fancyhf{}% Clear all headers/footers
@@ -212,7 +215,7 @@ The collimator has an overall length of 53\,mm, and is suspended from the carria
 
 The \am\ source used was a 40\,kBq alpha spectrometry source provided by Eckert \& Ziegler Nuclitec GmbH, with product code AMR14. It is an open source, with the radionuclide deposited onto a 7\,mm-diameter spot of a stainless steel disc. This minimizes energy degradation, giving an expected full width at half maximum for the 5.486\,MeV $\alpha$ peak of less than 20\,keV. In the expected event rate calculation, we assume that the radionuclide is deposited with equal density over the entire 7\,mm spot.
 
-Given the source strength and collimator geometry, an activity of 18\,mBq (i.e. 65 events/hour) is expected at the detector surface. 85.2\% of events, corresponding to an activity of 15\,mBq (54 events/hour) should include a 5.486\,MeV $\alpha$ emission. 
+Given the source strength and collimator geometry, an activity of 18\,mBq (i.e. 65 events/hour) is expected at the detector surface. 84.8\% of events, corresponding to an activity of 15\,mBq (54 events/hour) should include a 5.486\,MeV $\alpha$ emission. Another 13.1\% of events include a 5.443\,MeV $\alpha$ emission \cite{nudat}. If the energy resolution of the detector is sufficiently reduced by interactions in the passivated surface, these peaks will be indistinguishable, and 98\% of the total activity will lie in the observed peak. 
 
 \subsection{Muon Veto System}
 The expected vertical flux of cosmic ray $\mu$ with energy over 1\,GeV is 1\,cm$^{-2}$\,min$^{-1}$ at sea level for a horizontal detector \cite{PDG2016}. Therefore the expected rate of high energy $\mu$ in the TUBE system detector is approximately 620\,mBq (2240 events/hour), far overwhelming the expected $\alpha$ event rate. An active muon veto system is used to reduce cosmic $\mu$ background rate. The veto system used consists of a 50\,cm by 50\,cm (check dimensions) plastic scintillator panel and (details?) photomultiplier tube (PMT), placed on top of the cryostat. 
@@ -249,7 +252,7 @@ The built data is then processed using the Germanium Analysis Toolkit (GAT) soft
 
 A summary of the parameters saved at this stage is given in Table~\ref{tab:GAT_output}. Baseline removal is applied by subtracting the average value of the first 500 waveform samples from each sample of the waveform. The pole-zero correction applied uses the decay constant $\tau = 44.224\,\mu$s, found by fitting to the decay of 1000 pulses in a calibration run from the first calibration data set taken. The trapezoidal filter used for energy reconstruction has an integration time of 8\,$\mu$s and a collection time of 3\,$\mu$s. A second trapezoidal filter, with integration time of 0.5\,$\mu$s and collection time of 0.3\,$\mu$s, is used to tag pile-up events. A one-sided trapezoidal filter, with integration time of 200\,ns and peaking time of 10\,ns, is used to calculate the current 'A' used in the determination of A vs. E (see A vs E unidoc for details). 
 
-Three varieties of the waveform tail slope, which will be used to determine the DCR parameters, are saved. The values are the result of a two-point slope calculation, using the average value (in ADC) of the waveform in a 1\,us span for each of the points. All three varieties use the span starting 2\,us after the 97\% rise point of the waveform as the first point. The {\tt blrwfSlope} and {\tt blrpzcwfSlope} use the final 1\,us of the baseline-removed waveform as their second span. For the latter, pole-zero correction is applied before measuring the slope. The {\tt mjdblrwfSlope} parameter emulates the waveforms collected in \MJ\ data sets that do not use multi-sampling (MJD Data Sets 0, 1, and 3-5). For this parameter, the baseline-removed waveform is cut to have only 2016 samples, removing the final 10\,$\mu$s of decay tail. Then the final 1\,us of the shortened waveform is used as the second span. See Fig.~\ref{fig:tailslope}.
+Three varieties of the waveform tail slope, which will be used to determine the DCR parameters, are saved. The values are the result of a two-point slope calculation, using the average value (in ADC) of the waveform in a 1\,us region for each of the points. All three varieties use the region starting 2\,us after the 97\% rise point of the waveform as the first point. The {\tt blrwfSlope} and {\tt blrpzcwfSlope} use the final 1\,us of the baseline-removed waveform as their second span. For the latter, pole-zero correction is applied before measuring the slope. The {\tt mjdblrwfSlope} parameter emulates the waveforms collected in \MJ\ data sets that do not use multi-sampling (MJD Data Sets 0, 1, and 3-5). For this parameter, the baseline-removed waveform is cut to have only 2016 samples, removing the final 10\,$\mu$s of decay tail. Then the final 1\,us of the shortened waveform is used as the second region. See Fig.~\ref{fig:tailslope}.
 
 \begin{table*}[]
 \begin{tabular}{l | l}
@@ -277,21 +280,23 @@ Name & Description \\  \hline
 
 \begin{figure}[]
  \centering
- \includegraphics[width=1.0\columnwidth]{figs/tailslope_params_zoom_noTitle.pdf}
+ \includegraphics[width=1.0\columnwidth]{figs/tailslope_params_zoom_noTitle.png}
  \caption{Sample 2614\,keV waveform, with the points needed to calculate various tail slope parameters. The star indicates the 97\% rise point of the pulse. The blue waveform has had its baseline removed; the slope between the averages in the violet and blue dotted regions is the {\tt blrwfSlope}. The red waveform has had its final 10\,us chopped following baseline removal to emulate singly-sampled MJD waveforms; the slope between the averages in the violet and red dotted regions is the {\tt mjdblrwfSlope}. The black waveform has had pole-zero correction applied after baseline removal; the slope between the averages in the black dotted regions is the {\tt blrpzcwfSlope}.} 
- \label{fig:calib_residuals}
+ \label{fig:tailslope}
 \end{figure}
 
-In the final step of processing, GAT is used to combine about 24 hour's worth of consecutive runs are grouped into a skimmed data set. An offline energy threshold is applied to both the germanium and PMT data to reduce the number of noise events in the data set, and these thresholds are used to calculate a ``clean" multiplicity that excludes events below the analysis threshold. Other high-level parameters (i.e. those that require calibrated energy as an input value) are also calculated at this stage. These include A vs. E, the multi-site event discriminator used in this work (see A vs. E unidoc) and the DCR parameters, described below. 
+In the final step of processing, GAT is used to combine about 24 hour's worth of consecutive runs into a skimmed data set. An offline energy threshold is applied to both the germanium and PMT data to reduce the number of noise events in the data set, and these thresholds are used to calculate a ``clean" multiplicity that excludes events below the analysis threshold. 
+
+Other high-level parameters (i.e. those that require calibrated energy as an input value) are also calculated at this stage. These include A vs. E, which is the multi-site event discriminator used in this work (see A vs. E unidoc), A/E, a multi-site discriminator that is used to identify near-point-contact events, and the DCR parameters, described below. 
 
 \subsection{DCR Parameters}
 For a detailed discussion of the procedure used to calculate DCR parameters, see DCR unidoc (citation). 
 
-Four types of DCR parameters are calculated for each PONaMA-1 waveform. For each of the parameters, versions are saved with 99\% and 90\% bulk acceptance. The {\tt dcr90} and {\tt dcr99} parameters are calculated using the waveforms after baseline-removal, with no other filters applied. The {\tt mjddcr90} and {\tt mjddcr99} parameters are derived from the MJD-emulating waveforms, which have only a 10\,$\mu$s decay tail, instead of a 20\,$\mu$s one. The are provided as a point of comparison to study the effectiveness of the DCR analysis in the \MJ\ data acquisition system. Both of these sets of DCR parameters are calculated using the procedure described in the DCR unidoc. 
+Four types of DCR parameters are calculated for each PONaMA-1 waveform. For each of the parameters, versions are saved with 99\% and 90\% bulk acceptance. The {\tt dcr90} and {\tt dcr99} parameters are calculated using the waveforms after baseline-removal, with no other filters applied. The {\tt mjddcr90} and {\tt mjddcr99} parameters are derived from the MJD-emulating waveforms, which have only a 10\,$\mu$s decay tail, instead of a 20\,$\mu$s one. The are provided as a point of comparison to study the effectiveness of the DCR analysis in the \MJ\ data sets that do not use multisampling. Both of these sets of DCR parameters are calculated using the procedure described in the DCR unidoc. 
 
-The final 2 sets of DCR parameters, {\tt dcrpzc90} and {\tt dcrpzc99}, are calculated using the baseline-removed waveform after pole-zero-correction. This eliminates the need for the step in which the tail slope parameter is projected onto the energy axis, and creates a DCR parameter that has no dependence on energy for high-DCR events, unlike the other DCR parameter values. See Fig.~\ref{dcr_comparison}. The DCRPZC parameters are a measure of the amount of delayed charge collected in the first 20\,$\mu$s after the fast, bulk charges are collected. 
+The final 2 sets of DCR parameters, {\tt dcrpzc90} and {\tt dcrpzc99}, are calculated using the baseline-removed waveform after pole-zero correction. This eliminates the need for the step in which the tail slope parameter is projected onto the energy axis, and creates a DCR parameter that has no dependence on energy for high-DCR events, unlike the other DCR parameter values. The DCRPZC parameters are a measure of the amount of delayed charge collected in the first 20\,$\mu$s after the fast, bulk charges are collected. 
 
-The {\tt dcrpzc90} ({\tt dcrpzc99}) parameter calculated by finding the 90\% (99\%) acceptance value of {\tt blrpzcwfSlope} for single-site non-muon events with energies between 1\,MeV and 2380\,keV, and subtracting this value from {\tt blrpzcwfSlope}. Therefore, 90\% (99\%) of bulk events should have {\tt dcrpzc90} ({\tt dcrpzc99}) $< 0$.  
+The {\tt dcrpzc90} ({\tt dcrpzc99}) parameter is calculated by finding the 90\% (99\%) acceptance value of {\tt blrpzcwfSlope} for single-site non-muon events with energies between 1\,MeV and 2380\,keV, and subtracting this value from {\tt blrpzcwfSlope}. Therefore, 90\% (99\%) of bulk events should have {\tt dcrpzc90} ({\tt dcrpzc99}) $< 0$.  
 
 The DCRPZC parameters are the most appropriate set to use when comparing TUBE results to waveform simulations, which do not include pole-zero decay. This version of the DCR analysis also performs better with respect to muon events; bulk events have consistent average DCRPZC even at high energy, while DCR degrades in resolution and falls off at energies above 4\,MeV. See Fig.~\ref{fig:dcr_dcrpzc_comparison}. Except for cases in which a direct comparison of TUBE results to \MJ\ data is required, DCRPCZ is used in this work. Ultimately, we plan to move to a similar analysis for the \MJ\ data as well, as described in the DCR unidoc. 
 
@@ -305,16 +310,23 @@ Additionally, normalized versions of DCRPZC, {\tt dcrpzc90norm} and {\tt dcrpzc9
 
 Therefore, 90\% (99\%) of bulk events should have {\tt dcrpzc90norm} ({\tt dcrpzc99norm}) $< 1$, and value of these parameters is insensitive to changes in the gain of the system, unlike the unnormalized DCRPZC parameters.  
 
+\begin{figure}[]
+ \centering
+ \includegraphics[width=1.0\columnwidth]{figs/dcr90_comparison_highE.png}
+ \caption{A comparison of {\tt dcr90} and {\tt dcrpzc90} in single-site calibration events (from calibration data set 8) after the muon veto is applied. {\tt dcr90} falls and degrades in resolution at energies over 4\,MeV. Though {\tt dcrpzc90} rises slightly with increasing energy, likely due to a small change in the pole-zero decay constant $\tau$ between calibration data set 1 and 8, the effect is minimal compared to the broadening of {\tt dcr90}.} 
+ \label{fig:dcr_dcrpzc_comparison}
+\end{figure}
+
 \section{Results}
 \subsection{Detector Performance}
 \subsubsection{Energy Calibration}
-Energy calibration using the GAT Multipeak Fitter (see energy Unidoc) is applied to each data set. Fourteen peaks in the spectrum ranging in energy from 295\,keV to 2614\,keV are fit with a gaussian peak, a low energy tail, a high energy tail (which fits to small values, in general), a step, and a linear or quadratic background (depending on the expected shape of the continuum in the peak region).
+Energy calibration using the GAT Multipeak Fitter (see energy Unidoc) is applied to each data set. Fourteen peaks in the spectrum ranging in energy from 295\,keV to 2614\,keV are fit with a gaussian peak, a low energy tail, a high energy tail (which fits to small values, in general), a step (which is centered at the gaussian centroid), and a linear or quadratic background (depending on the expected shape of the continuum in the peak region).
 
 Comparing the resulting fit to a fit in which the peak positions were allowed to float, it was found that a linear calibration curve gave a poor fit to the peak positions in the spectrum. The residuals appeared to lie on a quadratic curve, with the 2614\,keV peak position being underestimated by up to 0.8\,ADC (corresponding to approximately 1\,keV). 
 
 The fit was improved by the addition of a quadratic component to the peak position function (see Fig.~\ref{fig:calib_residuals}). I.e., the uncalibrated peak position is given by:
-$$E_{ADC} = p_0 + p_1E_{keV} + p_2E_{keV}^2$$
-With this change, the peak position residuals are generally less than 0.4\,ADC and are evenly distributed about 0, though some non-linearity remains, likely due to digitization effects. 
+$$E_{ADC} = p_0 + p_1E_{keV} + p_2E_{keV}^2,$$
+where $p_2$ is positive. With this change, the peak position residuals are generally less than 0.4\,ADC and are evenly distributed about 0, though some non-linearity remains, likely due to digitization effects. 
 
 \begin{figure}[]
  \centering
@@ -328,7 +340,7 @@ Given the high room background rates, it is possible to calibrate every data set
 All shifts in the energy scale had less than a 2\,ADC effect on the position of the 2614\,keV peak save for one, between runs 1638 and 1639, which led to a shift of 4\,ADC. This shift was large enough to require that a stability correction be applied in the pulse-shape discriminating parameters. See below. 
 
 \subsubsection{Energy Resolution}
-The average FWHM at the 2614\,keV peak is $3.2\pm0.6$\,keV. The gaussian component of the peak having an average standard deviation of $1.1\pm0.1$\,keV, which would correspond to an average FWHM of $3.0\pm0.3$\,keV. The remaining contribution is due primarily to the low-energy tail, with a small contribution from the high-energy tail. The average resolution curve of the gaussian component is given by:
+The average FWHM at the 2614\,keV peak is $3.2\pm0.6$\,keV. The gaussian component of the peak has an average standard deviation of $1.1\pm0.1$\,keV, which would correspond to an average FWHM of $3.0\pm0.3$\,keV. The remaining contribution is due primarily to the low-energy tail, with a minimal contribution from the high-energy tail. The average resolution curve of the gaussian component is given by:
 $$\sigma = \sqrt{\num{2.79e-1}+\num{3.21e-4}\,E_{keV}+\num{2.84e-9}\,E_{keV}^2}$$
 
 The resolution suffers due to the continuous operation of the turbopump attached to the TUBE cryostat, since microphonic noise is introduced into the system. However, it was determined that the resolution was satisfactory for these measurements, and that gaining added duty cycles by avoiding pumping between measurements was a higher priority than optimizing the energy resolution. 
@@ -340,8 +352,15 @@ The current is estimated through the use of a 200\,ns {\tt TSCurrent} filter, wh
 
 To correct for the gain and noise change that occurred following run 1639, the A vs. E parameters and results are calculated separately for these two run periods. See Table~\ref{tab:AEresults}. These cuts are set using calibration data sets 1 and 8, which are 17.9 and 2.9\,hrs in duration, respectively. 
 
+\begin{figure*}[]
+ \centering
+ \includegraphics[width=\textwidth]{figs/avse_aenorm_calibDS8.png}
+ \caption{A comparison of A vs. E {\it (left)} and A/E {\it (right)} in calibration events (from calibration data set 8) after the muon veto is applied. The color scale indicates the number of events. Near point-contact events have energy-dependent values of A vs. E, as seen in the sloped upper edge of the A vs. E distribution when it is drawn with respect to energy, but have energy-independent values of A/E. Therefore, A/E is used to identify near-point-contact events.} 
+ \label{fig:avse_aenorm_comparison}
+\end{figure*}
+
 \subsubsection{A over E}
-Since the width of the distribution of ``A vs. E" estimator values depends on energy (see Fig.~\ref{fig:AvsE_plots}), it is a poor choice of parameter to describe the shape of the pulses from near-point-contact alpha events. Instead, we use ``A over E," the current discriminator normalized by the energy. Using this estimator, near-point-contact events appear in an energy-independent band at higher values than single-site events. 
+Since the width of the distribution of ``A vs. E" estimator values depends on energy (see Fig.~\ref{fig:avse_aenorm_comparison}), it is a poor choice of parameter to describe the shape of the pulses from near-point-contact alpha events. Instead, we use ``A over E," the current discriminator normalized by the energy. Using this estimator, near-point-contact events appear in an energy-independent band at higher values than single-site events. 
 
 The A/E parameters are determined: 
 \begin{itemize}
@@ -351,10 +370,10 @@ The A/E parameters are determined:
 \item A linear function in energy is fit to the mean A/E values. This energy correction is applied to all A/E values. 
 \item The A/E cut value is chosen such that 90\% of events in the DEP are accepted, following statistical background subtraction (using the sidebands of the peak).
 \item The cut value is subtracted from the energy-corrected A/E value to give the ``multi-site corrected A/E" (A/E$_{corr, MS}$).
-\item The 99\% acceptance value of of A/E$_{corr, MS}$ is determined. This is the value that 99\% of events with energies between 1\,MeV and 2630\,keV lie below. A/E$_{corr, MS}$ is normalized by this value.
+\item The 99\% acceptance value of of A/E$_{corr, MS}$ is determined. This is the value that 99\% of events (whether multisite or single-site) with energies between 1\,MeV and 2630\,keV lie below. A/E$_{corr, MS}$ is normalized by this value.
 \end{itemize}
 
-Therefore, multi-site events are expected to have A/E $<0$, and single-site events will have $A/E>0$. The final normalization corrects for gain instability and changes in the noise of the system, and 99\% of calibration-run gamma events will have $A/E<1$. Near point-contact events will have $A/E > 1$. 
+Therefore, multi-site events are expected to have A/E $<0$, and single-site events will have $A/E>0$. The final normalization corrects for gain instability and changes in the noise of the system, and 99\% of calibration-run gamma events will have $A/E<1$. Near point-contact events will have $A/E \gg 1$. 
  
 As for A vs. E, the A/E acceptance in the DEP and SEP are calculated using statistical background subtraction. The region from 1989\,keV to 2089\,keV, termed the \nonubb\ region, provides an estimate of the Compton continuum reduction provided by the cut. Again, a stability correction is applied after run 1639. See Table~\ref{tab:AEresults}. 
 
@@ -376,12 +395,12 @@ A/E & 1639 - & 89.6    $\pm$ 1.9  & 12.6  $\pm$ 0.7  & 53.7  $\pm$ 0.8  \\
 \subsubsection{Muon Veto}
 The energy in the muon veto panel is estimated using the digitizer onboard trapezoidal energy filter, which is set to (rise time, integration time). An offline threshold is applied to avoid cutting on noise events in the PMT. Events in the Ge detector that occur within 10\,$\mu$s of a muon panel event are vetoed. After the cosmogenic muon cut, the event rate from 3 to 10\,MeV is reduced from 1245\,events/keV/hr to 823\,events/keV/hr. 
 
-The relatively low muon background reduction rate is likely due to the poor noise performance of the PMT, amplifier, and energy filters. The system was not extensively tuned to optimize the energy threshold. In spite of this, the Ge spectrum of vetoed events has the expected features (see Fig.~\ref{fig:muVeto}).
+The relatively low muon background reduction rate is likely due to the poor noise performance of the PMT, amplifier, and energy filters. The system was not extensively tuned to optimize the energy threshold. In spite of this, the Ge spectrum of vetoed events has the expected features (see Fig.~\ref{fig:muVeto}). The reduction of the muon rate achieved is sufficient to allow measurements of the alpha source peak. 
 
 \begin{figure}[h]
  \centering
  \includegraphics[width=1.0\columnwidth]{figs/muon_veto}
- \caption{The Ge energy spectrum, before and after the muon veto is applied (in black and blue, respectively), and the Ge spectrum of vetoed events (in red). Note that the largest peak in the veto spectrum is seen at 511\,keV, aqstas is expected from true coincidence events due to pair production in materials near the detector, with a second small peak appearing at 1022\,keV. An additional small peak is seen at 1460\,keV, due to the high random coincidence rate of $^{40}$K events, likely from the PMT itself.} 
+ \caption{The Ge energy spectrum, before and after the muon veto is applied (in black and blue, respectively), and the Ge spectrum of vetoed events (in red). Note that the largest peak in the veto spectrum is seen at 511\,keV, as is expected from true coincidence events due to pair production in materials near the detector, with a second small peak appearing at 1022\,keV. An additional small peak is seen at 1460\,keV, due to the high random coincidence rate of $^{40}$K events, likely from the PMT itself.}
  \label{fig:muVeto}
 \end{figure}
 
@@ -392,34 +411,75 @@ In the the average data set used in this analysis, which is 22 hours long, the l
 
 Given the smallness of this effect compared to the statistical uncertainties in this analysis, the second-order effect of accidental coincidences is negligible, and is neglected.  
 
-\subsection{Alpha Event Rate}
-As a result of the as-built misalignment of the scanning and fixed IR shield axes (see above), the alpha event rate varies with scanning position. Since the degree of misalignment is not known {\textit a priori}, it is estimated from the data. Results from both a gaussian fit to the alpha peak in the energy spectrum and a count of the Poisson excess above the alpha-source-free runs in a 5$\sigma$ window around the peak energy are used to estimate the rate at each position. The assumption of a gaussian shaped peak in the energy spectrum is a poor one at low-magnitude scanning radii (as is discussed below), but the rate may be estimated on either side of these near-point contact positions, where the gaussian assumption is a good one. These results may then be extrapolated to find the rate at the remaining positions. Note that the Poisson counting and gaussian fit rate estimates show good agreement except for that the smallest-magnitude radii. 
+\subsection{Alpha Event Rate}\label{ssec:rate}
+As a result of the as-built misalignment of the scanning and fixed IR shield axes (see Sec.~\ref{ssec:geometry}), the alpha event rate varies with scanning position. Since the degree of misalignment is not known {\it a priori}, it is estimated from the data. The fits to the energy spectra described in Sec.~\ref{ssec:E_obs}~ is used to find the mean energy and width of the alpha peak, and a count of the Poisson excess above the alpha-source-free runs in a 5$\sigma$ window around the peak energy is used to estimate the rate at each position. The assumption of a gaussian shaped peak in the energy spectrum is a poor one at low-magnitude scanning radii (as discussed in Sec.~\ref{ssec:E_obs}), but the rate may be estimated at larger radii on either side of these near-point contact positions, where the gaussian assumption is a good one. These results may then be extrapolated to find the rate at the remaining positions. 
 
-As seen in Fig.\ref{fig:alpha_rate}, the source beam is not measurably obstructed at radii smaller than 16.5\,mm in magnitude, and falls approximately linearly at larger-magnitude radii. This observation, and the total reduction in rate at the largest magnitude radii lead us to derive a misalignment of approximately 2.5$\degree$. 
+As seen in Fig.~\ref{fig:alpha_rate}, the source beam is not measurably obstructed between radii of -15\,mm and 30\,mm, and falls approximately linearly at larger-magnitude negative radii. This observation, and the total reduction in rate at the largest magnitude radii lead us to derive a misalignment of less than 2$\degree$. The horizontal misalignment must be less than 1\,mm, since no scanning positions have a completely obstructed source beam. The exact values cannot be derived, since they are degenerate with one another. 
 
-Using scanning radii of magnitudes between 10 and 15\,mm, the alpha source rate is calculated to be 70~events/hr, or . The expected source rate
+\begin{figure}[]
+ \centering
+ \includegraphics[width=1.0\columnwidth]{figs/alphaRates_allPos_wAvg_062317.png}
+ \caption{Observed alpha event rates in each data set, following background subtraction. The red line indicates the average value, calculated as described in Sec.~\ref{ssec:rate}. The rate is reduced at positions with $r<-15$\,mm because of the misalignment of the scanning and IR cup axes. The rate at $r=7.5$\,mm is reduced by the partial obstruction of the passivated surface by the contact-pin holder, and the rate at $r=30$\,mm is low because the source beam is partially incident on the bevel, which is insensitive to alphas.} 
+ \label{fig:alpha_rate}
+\end{figure}
+
+Scanning radii between -15\,mm and 30\,mm are used to calculate the observed alpha source rate. The point at $r = 7.5$\,mm is not included, since the source beam is partially obstructed by the contact-pin support at this position. The points at $r = 30$\,mm are also not included, since at this position, part of the source beam falls on the bevel, rather than on the passivated surface. The bevel is part of the n+ contact of the detector, which is insensitive to alpha interactions. Using the remaining the 32 measurements, the observed source rate is 64.6$\pm$0.5~events/hr, or 18\,mBq.
+
+Given that the standard deviation of the alpha event peaks (see Table~\ref{tab:E_fit_results}) is larger than the 43\,keV energy difference between the two $^{241}$Am $\alpha$ decay peaks, nearly the full activity of the source is expected to appear in the peak. Therefore, the observed activity is in excellent agreement with that expected from the source specifications and collimator geometry. 
 
 \subsection{Alpha Energy and Spectral Shape}
-\subsubsection{Observations}
-In the energy spectra for each data set, it can be seen that for large-magnitude radii, compared to source-free runs, there is an excess of events falling in a Gaussian peak. The energy and width of the peak varies with radius. For positions with radii larger than 6.75\,mm in magnitude, the mean alpha energy is larger than 2614\,keV, limiting the gamma-interaction background contribution in the peak region. See Fig.~\ref{fig:E_peaks_gaus} for several examples. Therefore, despite the low alpha interaction rate, the peak can be clearly identified and fit.
+\subsubsection{Observations}\label{ssec:E_obs}
+In the energy spectra for each data set, it can be seen that for large-magnitude radii, compared to source-free runs, there is an excess of events falling in a Gaussian peak, as in the examples in Fig~\ref{fig:Epeaks}. The energy and width of the peak varies with radius. For positions with radii larger than 6.75\,mm in magnitude, the mean alpha energy is larger than 2614\,keV, limiting the gamma-interaction background contribution in the peak region. See Figs.~\ref{fig:Efit_110} and~\ref{fig:Efit_360} for several examples. Therefore, despite the low alpha interaction rate, the peak can be clearly identified and fit.
 
-A tail of events at low energy is expected to occur along with the peak, due to variation in the alpha penetration depth. Therefore, the peak is modeled using a Gaussian summed to an exponentially-modified Gaussian low-energy tail. Also included in the fit is a linear background contribution, which accounts for the gamma pile-up and muon background remaining after muon veto, single-site, and pile-up cuts. No other event cuts are used to produce these spectra. 
+A tail of events at low energy is expected to occur along with the peak, due to variation in the alpha penetration depth. However, in practice, adding an exponentially modified Gaussian component to the peak fitting function does not improve the goodness of fit. The low alpha rate and large standard deviation of the Gaussian peak often lead the preferred fit of the tail function to accommodate the background, rather than improving the fit to the peak. 
 
-At radii smaller than 6\,mm, the alpha peak falls in a region of high gamma backgrounds. Due to the low alpha rate, it can not be fit without applying some type of pulse-shape cut to select the source events. A cut of {\tt aenorm}$>1$ selects near-point contact events while rejecting 99\% of background events. When this cut is applied, the remaining peak is highly non-Gaussian, and the exponentially-modified tail dominates the fit. See Fig.~\ref{fig:E_peaks_nongaus}. 
+In the fit, the background is modeled by a linear function, which accounts for the gamma pile-up and muon background remaining after muon veto, single-site, and pile-up cuts. No other event cuts are used to produce these spectra. The results of these fits are given in Table~\ref{tab:E_fit_results}.
 
-The results of these fits are given in Table~\ref{tab:E_fit_results}. 
+\begin{figure*}[]
+ \centering
+  \begin{subfigure}[]{.45\textwidth}
+ \includegraphics[width=1.0\columnwidth]{figs/DS110_0_Efit.png}
+  \caption{The energy spectrum of a data set taken at 11 turns ($r= -13.5$\,mm), a total of 25.1\,hrs of runtime. Fit results are given in Table~\ref{tab:E_fit_results}.}
+ \label{fig:Efit_110}
+\end{subfigure}
+~
+  \begin{subfigure}[]{.45\textwidth}
+ \includegraphics[width=1.0\columnwidth]{figs/DS360_2_Efit.png}
+  \caption{The energy spectrum of a data set taken at 36 turns ($r = 24$\,mm), with 30.1\,hrs of runtime. Fit results are given in Table~\ref{tab:E_fit_results}.}
+ \label{fig:Efit_360}
+\end{subfigure}
+
+ \begin{subfigure}[]{.45\textwidth}
+ \includegraphics[width=1.0\columnwidth]{figs/DS170_0_Efit.png}
+  \caption{The energy spectrum of a data set taken at 17 turns ($r = -4.5$\,mm), a total of 19.1\,hrs of runtime, with a cut selecting near-point-contact events (${\tt aenorm} > 1.5$). At small radii ($r<6$\,mm), the peaks become highly non-Gaussian, and the fit is dominated by the low-energy tail. Fit results are given in Table~\ref{tab:Efits_aecut}.}
+ \label{fig:Efit_170}
+\end{subfigure}
+~
+ \begin{subfigure}[]{.45\textwidth}
+ \includegraphics[width=1.0\columnwidth]{figs/DS195_all_hiEfit.png}
+ \caption{The sum energy spectrum of all runs taken at 19.5 turns ($ = -0.75$\,mm), a total of 82.4\,hrs of runtime, with a cut selecting near-point-contact events (${\tt aenorm} > 1.5$). Alphas incident on the point-contact have nearly the full incident energy, a narrower peak width, and visible low-energy tailing due to charge loss in the dead layer of the point-contact. Fit results are given in Table~\ref{tab:fullE_fitRes}.}
+ \label{fig:Efit_195}
+\end{subfigure}
+ \caption{The energy spectra and peak fits for various scanning positions.} 
+ \label{fig:Epeaks}
+\end{figure*}
+
+At radii smaller than 6\,mm, the alpha peak falls in a region of high gamma backgrounds. Due to the low alpha rate, it can not be fit without applying a pulse-shape cut to select the source events. A cut of ${\tt aenorm} >1.5$ selects near-point contact events while rejecting 99.8\% of background events. When this cut is applied, the remaining peak is highly non-Gaussian, as in Fig.~\ref{fig:Efit_170}. In these peaks, there is significant low-energy tailing, and the exponentially-modified Gaussian is included in the fit. The results of the fits are given in Table~\ref{tab:Efits_aecut}, where $\frac{1}{\tau}$ is the relaxation length (in keV) and  f$_{\tau}$ is the fractional contribution of the low-energy tail component to the peak area.
+
+\input{Efits.txt}
 
 \begin{table*}[]
 \begin{center}
-\begin{tabular}{l l r r r}
-Data Set& $\alpha$ Pos. (mm) & $\mu$ (keV) & $\sigma$ (keV) & $\chi^2/N_{df}$\\  \hline
-
+\begin{tabular}{l l r r r r r}
+Data Set & $\alpha$ Pos. (mm) & $\mu$ (keV) & $\sigma$ (keV) & f$_{\tau}$ & $\tau$ (keV$^{-1}$)& $\chi^2/N_{df}$ \\  \hline
+{\tt DS170} & -4.5 & 2741$\pm$39 & 59$\pm$6 & 1.0$\pm$0.7 & 147$\pm$15 & 453/294 \\
+{\tt DS180} & -3.0 & 2436$\pm$9 & 56$\pm$7 & 1.00$\pm$0.01 & 607$\pm$43 & 282/264 \\
 \end{tabular}
-\caption{The results of a Gaussian+linear background fit to the alpha peak, at various scanning positions} \label{tab:E_fit_results}
+\caption{The results of a Gaussian+low energy tail peak shape fit to the energy of alphas incident at small radii. A cut selecting near-point-contact events (${\tt aenorm} > 1.5$) is used to reduce the gamma background rate.} \label{tab:Efits_aecut}
 \end{center}
 \end{table*}
 
-For the smallest radii ($r<3\,mm$), the Gaussian+tail model fit fails completely. For these data sets, we have instead given the estimated energy range of the observed alpha events, in Table ~\ref{tab:E_ranges}. These ranges were determined by eye-- they are the upper and lower energy bounds of the contiguous overdense region of high-A/E events that appear in the alpha-source runs, as in the boxed region of Fig.~\ref{AEvE_plot}.
+Due to the significant low-energy tail at these small radii, the Gaussian peak width does not give an accurate energy range for the alpha events observed. For the smallest radii ($r<3$\,mm), the Gaussian+tail model fit fails completely. For these data sets, we have given the estimated energy range of the observed alpha events, in Table ~\ref{tab:E_ranges}, either in lieu of or to supplement the description of the alpha energy spectra given by the fit results. These ranges were determined by eye-- they are the upper and lower energy bounds of the contiguous overdense region of high-A/E events that appear in the alpha-source runs, as in the boxed region of Fig.~\ref{fig:AEvE}.
 
 \begin{table}[]
 \begin{center}
@@ -434,36 +494,78 @@ Data Set& $\alpha$ Pos. (mm) & $E_{min}$ (keV) & $E_{max}$ (keV) \\  \hline
 \end{center}
 \end{table}
 
-At scanning positions that are partially or entirely incident on the point-contact, an additional alpha peak in the spectrum appears at nearly the full energy of the emitted alpha. Again, an A/E cut selecting near-point-contact events is applied to reduce the muon background. The peak shape is well-approximated by the sum of a Gaussian and an exponentially-modified Gaussian, as is expected from energy loss in the point-contact itself. The results of these fits are given in Table~\ref{tab:fullE_fitRes}, where $\frac{1}{\tau}$ is the relaxation length (in keV) and  f$_{\tau}$ is the fractional contribution of the low-energy tail component to the peak area. In {\tt DS195}, the source beam is entirely incident upon the point-contact, instead of being partially incident on the passivated surface. In this data set, the mean of the Gaussian component of the alpha peak falls at 5345\,keV, 141\,keV below the full 5.486\,MeV alpha energy. 
+\begin{figure*}[]
+ \centering
+ \begin{subfigure}[]{.45\textwidth}
+ \includegraphics[width=1.0\columnwidth]{figs/DS180_AE_all_wBox.png}
+\end{subfigure}
+ \begin{subfigure}[]{.45\textwidth}
+ \includegraphics[width=1.0\columnwidth]{figs/DS185_AE_all_wBox.png}
+\end{subfigure}
+ \caption{At small radii, ({\it left:} $r=-3.0$\,mm, {\it right:} $r=-2.25$\,mm) the alpha peak becomes highly non-Gaussian and becomes impossible to fit with a Gaussian+low energy tail model. Depending on the scanning position, the energy ranges of the high-A/E alpha events (indicated by the boxed regions above and listed in Table~\ref{tab:E_ranges}) are given to supplement or stand in place of the fit result information.} 
+ \label{fig:AEvE}
+\end{figure*}
+
+At scanning positions that are partially or entirely incident on the point-contact, an additional alpha peak in the spectrum appears at nearly the full energy of the emitted alpha. Again, an A/E cut selecting near-point-contact events ($A/E>1.5$) is applied to reduce the muon background. The peak shape is well-approximated by the sum of a Gaussian and an exponentially-modified Gaussian, as is expected from energy loss in the point-contact itself. See Fig~\ref{fig:Efit_195}. The results of these fits are given in Table~\ref{tab:fullE_fitRes}, . In {\tt DS195}, the source beam is entirely incident upon the point-contact, instead of being partially incident on the passivated surface. In this data set, the mean of the Gaussian component of the alpha peak falls at 5345\,keV, 141\,keV below the full 5.486\,MeV alpha energy. 
+
+All of the peak energies of the fits to the alpha energy spectra are depicted in Fig.~\ref{fig:Efit_mu}, and the standard deviations of the gaussian components are depicted in Fig.~\ref{fig:Efit_sig}. Plotting these results as a function of the magnitude of the radius, as in Fig.~\ref{fig:Efit_rMag}, the results at the positive- and negative-radii scanning positions appear to be consistent. 
+
+\begin{figure}[]
+ \centering
+ \includegraphics[width=1.0\columnwidth]{figs/EvR_wBoxes.png}
+ \caption{The centroids of the alpha energy peaks in each data set. For scanning positions with significant low-energy tailing, the black box depicts the estimated full energy range of alpha events, as given in Table~\ref{tab:E_ranges}. At positions that are partially or completely incident on the point-contact, an additional peak appears at nearly the full incident alpha energy. The hashed box indicates the region on the detector surface that is obscured by the contact pin and contact pin support.} 
+ \label{fig:Efit_mu}
+\end{figure}
+
+\begin{figure}[]
+ \centering
+ \includegraphics[width=1.0\columnwidth]{figs/EsigvR_wBoxes.png}
+ \caption{The standard deviation of the gaussian component of the alpha energy peaks in each data set. The hashed box indicates the region on the detector surface that is obscured by the contact pin and contact pin support.} 
+ \label{fig:Efit_sig}
+\end{figure}
+
+\begin{figure*}[]
+ \centering
+ \begin{subfigure}[]{.45\textwidth}
+ \includegraphics[width=1.0\columnwidth]{figs/EvRmag.png}
+\end{subfigure}
+ \begin{subfigure}[]{.45\textwidth}
+ \includegraphics[width=1.0\columnwidth]{figs/EsigvRmag.png}
+\end{subfigure}
+ \caption{The centroids {\it (left)} and standard deviations {\it (right)} of the alpha energy peaks in each data set, given as a function of the radial distract from the point contact. Negative-radius source positions appear as blue downward-pointing triangles, and positive-radius positions as red upward-pointing triangles. The results of the 0$\degree$ and 180$\degree$ scans appear to be consistent.} 
+ \label{fig:Efit_rMag}
+\end{figure*}
 
 \begin{table*}[]
 \begin{center}
 \begin{tabular}{l l r r r r r}
 Data Set & $\alpha$ Pos. (mm) & $\mu$ (keV) & $\sigma$ (keV) & f$_{\tau}$ & $\tau$ (keV$^{-1}$)& $\chi^2/N_{df}$ \\  \hline
-{\tt DS185} & -2.25 & 5294 $\pm$4 & 18$\pm$3 & 0 & N/A & 190/196 \\
-{\tt DS190} & -1.5 & 5306 $\pm$1 & 28$\pm$3 & 0.7$\pm$.2 & 26$\pm$10 & 124/194 \\
-{\tt DS195} & -0.75 & 5345 $\pm$9 & 10$\pm$3 & 0.9$\pm$.2 & 36$\pm$4 & 221/194 \\
+{\tt DS185} & -2.25 & 5303$\pm$8 & 16$\pm$4 & 1.0$\pm$.9 & 12$\pm$11 & 314/274 \\
+{\tt DS190} & -1.5 & 5298$\pm$5 & 31$\pm$4 & 0.3$\pm$.2 & 31$\pm$4 & 332/274 \\
+{\tt DS195} & -0.75 & 5345$\pm$4 & 9$\pm$2 & 0.9$\pm$.1 & 41$\pm$6 & 335/274 \\
 \end{tabular}
-\caption{The results of a Gaussian+low energy tail peak shape fit to the energy of alphas incident on the point-contact. Due to the low point-contact alpha rate in {\tt DS185}, the tail component in this spectrum fits to 0. All data sets taken at each position are combined to determine these results.} \label{tab:fullE_fitRes}
+\caption{The results of a Gaussian+low energy tail peak shape fit to the energy of alphas incident on the point-contact. All data sets taken at each position are combined to determine these results.} \label{tab:fullE_fitRes}
 \end{center}
 \end{table*}
+
+
 
 \subsubsection{Discussion}
 The energy of alpha events from the collimated source incident on the passivated surface of the detector is degraded at all radii, and is reduced far beyond the expected energy loss to a thin dead layer. Furthermore, the energy varies by up to a factor of 5 with the incident radius of the source. 
 
 Both of these observations indicate that charge loss, whether to slow surface charge collection, charge trapping, or a combination of the two factors, is occurring. Additionally, the radial dependence of energy indicates that positive and negative charge carrier contributions are affected differently, as would be expected from their differing mobilities in germanium.
 
-At positions near the point-contact of the detector, the relative contributions of electrons and electron-holes vary drastically over small distances. For instance, at radii less than 5\,mm, the weighting potential at the passivated surface of a detector similar to PONaMA-1 (see Fig,~\ref{wp_z0}) varies by over 15\% over the diameter of the alpha source beam (1.75\,mm). At radii larger than 10\,mm, on the other hand, the weighting potential varies by less than 3\% over the diameter of the alpha source beam. 
+At positions near the point-contact of the detector, the relative contributions of electrons and electron-holes vary drastically over small distances. For instance, at radii less than 5\,mm, the weighting potential at the passivated surface of a detector similar to PONaMA-1 (see Fig.~\ref{fig:wp_z0}) varies by over 15\% over the diameter of the alpha source beam (1.75\,mm). At radii larger than 10\,mm, on the other hand, the weighting potential varies by less than 3\% over the diameter of the alpha source beam. 
 
 Based on this difference in the weighting potential, the observed variation in the alpha source spectral peak shape is not unexpected. 
 
-The weighting potential also allows us to infer that both positive and negative charges must be affected by the charge loss mechanism in the detector. If only the energy of the electrons were being lost, the alpha peak energy would be reduced by at most 10\% at radii larger than 13\,mm. Instead, we see, in Fig.~\ref{fig:EvR_plot}, the energy is reduced by up to 31\% for these radii. Overall, the energy dependence on radius is larger (steeper?) than the radial dependence of the weighting potential for all radii, with a difference that is particularly dramatic for large radii. 
+The weighting potential also allows us to infer that both positive and negative charges must be affected by the charge loss mechanism in the detector. If only the energy of the electrons were being lost, the alpha peak energy would be reduced by at most 10\% at radii larger than 13\,mm. Instead, we see, in Fig.~\ref{fig:Efit_mu}, the energy is reduced by up to 31\% of the full incident alpha energy for these radii. Overall, the energy dependence on radius is larger (steeper?) than the radial dependence of the weighting potential for all radii, with a difference that is particularly dramatic for large radii. 
 
 If, instead, only the energy from the electron-holes were being affected, we would except the energy of the alpha peak to increase dramatically at radii less than 5\,mm. This is also not observed; the alpha peak falls steeply until the source beam is incident on the point contact itself, with peak energies below 50\% of the full alpha energy. 
 
 Therefore, we must conclude that both positive and negative charges are being trapped and/or slowed for interactions near the passivated surface, regardless of the radial position of the interaction. Conclusions concerning possible charge-loss mechanisms are discussed in Sec.~\ref{sec:models}.
 
-Events incident on the p-contact, on the other hand, do not show indications of significant charge-trapping. The average energy loss observed is consistent with the loss seen in scans of the point contact of BEGe-type PPC detectors \cite{Agostini_thesis}. In that work, the energy loss was found to indicate a dead layer thickness of $519\pm15$\,nm, larger than the manufacturer-cited Boron implantation depth of approximately 300\,nm. This could indicate the presence of additional material on the surface of the point-contact or deadness extending beyond the boron-implantation depth into the germanium itself. 
+Events incident on the p-contact, on the other hand, do not show indications of significant charge-trapping. The average energy loss observed is consistent with the loss seen in scans of the point contact of BEGe-type PPC detectors \cite{Agostini_thesis}. In that work, the energy loss was found to indicate a dead layer thickness of $519\pm15$\,nm, larger than the manufacturer-cited Boron implantation depth of approximately 300\,nm. This could indicate the presence of additional material on the surface of the point-contact or deadness extending beyond the cited boron-implantation depth. 
 
 \begin{figure}[]
  \centering
@@ -474,28 +576,63 @@ Events incident on the p-contact, on the other hand, do not show indications of 
 
 \subsection{DCR}
 \subsubsection{Observations}
-To avoid effects from instability, the {\tt dcrpzc99norm} is used to study the alpha peak characteristics. This parameter is referred to as ``DCR" in the following sections, with all other DCR parameters referred to by their full names.
-
-In the DCR distribution for each data set, alpha events fall in a gaussian peak, the mean DCR value of which falls dramatically at small radii ($r<6$\,mm). For $r > 6$\,mm, the DCR value in the peak is sufficiently above the DCR distribution for normal events that the peaks can be clearly distinguished, and the high-DCR peak can be fit to a single Gaussian. 
+ In the DCR distribution for each data set, alpha events fall in a gaussian peak. Fits to the alpha peaks in the DCR distributions are done for three of the parameters, {\tt dcr90}, {\tt dcrpzc90}, and {\tt dcrpzc99norm}. Deriving the results for alternate acceptance levels of the first two simply require a shift of the results, with no re-scaling. The final version is provided to correct for the effects of gain shifts or changes in the pole-zero decay constant of the signal pulses, but is sensitive to changes in the noise of the system. 
 
 A full model-driven fitting function would include both a gaussian and exponentially-modified gaussian that accounts for the tail of low-DCR alpha events, seen in the plots of DCR vs. energy, in the fit to the peak. The background, which is the tail of the background-event gaussian, would be most appropriately modeled by a quadratic function. In practice, however, the fraction of alpha events occurring in the low-DCR tail small, and the relaxation constant of the tail is long. Combined with the low alpha rate, when a low-DCR tail is included, it is degenerate with the background function. Similarly, the inclusion of linear and quadratic components does not improve the fit to the background events. Instead, the combinations of the low-DCR tail of the signal and the low-DCR rise in the background can be fit effectively by including a step function (centered at the mean of the alpha peak gaussian) in the background function and limiting the fit window appropriately. Since the peak integral is not used for analysis, it is irrelevant whether the alpha peaks are fit with the signal or background components of the fit. 
 
-The DCR spectrum includes all non-muon single-site events with energies between 1 and 6\,MeV. For data sets with $r<6\,mm$, as in the fits to the energy spectra, a pulse shape cut selecting near-point contact events is applied to reduce the background rate and allow a fit to the alpha events. The results of these fits are given in Table~\ref{tab:DCR_fitResults}.
+The DCR spectrum includes all non-muon single-site events with energies between 1 and 6\,MeV. For $r > 3$\,mm, the energy of all observed alpha events falls in this range (see Table~\ref{tab:E_ranges}. Furthermore, the DCR value in the peak is sufficiently above the DCR distribution for normal events that the peaks can be clearly distinguished, and the high-DCR peak can be fit to a single Gaussian (see Figs~\ref{fig:DS110_dcrFit} and ~\ref{fig:DS360_dcrFit} for examples).
 
+For data sets with $r<3\,mm$, the relevant energy range extends below 1\,MeV and the DCR values approach those of gamma background events, making the alpha event peak difficult to distinguish. As in the fits to the energy spectra, a pulse shape cut selecting near-point contact (${\tt aenorm} > 1.5$) events is applied to reduce the background rate and allow a fit to the alpha events (see Fig~\ref{fig:DS185_dcrFit}).
+
+Events incident on the point contact itself do not have distinguishably distinct peaks in DCR when the broad energy range of 1 to 6\,MeV is used. Instead, the peak must be fit using an energy window in which the alpha events dominate the spectrum; a 5$\sigma$ window around the peak energy (taken from the fits described in Sec.~\ref{ssec:E_obs}) is used. This approach is used only for the data sets with $r=-7.5$\,mm, the source position at which the beam is entirely incident on the point contact. 
+
+All three of the DCR parameters are fit with the same procedure. Results are given in Figs.~\ref{fig:dcr90_mu}, ~\ref{fig:dcrpzc90_mu}, and ~\ref{fig:dcrpzc99norm_mu}
+
+
+
+
+ the mean DCR value of which falls dramatically at small radii ($r<6$\,mm). 
+
+ 
 \subsubsection{Discussion}
 
 
 \subsection{A/E and DCR} 
 \subsubsection{A/E of Alpha Events}
-As expected from the calculated drift paths of PPC detectors, the rate of the initial rise of pulses strongly depends on the event incidence radius, particularly near the passivated surface. The high-A/E peak of events associated with the alpha source was fit using a Gaussian function, and its centroid $\mu_{AE}$ was taken as the characteristic A/E value of the scanning location. For runs in which the energy of the $\alpha$ peak is over 2630\,keV ($r > 6$\,mm), only events with energies between 2630\,keV and 6\,MeV are included. For data sets with $r < 6$\,mm, where the alpha peak falls outside this energy window, events with energies between 1 and 6\,MeV are included. See Fig.~\ref{AE_fits} for sample A/E distributions and fits at various radii. 
+As expected from the calculated drift paths of PPC detectors, the rate of the initial rise of pulses strongly depends on the event incidence radius, particularly near the passivated surface. The high-A/E peak of events associated with the alpha source was fit using a Gaussian function, and its centroid $\mu_{AE}$ was taken as the characteristic A/E value of the scanning location. Since the precise peak shapes of the A/E distributions are not of interest for this work, we use a simplified fitting model, with only a Gaussian component to identify the peak centroid and width. 
+
+For runs in which the energy of the $\alpha$ peak is well over 2630\,keV ($\abs{r} > 7.5$\,mm), only events with energies between 2630\,keV and 6\,MeV are included. For data sets with $\abs{r} < 7.5$\,mm, where all or some of the alpha peak may fall outside this energy window, events with energies between 1 and 6\,MeV are included. See Fig.~\ref{fig:AE_fits} for sample A/E distributions and fits. 
+
+\begin{figure*}[]
+ \centering
+ \begin{subfigure}[]{.45\textwidth}
+ \includegraphics[width=1.0\columnwidth]{figs/DS10_0_aefit.png}
+ \caption{A data set taken at 1 turn ($r = -28.5$\,mm), a total of 24.9\,hrs of runtime, with a cut selecting events with energy between 2630\,keV and 6\,MeV.}
+\end{subfigure}
+ \begin{subfigure}[]{.45\textwidth}
+ \includegraphics[width=1.0\columnwidth]{figs/DS170_0_aefit.png}
+  \caption{A data set taken at 17 turns ($r = -4.5$\,mm), a total of 19.1\,hrs of runtime, with a cut selecting events with energy between 1\,MeV and 6\,MeV.} 
+\end{subfigure}
+\caption{Sample A/E distributions and Gaussian peak fits to alpha events.}
+ \label{fig:AE_fits}
+\end{figure*}
 
 For most data sets, the peak in A/E is approximately Gaussian in shape. As in the case of energy, the peak becomes non-Gaussian at small radii, where the length scale of significant changes to the drift time of charges becomes small compared to the diameter of the source beam. At these small radii, however, the A/E values are well above those of 99\% of background events. 
 
-The fit results are given in Table~\ref{tab:AE_fits} and displayed in Fig.~\ref{AE_fitResults}. 3$\sigma$ and 5$\sigma$ windows around $\mu_{AE}$ are also indicated. If A/E at each position obeys a normal distribution, these windows will include 86.6\% and 98.8\% of events, respectively.
+The fit results are given in Table~\ref{tab:AE_fits} and displayed in Fig.~\ref{fig:AEfit_mu}. These results indicate that the high-A/E cut applied to give energy and DCR fit results,  as in Sec.~\ref{ssec:E_obs}, is appropriate.
 
-These results indicate that the high-A/E cut applied to give energy and DCR fit results,  as in Sec.~\ref{sec:E_observations}, is appropriate.
+\begin{figure}[]
+ \centering
+ \includegraphics[width=1.0\columnwidth]{figs/AEvR_wBox.png}
+ \caption{The centroids of the alpha peaks in A/E in each data set. The relatively low value of A/E for data sets with $r=-0.75$\,mm occurs because the large (relatively slow) electron component of the signal reduces the A/E value for these events.} 
+ \label{fig:AEfit_mu}
+\end{figure}
 
 \subsubsection{Complementarity of High-A/E and DCR Cuts}
+The distributions of alpha events incident at various radii in the A/E vs. DCR parameter space (see Fig.~\ref{fig:AEvDCR_events}) suggest that the two pulse-shape analyses are highly complementary. 
+
+ fits to the DCR and A/E peaks 
+
 
 \subsection{Alpha-Identification Efficiency using DCR Techniques}
 
