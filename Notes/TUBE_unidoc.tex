@@ -22,6 +22,7 @@
 \usepackage{booktabs}
 \usepackage{subcaption}
 \usepackage{physics}
+
 \fancypagestyle{uniheader}
 {
 \fancyhf{}% Clear all headers/footers
@@ -457,7 +458,7 @@ In the fit, the background is modeled by a linear function, which accounts for t
 ~
  \begin{subfigure}[]{.45\textwidth}
  \includegraphics[width=1.0\columnwidth]{figs/DS195_all_hiEfit.png}
- \caption{The sum energy spectrum of all runs taken at 19.5 turns ($ = -0.75$\,mm), a total of 82.4\,hrs of runtime, with a cut selecting near-point-contact events (${\tt aenorm} > 1.5$). Alphas incident on the point-contact have nearly the full incident energy, a narrower peak width, and visible low-energy tailing due to charge loss in the dead layer of the point-contact. Fit results are given in Table~\ref{tab:fullE_fitRes}.}
+ \caption{The sum energy spectrum of all runs taken at 19.5 turns ($r = -0.75$\,mm), a total of 82.4\,hrs of runtime, with a cut selecting near-point-contact events (${\tt aenorm} > 1.5$). Alphas incident on the point-contact have nearly the full incident energy, a narrower peak width, and visible low-energy tailing due to charge loss in the dead layer of the point-contact. Fit results are given in Table~\ref{tab:fullE_fitRes}.}
  \label{fig:Efit_195}
 \end{subfigure}
  \caption{The energy spectra and peak fits for various scanning positions.} 
@@ -466,7 +467,7 @@ In the fit, the background is modeled by a linear function, which accounts for t
 
 At radii smaller than 6\,mm, the alpha peak falls in a region of high gamma backgrounds. Due to the low alpha rate, it can not be fit without applying a pulse-shape cut to select the source events. A cut of ${\tt aenorm} >1.5$ selects near-point contact events while rejecting 99.8\% of background events. When this cut is applied, the remaining peak is highly non-Gaussian, as in Fig.~\ref{fig:Efit_170}. In these peaks, there is significant low-energy tailing, and the exponentially-modified Gaussian is included in the fit. The results of the fits are given in Table~\ref{tab:Efits_aecut}, where $\frac{1}{\tau}$ is the relaxation length (in keV) and  f$_{\tau}$ is the fractional contribution of the low-energy tail component to the peak area.
 
-\input{Efits.txt}
+%\input{Efits.txt}
 
 \begin{table*}[]
 \begin{center}
@@ -510,19 +511,21 @@ At scanning positions that are partially or entirely incident on the point-conta
 
 All of the peak energies of the fits to the alpha energy spectra are depicted in Fig.~\ref{fig:Efit_mu}, and the standard deviations of the gaussian components are depicted in Fig.~\ref{fig:Efit_sig}. Plotting these results as a function of the magnitude of the radius, as in Fig.~\ref{fig:Efit_rMag}, the results at the positive- and negative-radii scanning positions appear to be consistent. 
 
-\begin{figure}[]
+\begin{figure*}[]
  \centering
+  \begin{subfigure}[]{.45\textwidth}
  \includegraphics[width=1.0\columnwidth]{figs/EvR_wBoxes.png}
- \caption{The centroids of the alpha energy peaks in each data set. For scanning positions with significant low-energy tailing, the black box depicts the estimated full energy range of alpha events, as given in Table~\ref{tab:E_ranges}. At positions that are partially or completely incident on the point-contact, an additional peak appears at nearly the full incident alpha energy. The hashed box indicates the region on the detector surface that is obscured by the contact pin and contact pin support.} 
+ \caption{The centroids of the alpha energy peaks in each data set. For scanning positions with significant low-energy tailing, the black box depicts the estimated full energy range of alpha events, as given in Table~\ref{tab:E_ranges}. At positions that are partially or completely incident on the point-contact, an additional peak appears at nearly the full incident alpha energy. } 
  \label{fig:Efit_mu}
-\end{figure}
-
-\begin{figure}[]
- \centering
+\end{subfigure}
+~
+\begin{subfigure}[]{.45\textwidth}
  \includegraphics[width=1.0\columnwidth]{figs/EsigvR_wBoxes.png}
- \caption{The standard deviation of the gaussian component of the alpha energy peaks in each data set. The hashed box indicates the region on the detector surface that is obscured by the contact pin and contact pin support.} 
+ \caption{The standard deviation of the gaussian component of the alpha energy peaks in each data set.} 
  \label{fig:Efit_sig}
-\end{figure}
+ \end{subfigure}
+ \caption{The results of Gaussian fits to the alpha energy peaks. The hashed box indicates the region on the detector surface that is obscured by the contact pin and contact pin support.}
+\end{figure*}
 
 \begin{figure*}[]
  \centering
@@ -547,8 +550,6 @@ Data Set & $\alpha$ Pos. (mm) & $\mu$ (keV) & $\sigma$ (keV) & f$_{\tau}$ & $\ta
 \caption{The results of a Gaussian+low energy tail peak shape fit to the energy of alphas incident on the point-contact. All data sets taken at each position are combined to determine these results.} \label{tab:fullE_fitRes}
 \end{center}
 \end{table*}
-
-
 
 \subsubsection{Discussion}
 The energy of alpha events from the collimated source incident on the passivated surface of the detector is degraded at all radii, and is reduced far beyond the expected energy loss to a thin dead layer. Furthermore, the energy varies by up to a factor of 5 with the incident radius of the source. 
@@ -576,25 +577,181 @@ Events incident on the p-contact, on the other hand, do not show indications of 
 
 \subsection{DCR}
 \subsubsection{Observations}
- In the DCR distribution for each data set, alpha events fall in a gaussian peak. Fits to the alpha peaks in the DCR distributions are done for three of the parameters, {\tt dcr90}, {\tt dcrpzc90}, and {\tt dcrpzc99norm}. Deriving the results for alternate acceptance levels of the first two simply require a shift of the results, with no re-scaling. The final version is provided to correct for the effects of gain shifts or changes in the pole-zero decay constant of the signal pulses, but is sensitive to changes in the noise of the system. 
+In the DCR distribution for each data set, almost all alpha events fall in a gaussian peak. Fits to the alpha peaks in the DCR distributions are done for three of the parameters, {\tt dcr90}, {\tt dcrpzc90}, and {\tt dcrpzc99norm}. Deriving the results for alternate acceptance levels of the first two simply require a shift of the results, with no rescaling. The final version is provided to correct for the effects of gain shifts or changes in the pole-zero decay constant of the signal pulses, but is sensitive to changes in the noise of the system. 
 
+\begin{figure*}[]
+ \centering
+  \begin{subfigure}[]{.45\textwidth}
+ \includegraphics[width=1.0\columnwidth]{figs/DS110_0_DCRPZCnorm.png}
+  \caption{The {\tt dcrpzc99norm} distribution of a data set taken at 11 turns ($r= -13.5$\,mm), a total of 25.1\,hrs of runtime.}
+ \label{fig:DCRfit_110}
+\end{subfigure}
+~
+  \begin{subfigure}[]{.45\textwidth}
+ \includegraphics[width=1.0\columnwidth]{figs/DS360_2_DCRPZCnorm.png}
+  \caption{The {\tt dcrpzc99norm} distribution of a data set taken at 36 turns ($r = 24$\,mm), with 30.1\,hrs of runtime.}
+ \label{fig:DCRfit_360}
+\end{subfigure}
+
+ \begin{subfigure}[]{.45\textwidth}
+ \includegraphics[width=1.0\columnwidth]{figs/DS185_0_DCRPZCnorm.png}
+  \caption{The {\tt dcrpzc99norm} distribution of a data set taken at 18.5 turns ($r = -2.25$\,mm), a total of 25.0\,hrs of runtime, with a cut selecting near-point-contact events (${\tt aenorm} > 1.5$). At small radii ($r<3$\,mm), the DCR parameter values for alpha events become similar to those of gamma background events.}
+ \label{fig:DCRfit_185}
+\end{subfigure}
+~
+ \begin{subfigure}[]{.45\textwidth}
+ \includegraphics[width=1.0\columnwidth]{figs/DS195_dcrpzcFit.png}
+ \caption{The sum {\tt dcrpzc90} distribution of all runs taken at 19.5 turns ($ = -0.75$\,mm), a total of 82.4\,hrs of runtime, with a cut selecting near-point-contact events (${\tt aenorm} > 1.5$) in a $5\sigma$ energy window centered at the full-energy alpha peak position. Alphas incident on the point-contact do not show elevated DCR values.}
+ \label{fig:Efit_195}
+\end{subfigure}
+ \caption{DCR parameter distributions and Gaussian fits for various peak positions. The different varieties of DCR parameters generally have similarly-shaped distributions, save for peaks near 0 in {\tt dcrpzc99norm}, which are distorted by scaling effects. Fit results are given in Table~\ref{tab:DCR_fit_results}.} 
+ \label{fig:DCRpeaks}
+\end{figure*}
 A full model-driven fitting function would include both a gaussian and exponentially-modified gaussian that accounts for the tail of low-DCR alpha events, seen in the plots of DCR vs. energy, in the fit to the peak. The background, which is the tail of the background-event gaussian, would be most appropriately modeled by a quadratic function. In practice, however, the fraction of alpha events occurring in the low-DCR tail small, and the relaxation constant of the tail is long. Combined with the low alpha rate, when a low-DCR tail is included, it is degenerate with the background function. Similarly, the inclusion of linear and quadratic components does not improve the fit to the background events. Instead, the combinations of the low-DCR tail of the signal and the low-DCR rise in the background can be fit effectively by including a step function (centered at the mean of the alpha peak gaussian) in the background function and limiting the fit window appropriately. Since the peak integral is not used for analysis, it is irrelevant whether the alpha peaks are fit with the signal or background components of the fit. 
 
-The DCR spectrum includes all non-muon single-site events with energies between 1 and 6\,MeV. For $r > 3$\,mm, the energy of all observed alpha events falls in this range (see Table~\ref{tab:E_ranges}. Furthermore, the DCR value in the peak is sufficiently above the DCR distribution for normal events that the peaks can be clearly distinguished, and the high-DCR peak can be fit to a single Gaussian (see Figs~\ref{fig:DS110_dcrFit} and ~\ref{fig:DS360_dcrFit} for examples).
+The DCR spectrum includes all non-muon single-site events with energies between 1 and 6\,MeV. For $r > 3$\,mm, the energy of all observed alpha events falls in this range (see Table~\ref{tab:E_ranges}. Furthermore, the DCR value in the peak is sufficiently above the DCR distribution for normal events that the peaks can be clearly distinguished, and the high-DCR peak can be fit to a single Gaussian (see Figs~\ref{fig:DCRfit_110} and ~\ref{fig:DCRfit_360} for examples).
 
-For data sets with $r<3\,mm$, the relevant energy range extends below 1\,MeV and the DCR values approach those of gamma background events, making the alpha event peak difficult to distinguish. As in the fits to the energy spectra, a pulse shape cut selecting near-point contact (${\tt aenorm} > 1.5$) events is applied to reduce the background rate and allow a fit to the alpha events (see Fig~\ref{fig:DS185_dcrFit}).
+For data sets with $r<3\,mm$, the relevant energy range extends below 1\,MeV and the DCR values approach those of gamma background events, making the alpha event peak difficult to distinguish. As in the fits to the energy spectra, a pulse shape cut selecting near-point contact (${\tt aenorm} > 1.5$) events is applied to reduce the background rate and allow a fit to the alpha events (see Fig~\ref{fig:DCRfit_185}).
 
-Events incident on the point contact itself do not have distinguishably distinct peaks in DCR when the broad energy range of 1 to 6\,MeV is used. Instead, the peak must be fit using an energy window in which the alpha events dominate the spectrum; a 5$\sigma$ window around the peak energy (taken from the fits described in Sec.~\ref{ssec:E_obs}) is used. This approach is used only for the data sets with $r=-7.5$\,mm, the source position at which the beam is entirely incident on the point contact. 
+Events incident on the point contact itself do not have distinguishably distinct peaks in DCR when the broad energy range of 1 to 6\,MeV is used. Instead, the peak must be fit using an energy window in which the alpha events dominate the spectrum; a 5$\sigma$ window around the peak energy (taken from the fits described in Sec.~\ref{ssec:E_obs}) is used. Due to the low event and background rate after these cuts are applied, the peak is fit using only a Gaussian distribution. This approach is used only for the data sets with $r=-7.5$\,mm, the source position at which the beam is entirely incident on the point contact (see Fig~\ref{fig:DS195_dcrFit}).
 
-All three of the DCR parameters are fit with the same procedure. Results are given in Figs.~\ref{fig:dcr90_mu}, ~\ref{fig:dcrpzc90_mu}, and ~\ref{fig:dcrpzc99norm_mu}
+All three of the DCR parameters are fit with the same procedure. The peak shapes in all three parameters are similar, save for at small radii ($r<6$\,mm), where the DCR parameter values are small and pole-zero corrected DCR parameters retain better alpha separation from the gamma and muon background events than the {\tt dcr90} value does. At very small DCR values, the {\tt dcrpzc99norm} peak shapes are distorted by the effects of the scaling on negative tail slope values. 
+
+Results are given in Figs.~\ref{fig:DCRfit} and ~\ref{fig:dcrNormfit}. It is clear, there and in Figs.~\ref{fig:DCRfit_rMag} and ~\ref{fig:dcrNormFit_rMag}, that unlike the energy, the DCR parameter values of the alpha peaks do not appear to be azimuthally symmetric. At positions with $r>6$\,mm, the DCR values of alpha events are consistently much higher than those of background events; however, the value of the parameters differs by up to a factor of 2 at the $0\degree$ and $180\degree$ scanning positions. 
+
+\begin{figure*}[]
+ \centering
+  \begin{subfigure}[]{.45\textwidth}
+ \includegraphics[width=1.0\columnwidth]{figs/dcrCombined_mu.png}
+ \caption{The centroids of the alpha peaks in each data set.} 
+ \label{fig:DCRfit_mu}
+\end{subfigure}
+~
+\begin{subfigure}[]{.45\textwidth}
+ \includegraphics[width=1.0\columnwidth]{figs/dcrCombined_sig.png}
+ \caption{The standard deviation of the alpha peaks in each data set.} 
+ \label{fig:DCRfit_sig}
+ \end{subfigure}
+ \caption{The results of Gaussian fits to the alpha peaks in {\tt dcrpzc90}, in black, and {\tt dcr90}, in blue. All values are in units of ADC/ns. The hashed box indicates the region on the detector surface that is obscured by the contact pin and contact pin support.}
+  \label{fig:DCRfit}
+\end{figure*}
+
+Additionally, the positive and negative radius positions show different qualitative behavior for $r>12$\,mm. At the negative-radius positions, the DCR parameters values rise as the radius increases, and at positive-radius positions, their values fall with increasing radius. 
+
+At positions with $r<= 12$\,mm, the $0\degree$ and $180\degree$ scans are in greater agreement, though their values of {\tt dcr90} and {\tt dcrpzc90} are still offset from one another, as in Fig.~\ref{fig:DCRfit_rMag}. Correcting for changes in the gain and noise of the system, as in \ref{fig:dcrNormFit_rMag}, brings the values at these radii into closer agreement. In this plot, it is also clear that the DCR's functional dependence on radius is also in agreement for these near-point contact positions. 
+
+A discussion of the potential causes of the observed azimuthal dependence, along with further discussion of the DCR parameter significance, is given below. 
+
+\begin{figure*}[]
+ \centering
+  \begin{subfigure}[]{.45\textwidth}
+ \includegraphics[width=1.0\columnwidth]{figs/dcrpzc99normfit_mu.png}
+ \caption{The centroids of the alpha peaks in each data set.} 
+ \label{fig:dcrNormfit_mu}
+\end{subfigure}
+~
+\begin{subfigure}[]{.45\textwidth}
+ \includegraphics[width=1.0\columnwidth]{figs/dcrpzc99normfit_sig.png}
+ \caption{The standard deviation of the alpha peaks in each data set.} 
+ \label{fig:dcrNormfit_sig}
+ \end{subfigure}
+  \caption{The results of Gaussian fits to the alpha peaks in {\tt dcrpzc99norm}, in arbitrary units. The hashed box indicates the region on the detector surface that is obscured by the contact pin and contact pin support.}
+  \label{fig:dcrNormfit}
+\end{figure*}
+
+\begin{figure*}[]
+ \centering
+ \begin{subfigure}[]{.45\textwidth}
+ \includegraphics[width=1.0\columnwidth]{figs/dcrCombined_mu_rMag.png}
+\end{subfigure}
+ \begin{subfigure}[]{.45\textwidth}
+ \includegraphics[width=1.0\columnwidth]{figs/dcrCombined_sig_rMag.png}
+\end{subfigure}
+ \caption{The centroids {\it (left)} and standard deviations {\it (right)} of the alpha DCR peaks in each data set, given as a function of the radial distract from the point contact. Both {\tt dcrpzc90} and {\tt dcr90} values are shown, in filled and open triangles, respectively. Error bars are suppressed for clarity. Negative-radius source positions appear as blue ({\tt dcrpzc90}) or green ({\tt dcr90}) downward-pointing triangles, and positive-radius positions as red ({\tt dcrpzc90}) or violet ({\tt dcr90}) upward-pointing triangles. The centroids of the 0$\degree$ and 180$\degree$ scans are not consistent with other another, but the peak widths appear relatively consistent. See~\ref{sssec:DCRfit_disc} for discussion.} 
+ \label{fig:DCRfit_rMag}
+\end{figure*}
+
+\begin{figure*}[]
+ \centering
+ \begin{subfigure}[]{.45\textwidth}
+ \includegraphics[width=1.0\columnwidth]{figs/dcrpzc99normfit_mu_rMag.png}
+\end{subfigure}
+ \begin{subfigure}[]{.45\textwidth}
+ \includegraphics[width=1.0\columnwidth]{figs/dcrpzc99normfit_sig_rMag.png}
+\end{subfigure}
+ \caption{The centroids {\it (left)} and standard deviations {\it (right)} of the alpha {\tt dcrpzc99norm} peaks in each data set, given as a function of the radial distract from the point contact. The centroids of the 0$\degree$ and 180$\degree$ scans are not consistent with other another at $r>12$\,mm, but the peak widths appear relatively consistent. See~\ref{sssec:DCRfit_disc} for discussion.} 
+ \label{fig:dcrNormFit_rMag}
+\end{figure*}
+
+\subsubsection{DCR as an Alpha Rejection Parameter}\label{sssec:DCRfit_disc}
+At almost all scanning radii, alpha events incident on the passivated surface show significant slow charge components, and therefore highly elevated values of the DCR parameters. Therefore, the DCR pulse shape parameters provide a powerful tool by which external alpha events can be identified in PPC detectors. 
+
+The amount of energy being collected as slow charge in the first 20\,$\mu$s of the pulse tail can be calculated directly from the {\tt dcrpzc90} parameter and the calibration constants for the electronics system. A {\tt dcrpzc90} value of 4E$-3$\,ADC/ns, similar to that found for many source positions, is divided by 0.74\,ADC/keV, the average value of the linear term of the energy calibration curve, to give an average rate of delated charge recovery in the pulse of 5.4\,keV/ns. The other terms of the calibration curve are relatively small, and are neglected. Therefore, in the 20\,$\mu$s of waveform tail that are digitized in these measurements, approximately 110\,keV of energy is collected. 
+
+For each scanning position, we can find the slow component energy as a fraction of the prompt alpha peak energy at that position, as in Fig.~\ref{fig:Efrac}. The delayed charge energy fraction falls quickly at small scanning radii. At radii larger than 6\,mm, between 2.0 and 3.6\% of the total energy is collected as delayed charge, with an average delayed fraction of 2.5\%.  
+
+\begin{figure}[]
+ \centering
+ \includegraphics[width=1.0\columnwidth]{figs/slowFracOverE.png}
+ \caption{The energy of the collected delayed charge, as a fraction of the prompt alpha energy at that scanning position.} 
+ \label{fig:Efrac}
+\end{figure}
+
+The alpha background events of interest to rare event searches like the \MJ\ \DEM\ are those with energies of over 1\,MeV. Given the typical PPC detector energy resolution of less than 5\,keV at these energies, a 2\% delayed charge effect, corresponding to 20\,keV, is easily observable. This implies that regardless of the source of the alpha background, and whether the alpha particle is degraded in energy before reaching the passivated surface, any event that has high enough energy to be a problematic background event also demonstrates a detectable delayed charge signature, provided its point of incidence is at at a radius greater than 6\,mm. 
+
+\subsubsection{Outlier Events}\ref{sssec:outliers}
+When we plot a given alpha scan data set in the DCR vs. energy parameter space, as in Fig.~\ref{fig:outliers}, some fraction of outlier events that do not fall either in the alpha energy or DCR peak also appear. This implies that the Gaussian model of the peak position and shape (in both energy and DCR) does not fully describe all of the observed alpha events. Some events have both degraded energies and DCR values. 
+
+Significantly for our purposes, the fraction of the prompt energy that is collected as slow charge (i.e. the ratio of {\tt dcrpzc90}, in keV/ns and integrated over the duration of the waveform tail, to the energy) in these events appears to be constant, and is 2.9\%, identical to that of the undegraded events. This means that, as discussed in Sec.~\ref{sssec:DCRfit_disc}, these events can still be efficiently identified in the \nonubb\ ROI.
+
+The fraction of events that appear as outliers in both parameters is impossible to calculate precisely, since they become indistinguishable from the statistical fluctuation of background events at low energies and DCR values. Based on the numbers of events at higher-than-usual DCR values, we estimate that approx. 10\% of events are outliers. 
+
+It is difficult to speak to the physics of these outlier events, since we do not know their origin. Though the source manufacturer cites a 20\,keV expected line-width for the $^{241}$Am source, that does not preclude the possibility of some small fraction of events being highly degraded in energy upon leaving the source. Another possibility is that these events are scattering in the collimator before arriving at the detector surface.
+
+Alternatively, the degraded outlier events could be caused by a dead layer or shallow angle scattering in the passivated surface itself. Therefore, events such as these could be useful in understanding further aspects of charge collection from surface events, and in measuring the dead-layer associated with the passivated surface. 
+
+Without knowing the origin of the outlier events, however, we cannot draw conclusions based on them. Future passivated-surface studies with the TUBE cryostat will employ source beams with shallower angles of incidence; based on the results of those studies, we should be able to determine the cause of these events and the thickness of the dead and charge-trapping regions associated with the passivated surface. 
+
+\begin{figure}[]
+ \centering
+ \includegraphics[width=1.0\columnwidth]{figs/outlier_events_260_0.png}
+ \caption{A plot of all single-site events in a data set taken at $r=9$\,mm, in {\tt dcrpzc90} vs. energy. The blue box shows the region that lies within $5\sigma$ of the energy and DCR peaks, and the red box indicates some of the events that are outliers from both peaks. Events that are in the violet box but not in the red or blue boxes are outliers in either the energy or DCR peaks. The red-outlined region shows a clear excess of events over a source-free data set. 8.2\% of the events in the violet box (including the red and blue-boxed regions) are outliers from both peaks; 89.2\% fall within the $5\sigma$ windows of both the energy and DCR peaks.} 
+ \label{fig:outliers}
+\end{figure}
 
 
+\subsubsection{Radial Dependence of DCR}
+The azimuthal dependence (or, we believe, the instability, see below) of the DCR parameters makes it difficult to draw definitive conclusions about their radial dependence. This is particularly the case at large radii ($r>12$\,mm). In positive-radius scanning positions, {\tt dcrpzc90} falls with increasing radius, at a rate of -4.8E-5$\pm$1.2E-5\,ADC/ns/mm, found using a linear fit to all data sets in this position range. In negative-radius scanning positions, {\tt dcrpzc90} instead rises with increasing radius, at a rate of 2.8E-5$\pm$3E-6\,ADC/ns/mm. 
 
+Compared to this, the radial dependence of the DCR parameters at positions with $r<12$\,mm is dramatic, and occurs with similar functional form in both the positive- and negative-radius scans, as seen in Figs. ~\ref{fig:DCRfit_rMag} and ~\ref{fig:dcrNormFit_rMag}. Unfortunately, the source beam is obstructed at small positive-radii positions, so the similarity of the results cannot be tested directly for all radii. 
 
- the mean DCR value of which falls dramatically at small radii ($r<6$\,mm). 
+Over the range that can be scanned, though, the positive-radius positions show a fall {\tt dcrpzc90} rise with increasing radius with a rate of 1.4E-4$\pm$3E-5\,ADC/ns/mm, and the negative-radius positions show an increase with the rate of 3.2E-4$\pm$2E-5\,ADC/ns/mm. If, instead of using all negative-radius data sets, we use only those for which a positive-radius equivalent exists, we derive a rate of change for the {\tt dcrpzc90} value of 1.8E-4$\pm$4E-5\,ADC/ns/mm, which agrees with the rate found at positive-radius positions to within the uncertainty of the fit. 
 
- 
-\subsubsection{Discussion}
+Most importantly, we find that at incidence positions very close to the point-contact ($r<6$\,mm), the DCR parameters cannot be used to reliably identify alpha events while retaining high bulk-event efficiency. Alphas incident on the point-contact itself are completely indistinguishable by their DCR parameters.   
+
+\subsubsection{Stability of the DCR Value}
+The apparent azimuthal dependence of the DCR value is thought, rather, to be a problem of instability in the process by which delayed charge is collected. In studies of the stability, data sets with $|r|<12$\,mm are excluded; based on the observations of the radial dependence of DCR (above), it appears that the changes in DCR at these positions are unaffected by the azimuthal effect or instability, whatever its source. 
+
+The leading candidate for the cause of the shift in the DCR parameters is charging of the detector surface by the alpha particles themselves, and the resulting interactions in the detector surface. Passivated surface charge build-up over time has been observed in other PPC detectors (citation?), and our own measurements of the observed energy indicate that significant charge is being lost on or near the surface. Direct measurement of the leakage current in the detector after the alpha scans were completed showed that it was an order of magnitude higher than at the start of scanning, further supporting this theory. 
+
+Plotting {\tt dcrpzc90} in each data set with respect to the data set order (which corresponds, almost exactly, to days of run time), as in Fig.~\ref{fig:DCRvT}, shows a pattern in which the DCR parameter values rise over the time during which the source is incident on the passivated surface, ``resetting" to lower values after the source beam is removed from the surface for some time. Furthermore, the rate at which the DCR value increases appears to be correlated with the observed alpha rate, as would be expected if surface charge build-up were the cause of the change. 
+
+Additional evidence for this theory is provided by the changes in DCR values in the positions that were repeated non-consecutively, with several days of scanning of other positions occurring between the two scans at that location. This was done for 3 positions, at $r= $  -9, -7.5, and 30\,mm. In all three cases, shown in Fig.~\ref{fig:DCR_repeated}, the second measurement shows a higher DCR value than the first measurement.  
+
+\begin{figure}[]
+ \centering
+ \includegraphics[width=1.0\columnwidth]{figs/dcrpzc90fit_mu_overTime_rOver12_wRate.png}
+ \caption{The {\tt dcrpzc90} mean value of the alpha peak, as a function of data set order. One data set corresponds, almost exactly, to one day of run time. The hashed boxes indicates stretches of time during which the alpha source was not incident on the detector surface. The color scale indicates the alpha event rate, in events/hr.} 
+ \label{fig:DCRvT}
+\end{figure}
+
+\begin{figure}[]
+ \centering
+ \includegraphics[width=1.0\columnwidth]{figs/dcrpzc90_repeatedDS.png}
+ \caption{The {\tt dcrpzc90} mean value of the alpha peak as a function of data set order for the non-consecutively repeated measurements. The point shapes indicate the position of the source (circles, squares, and triangles correspond to runs with $r=$ -9, -7, and 30\,mm, respectively), and colors indicate the run order (blue is the first data set taken at that position, red is the second). One data set corresponds, almost exactly, to one day of run time. The hashed boxes indicates stretches of time during which the alpha source was not incident on the detector surface.} 
+ \label{fig:DCR_repeated}
+\end{figure}
+
 
 
 \subsection{A/E and DCR} 
@@ -619,22 +776,117 @@ For runs in which the energy of the $\alpha$ peak is well over 2630\,keV ($\abs{
 
 For most data sets, the peak in A/E is approximately Gaussian in shape. As in the case of energy, the peak becomes non-Gaussian at small radii, where the length scale of significant changes to the drift time of charges becomes small compared to the diameter of the source beam. At these small radii, however, the A/E values are well above those of 99\% of background events. 
 
-The fit results are given in Table~\ref{tab:AE_fits} and displayed in Fig.~\ref{fig:AEfit_mu}. These results indicate that the high-A/E cut applied to give energy and DCR fit results,  as in Sec.~\ref{ssec:E_obs}, is appropriate.
+Anomalously low values of A/E occur for events incident on the point-contact itself. Though these events have very fast rising edges, they also have a substantial slow electron fraction, which reduces the A/E value. To correctly identify events like these from the shape of their rising edge, a rise-time parameter, measuring time over which the pulse rises from the start of the prompt signal to a given fraction of its total amplitude (for instance, 50\% of the maximum pulse height), would be more appropriate than the A/E parameter used in this analysis. The \MJ\ Collaboration plans to implement such a pulse-shape discriminator, in addition to the {\tt avse} parameter that is currently used to reject multi-site events.
+
+The fit results are displayed in Fig.~\ref{fig:AEfit_mu}. These results indicate that the high-A/E cut applied to give energy and DCR fit results,  as in Sec.~\ref{ssec:E_obs}, is appropriate.
 
 \begin{figure}[]
  \centering
  \includegraphics[width=1.0\columnwidth]{figs/AEvR_wBox.png}
- \caption{The centroids of the alpha peaks in A/E in each data set. The relatively low value of A/E for data sets with $r=-0.75$\,mm occurs because the large (relatively slow) electron component of the signal reduces the A/E value for these events.} 
+ \caption{The centroids of the alpha peaks in A/E in each data set. The relatively low value of A/E for data sets with $r=-0.75$\,mm occurs because the large (slow) electron component of the signal reduces the A/E value for these events.} 
  \label{fig:AEfit_mu}
 \end{figure}
 
 \subsubsection{Complementarity of High-A/E and DCR Cuts}
-The distributions of alpha events incident at various radii in the A/E vs. DCR parameter space (see Fig.~\ref{fig:AEvDCR_events}) suggest that the two pulse-shape analyses are highly complementary. 
+The distributions of alpha events incident at various radii in the A/E vs. DCR parameter space (see Fig.~\ref{fig:AEvDCR_events}) suggest that the two pulse-shape analyses are highly complementary. This suggests that by using both the A/E and DCR pulse shape discriminators, we should be able to achieve excellent alpha event discrimination with only minimal sacrifice of bulk events. 
 
- fits to the DCR and A/E peaks 
+\begin{figure*}[]
+ \centering
+ \begin{subfigure}{.65\textwidth}
+ \includegraphics[width=1.\columnwidth]{figs/AEvDCRPZCnorm.png}
+ \end{subfigure}
+ \begin{subfigure}{.34\textwidth}
+  \includegraphics[width=1.\columnwidth]{figs/AEvDCR_plot_legend.png}
+   \end{subfigure}
+ \caption{The A/E vs. normalized DCR distribution for all single-site events with energies between 100\,keV and 10\,MeV, at varying scanning radii. The points in black are from a data set without the alpha source incident on the detector surface, and the scan data sets are shown in rainbow order, with red representing the smallest-radius scan. 99\% of calibration events with energies between 1000 and 2630\,keV fall below an A/E value of 1, and 99\% of calibration events with energies between 1000 and 2380\,keV fall below a {\tt dcrpzc99norm} value of 1.} 
+ \label{fig:AEvDCR_events}
+\end{figure*}
 
+Examining the fit results to the DCR and A/E peaks supports this conclusion. The $5\sigma$ windows around each alpha peak should include 99\% of the events, assuming normally distributed values; by using an equivalent normalization for the A/E and DCR values, we can compare them directly, as in Fig.~\ref{fig:AEandDCR}. The y-axis in this figure indicates the alpha events' separation from bulk events-- 99\% of bulk events fall below 1, whether the relevant discrimination parameter is A/E or DCR. Also indicated are the 99.9\% acceptance points in each parameter, which occur at different values for A/E and DCR, indicating that the DCR distribution is more heavily-tailed than the A/E distribution. 
+
+\begin{figure*}[]
+ \centering
+ \includegraphics[width=1.\textwidth]{figs/AEandDCR_noThree.png}
+ \caption{The $5\sigma$ window containing the A/E and DCR alpha peak positions at each position, normalized to 99\% bulk acceptance of both cuts. The red points and magenta boxes indicate the centroids and $\pm 2.5\sigma$ values of the peaks in {\tt dcrpzc99norm}, and the green points and blue boxes indicate the same in {\tt aenorm}. The red dotted line and cyan dotted-dashed line are the 99.9\% acceptance points in DCR and A/E, respectively. The black dashed line indicates the 99\% acceptance point in both parameters.} 
+ \label{fig:AEandDCR}
+\end{figure*}
+
+For each position measured, we find that either or both of the DCR and A/E discriminator parameters are well above the 99.9\% acceptance line for that parameter. This indicates that by applying 99.9\% bulk-acceptance cuts in both parameters, we can effectively eliminate alpha events occurring anywhere on the passivated surface. Ergo, total alpha event rejection with only 0.2\% sacrifice of bulk events should be possible in PPC detectors.
+
+Another advantage of this method of alpha removal is that it is equally effective at all energies of the alpha events, save for the requirement that the energy of the event be high enough that the DCR signal (of approximately 2-3\% of the prompt event energy, see above) is detectable. This is the case for all events that could fall in the \nonubb\ ROI. Therefore, this purely pulse-shape-based method is as effective for energy-degraded alpha events as it is for undegraded events originating from alpha contamination on the surface itself.
+
+The only exception to this highly efficient alpha event removal occurs for events directly incident on the point-contact itself, at the smallest-radius position. Given that these events do not experience charge trapping, their energies are much higher than that of the \nonubb\ region-of-interest, so they are not a particularly problematic background. If alpha energy is degraded before reaching the point-contact, though, they could have any energy below the full energy of the alpha peak. As discussed above, these events would be effectively tagged with high efficiency if a rise-time parameter were substituted for the A/E parameter, as is planned in the \MJ\ \DEM\ analysis. 
+
+Fig.~\ref{fig:AEandDCR} also shows that at positions with $r<= 6$\,mm, the A/E-based rejection of alpha events dominates in effectiveness, and that below $r=9$\,mm, an 99.9\%-acceptance cut in A/E suffices to tag all alpha events. This is why the previous study of alpha backgrounds in a PPC detector \cite{Agostini_thesis}, found no need for an additional pulse-shape discriminator beyond A/E, though an asymmetry parameter, which identifies slowly-released charge like our DCR parameter, was studied \cite{TUBEdoc?}. BEGe-type detectors, like the one measured in that work, have the entirety of their passivated surface lying within $r=9$\,mm, so the use of the DCR discriminator would not measurably improve their background rejection capabilities. 
+
+The DCR discriminator is needed, though, in ORTEC-type detectors, which have a passivated surface along the entire bottom plane of the detector. In this detector design, which is that of the detector measured in this work, and used for all of the \MJ\ \DEM 's enriched detectors, the DCR discriminator is a powerful way to reject alpha events occurring far from the point-contact, where A/E is relatively insensitive. 
 
 \subsection{Alpha-Identification Efficiency using DCR Techniques}
+Given that the DCR pulse-shape discrimination technique is less effective than the A/E technique at $r<=6$\,mm, we focus our attention on evaluating the alpha-rejection efficiency of the various DCR parameters at scanning positions with $r>6$\,mm. 
+
+To calculate an alpha-rejection fraction, we must first find the predicated number of background events in the alpha peak region of the data set, with no DCR cut applied. We use both the right-hand sideband in the data set and the spectral shape in the sideband and peak regions, measured in a source-free run, to find the expected number of background events. See Fig.~\ref{fig:eff_regions} for sample spectra and energy regions. 
+
+\begin{figure*}[]
+ \centering
+ \includegraphics[width=1.\textwidth]{figs/eff_peakRegions.png}
+ \caption{Energy spectra for a source scan data set with $r=9$\,mm {\it (left)} and a background data set {\it (right)}. The energy windows indicated are the $5\sigma$ peak region, in red, and the 500\,keV right-hand sideband, in blue. $n_{s, pk}$ is the sum of all events in the red solid-lined box and $n_{s, rh}$ is the sum of all the events in the blue solid-lined box. $n_{b, pk}$ and $n_{b, rh}$ are the sum of events in the red and blue dashed-line boxes, respectively.} 
+ \label{fig:eff_regions}
+\end{figure*}
+
+Below, the background data set is referred to by the subscript {\it b} and the alpha source scanning data set by the subscript {\it s}. The peak region is taken to be a $5\sigma_E$ window around the centroid of the alpha-energy Gaussian, and the sideband region is the 500\,keV region with minimum energy of $\mu_E+5\sigma_E$. Only a right-hand sideband is used, to avoid effects from the energy-degraded alpha events described in Sec.~\ref{sssec:outliers}. The peak region is referred to by the subscript {\it pk}, and the sideband region by the subscript {\it rh}.
+
+The following algorithm is repeated for each alpha scan data set for which we would like to calculate the efficiency:
+\begin{itemize}
+\item The expected spectral shape of the background events is calculated from a background run. To do this, the number of events in the peak region, $n_{b, pk}$, and the number of events in the right-hand sideband region, $n_{b, rh}$ are found. Each event total is divided by the width of its energy window. Their ratio is the number of events per keV expected in the peak region, given some number of events per keV in the sideband region.
+\item The number of events in the right-hand sideband of the source scan data set, $n_{s, rh}$ is found. It is normalized by the width of the sideband energy window, and then multiplied by the width of the peak energy window and the spectral shape ratio to give the number of background events per hour expected in the peak region. 
+\item This value is subtracted from the measured number of peak-region events in the alpha source scan data set, $n_{s, pk}$ to give the projected number of alpha events, $n_{\alpha}$. I.e., 
+$$ n_{\alpha} =  n_{s, pk}-n_{s, rh}\frac{n_{b, pk}}{n_{b, rh}}\frac{5\sigma_E}{500\,keV} $$
+\item The above steps are repeated after the DCR cut is applied to both the source and background runs to find the expected number of background events in the peak region of the source scan data set that would be removed by the cut. This value is subtracted from the total number of events cut in the peak region of the source data set to give the projected number of alpha events removed by the cut, $m_\alpha$. I.e.,
+ $$ m_{\alpha} =  m_{s, pk}-m_{s, rh}\frac{m_{b, pk}}{m_{b, rh}}\frac{5\sigma_E}{500\,keV} $$
+ where the $m_{i, j}$ are equivalent to the $n_{i, j}$ above, but measured after the DCR cut is applied. 
+\item The ratio $\frac{m_\alpha}{n_\alpha}$ is the alpha rejection efficiency in the source-scan data set. 
+\end{itemize}
+
+A derivation of the formula by which the uncertainties for these efficiencies are calculated is given in Appendix FIXME. 
+
+At positions with radii below 6\,mm for which the source is incident on the passivated surface, the alpha peak appears in a region of the energy spectrum that is dominated by gamma background events from environmental radioactivity and the materials of the cryostat itself. The alpha event rate is low, and these backgrounds are both high and highly variable. An additional complication comes from the broad energy distribution of the alpha events at these positions, as discussed in Sec.~\ref{ssec:E_obs}; to find an expected alpha event rate, we must understand the spectral shape over the entire range of relevant energies with high accuracy. 
+
+This implies that our approach of normalizing the background spectra to one another is of limited utility.  The resulting uncertainties from the estimate of the backgrounds dominate our expected alpha event rate. Without an accurate calculation of the expected number of alpha events, we cannot accurately cite a rejection fraction for the events. Therefore, measurements at these radii are not included in the average efficiency values for each DCR parameter. 
+
+Events incident on the point-contact itself are not expected to exhibit slow charge release, and are therefore expected to be relatively unaffected by the DCR cut. Data sets with the source beam incident on the point-contact are therefore also excluded from the average efficiency calculations. 
+
+The rejection efficiencies are calculated for each data set using the {\tt dcr90}, {\tt mjddcr90}, and {\tt dcrpzc90}, and {\tt dcrpzc99norm} parameters. The first three of these are set to retain 90\% of single-site calibration events, and the final cut is set to retain 99\% of calibration events. The results for each data set are shown in Fig.~\ref{fig:eff_allR}, and the average rejection efficiency values for each parameter are given in Table~\ref{tab:avgEff}. 
+
+The errors for the efficiency of each data set are large, due to the low alpha rate. They are particularly large at positions with large-magnitude negative radii, where the source beam is partially obscured. 
+
+Averaging the efficiency at all scanning positions, however, reduces the error sufficiently to show that the rejection efficiencies of the various DCR parameters, save for {\tt dcrpzc99norm}, are consistent with 99\%. This implies that 1\% of alpha events with the full expected energy (indicating that significant charge trapping has occurred) are not measurably re-releasing that charge on the time scale of digitization. The higher average efficiency of the normalized DCR parameter ({\tt dcrpzc99norm}), which is consistent with 100\%, suggests that the culprit may be varying noise in the system, which is corrected for by the use of this parameter. This is unsurprising, given the high noise (and particularly the high and varying levels of microphonic noise, due to the vacuum pump operation) in the TUBE scanning setup. 
+
+\begin{figure*}[]
+ \centering
+ \begin{subfigure}{.45\textwidth}
+ \includegraphics[width=1.\textwidth]{figs/dcrpzc_eff.png}
+ \caption{The DCR parameters that employ event-by-event pole-zero correction. Values for {\tt dcrpzc90} are in red, and those for {\tt dcrpzc99norm} are in blue.} 
+ \end{subfigure}
+  \begin{subfigure}{.45\textwidth}
+ \includegraphics[width=1.\textwidth]{figs/dcr_eff.png}
+ \caption{The DCR parameters that employ the linear projection method of pole-zero correction. Values for {\tt dcr90} are in red, and those for {\tt mjddcr90} are in blue.} 
+ \end{subfigure}
+ \caption{The alpha rejection efficiency of each DCR parameter, calculated for each data set with a source beam incidence position with $r>6$\,mm.}
+ \label{fig:eff_allR}
+\end{figure*}
+
+\begin{table}[]
+\begin{center}
+\begin{tabular}{l r r}
+DCR Param. & ~~$\varepsilon$ (\%), $|r|>6$\,mm \\  \hline
+{\tt dcr90} & 99.2$\pm$0.5  \\
+{\tt dcrpzc90} & 98.9$\pm$0.5  \\
+{\tt mjddcr90} & 99.1$\pm$0.5  \\
+{\tt dcrpzc99norm} &  99.7$\pm$0.4 \\
+\end{tabular}
+\caption{Average alpha rejection efficiencies for all evaluated DCR parameters.} \label{tab:avgEff}
+\end{center}
+\end{table}
 
 
 \section{Comparison to Models of Surface-Charge Collection}
