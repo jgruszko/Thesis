@@ -13,8 +13,7 @@
 \usepackage{xcolor}
 \usepackage{lipsum}
 \usepackage{gensymb}
-\definecolor{blue}{RGB}{50,0,255}
-\definecolor{orange}{RGB}{255,128,0}ls 	
+\definecolor{blue}{RGB}{50,0,255} 	
 \colorlet{blueh}{blue!30}
 \usepackage{fancyhdr}
 \usepackage{afterpage}
@@ -551,6 +550,28 @@ Data Set & $\alpha$ Pos. (mm) & $\mu$ (keV) & $\sigma$ (keV) & f$_{\tau}$ & $\ta
 \end{center}
 \end{table*}
 
+\subsubsection{Radial Dependence of Energy}\label{sssec:spec_fit}
+Using the mean energies at each position found in Sec.~\ref{sssec:Efits}, a spectral model describing the energy contributions of alpha contamination at a given position on the passivated surface can be constructed. Though it is slightly unnatural to consider the radial dependence of the energy, rather than the inverse, it will simplify the derivation of a full alpha energy spectrum for a given radial contamination model. Therefore we proceed with the former.
+
+\begin{figure}[]
+ \centering
+ \includegraphics[width=1.\columnwidth]{figs/RvsE_fit_wBoxes.png}
+ \caption{Radii of the source incidence position, plotted with respect to the energy of the resulting alpha peak. Only data sets for which a gaussian (or gaussian+low-energy tail) peak shape modeled the alpha peak are included in the fit. The boxes represent the range of energies for the data sets that could not be fit, given in Table~\ref{tab:E_ranges}. The passivated-surface radii (scans with $r\geq3$\,mm), are fit with a fourth-order polynomial in energy (in red), and the energies of the point-contact positions are averaged (in blue).} 
+ \label{fig:RvsE_fit}
+\end{figure}
+
+Plotting the radii of the measurements in which the source was incident on the passivated surface with respect to the centroid energies found at those radii, as in Fig.~\ref{fig:RvsE_fit}, and fitting to the fourth-order polynomial
+$$ r = aE^4 + 1.6 $$
+where $r$ is the source position radius, in mm, and $E$ is the energy of the resulting event, we find that the fit parameter $a = 5.50E-14\pm3E-16$, and the $\chi^2/N_{df}$ of the fit is 2.50.
+
+The constant component is set to be 1.6\,mm because this is the outer radius of the point-contact of PONaMa-1; the passivated surface energy function should not exhibit a radial dependence below this value. When the constant component is allowed to float in the fit, it fits to a value of $1.4\pm.2$\,mm, consistent with a radius of 1.6\,mm. Therefore, we fix this parameter to the model-driven value. 
+
+The choice of a fourth order polynomial was entirely driven by the observed spectral shape, and is not driven by any theoretical model. The goodness-of-fit is not improved by the addition of a quadratic component to the fitting function. If the polynomial of the fit is allowed to float, it fits to a value of $4.2\pm0.1$, and the $\chi^2/N_{df}$ of the fit is 2.44, only slightly improved from its previous value. Therefore, for the sake of simplicity, we fix the exponent to a value of 4.  
+
+Though the energy spans of events at the lowest scanning radii (where a peak could not be fit to the spectrum) were not included in the fit, their range of values roughly agrees with those given by the fitting function. The increase in the width of the energy peak at low radii found from the derived spectral shape is not as dramatic as that seen in the data; if they matched, the red fit line in Fig.~\ref{fig:RvsE_fit} would traverse the full length (in the energy-axis) of each box. This, and the imperfect goodness-of-fit, indicates that there is additional energy-broadening that is not captured by the derived spectral shape function. However, this simple function appropriately captures most of the relevant energy information. 
+
+To model the energies of alpha events on the point contact itself (at $r<1.6$\,mm), the mean energies of the 3 fits to the point-contact alpha peaks are averaged. Their average energy is $5323\pm3$\,keV. The energy at these radii is assumed to be independent of radius. 
+
 \subsubsection{Discussion}
 The energy of alpha events from the collimated source incident on the passivated surface of the detector is degraded at all radii, and is reduced far beyond the expected energy loss to a thin dead layer. Furthermore, the energy varies by up to a factor of 5 with the incident radius of the source. 
 
@@ -699,7 +720,7 @@ For each scanning position, we can find the slow component energy as a fraction 
 
 The alpha background events of interest to rare event searches like the \MJ\ \DEM\ are those with energies of over 1\,MeV. Given the typical PPC detector energy resolution of less than 5\,keV at these energies, a 2\% delayed charge effect, corresponding to 20\,keV, is easily observable. This implies that regardless of the source of the alpha background, and whether the alpha particle is degraded in energy before reaching the passivated surface, any event that has high enough energy to be a problematic background event also demonstrates a detectable delayed charge signature, provided its point of incidence is at at a radius greater than 6\,mm. 
 
-\subsubsection{Outlier Events}\ref{sssec:outliers}
+\subsubsection{Outlier Events}\label{sssec:outliers}
 When we plot a given alpha scan data set in the DCR vs. energy parameter space, as in Fig.~\ref{fig:outliers}, some fraction of outlier events that do not fall either in the alpha energy or DCR peak also appear. This implies that the Gaussian model of the peak position and shape (in both energy and DCR) does not fully describe all of the observed alpha events. Some events have both degraded energies and DCR values. 
 
 Significantly for our purposes, the fraction of the prompt energy that is collected as slow charge (i.e. the ratio of {\tt dcrpzc90}, in keV/ns and integrated over the duration of the waveform tail, to the energy) in these events appears to be constant, and is 2.9\%, identical to that of the undegraded events. This means that, as discussed in Sec.~\ref{sssec:DCRfit_disc}, these events can still be efficiently identified in the \nonubb\ ROI.
@@ -888,18 +909,123 @@ DCR Param. & ~~$\varepsilon$ (\%), $|r|>6$\,mm \\  \hline
 \end{center}
 \end{table}
 
-
 \section{Comparison to Models of Surface-Charge Collection}
 \subsection{Surface Drift of Electrons}
-\subsection{Surface Drift of Electrons and Holes}
+The original theoretical model for the DCR effect posited that slow surface-drift of electrons was responsible for the slow charge component, with holes being collected normally through the bulk \cite{Neutrino16}. Charge transport models in germanium \cite{Mullowney2012} suggest that charge carrier mobilities are 10 to 100 times slower for surface transport than for bulk transport. Given the overall lower mobility of electrons, and the lower weighting potential they experience over much of the detector surface (as in Fig.~\ref{fig:wp_z0}), we would expect that electrons would be much more susceptible to surface transport than electron holes. 
+
+This effect can be modeled using the {\tt fieldgen} and {\tt siggen} software packages by generating the fields in the detector with the addition of a small amount of charge deposited on the passivated surface. This creates drift paths that run perpendicular to the passivated surface in a narrow region near the surface. Events that occur in this skin depth, like alpha interactions, will have degraded energies and a DCR contribution (see Fig.~\ref{DCR_wf}). Electrons that reach the surface as assigned a slower drift speed, in this case a factor of 2\% of the bulk drift speed (check this with Susanne). 
+
+The radial dependence of energy, in this case, mimics the inverse of the electron weighting potential exactly, since the fraction of the signal carried by the electrons is missing at all radii (see Fig.~\ref{fig:sim_EvR_e}). Because the electron component of the pulse shape (which is the origin of the DCR signal, in this case) increases in strength at small radii, we would expect that the DCR effect would  be particularly large at radii very near to the point-contact radius. In general, it would be expected to decrease with increasing radius, as in Fig.~\ref{fig:sim_DCRvR_e}. 
+
+Given the observed radial dependence of energy and DCR, this model is not confirmed by the TUBE measurements. Though surface drift of electrons may be occurring, it is not the dominant effect observed. 
+
 \subsection{Passivated-Surface Trapping of Holes}
+An alternative model, in which the collection of the electron-holes is also impeded by the passivated surface layer effects, was developed. If there is a high concentration of bulk trapping centers in a thin layer near the passivated surface, as suggested by the direct measurements of trapping made in segmented germanium detectors ~\cite{Abt2017}, then some fraction of the electron-holes will be trapped in the bulk of the detector. Slow rerelease of these charges would lead to a DCR effect, in addition to the prompt signal from untrapped electron-holes. The rate of this rerelease would be temperature-dependent \cite{?}. Additionally, the electron fraction is completely or almost completely lost to trapping or slow surface transport in this model, which as in the surface-electron model, is likely given electrons' lower mobility. 
+
+Again, we model the resulting radial dependence of energy and the DCR parameter using {\tt siggen}. The electron contribution to the signal is completely turned off (assigned a drift speed of 1E-4 of the bulk speed), and a given fraction of the electron holes is delayed by convolving their signal with an exponential function with a time constant of 10\,$\mu$s. 
+
+If the hole trapping fraction is constant across the surface of the detector, the radial dependence of energy again mimics the shape of the inverse of the weighting potential (check this?), but a larger fraction of the incident energy is lost at all radii. The radial dependence of the DCR, on the other hand, exhibits the opposite behavior as in the surface-electron model, decreasing dramatically at small radii. The electron-hole contribution to the signal drops dramatically at small radii (as seen in the weighting potential, Fig~\ref{fig:wp_z0}); since the DCR effect in this case scales with that fraction, it also disappears at small radii. 
+
+The energies observed in the TUBE scan of PONaMA-1, and the radial dependence of the DCR parameters at near-point-contact positions (where instability effects are reduced), support this model for the surface alpha charge collection. Further {\tt siggen} simulations should answer the question of whether a constant trapping fraction is sufficient to give the observed radial dependence of energy, or if a radial dependence of the charge trapping is needed to reproduce the effect observed in these measurements. (Add these if possible.)
+
+\subsection{Surface Drift of Electrons and Holes}
+A final possibility for the behavior of charges near the passivated surface of the detector is that both electrons and electron-holes are exhibiting surface drift. Since the holes would drift more quickly, they would therefore dominate the DCR. Thus, the radial dependence of energy and DCR would be identical to that predicted by the bulk-trapping model. Alpha source scans at varying detector temperatures would distinguish between these two models. The DCR parameter values in this model would be stable under temperature changes, since surface drift speeds are unaffected by temperature \cite{Mullowney2012?}. In the bulk-trapping model, an increase in temperature would lead to a corresponding increase in the DCR values, since trapped charges would be rereleased more quickly. 
 
 \section{Implications for the \MJ\ \DEM\ }
-\subsection{Overall DCR Efficiency}
+\subsection{Alpha Energy Spectrum}\ref{ssec:alpha_model}
+To create a realistic alpha energy spectrum, the radial dependence of the energy, derived in Sec.~\ref{sssec:spec_fit} must be integrated with respect to position for a given model of the alpha contamination. Below, we derive the expected energy spectra for two potential models of contamination: a uniform-distribution model, and one in which the presence of alpha emitters falls with radius.  
+
+Also needed is the fraction describing the relative deadness of the point-contact region, compared to the passivated surface. The alpha rate at unobscured scanning positions incident on the passivated surface, derived in Sec.~\ref{ssec:alpha_rate} is constant, with an average of 64.6\,events/hr. 
+
+The peak in the data sets with the source fully incident on the point-contact, on the other hand, shows a substantially reduced event rate, likely due to the thicker dead-layer in this region. Combining all data sets taken with the source incident at $r=-0.75$\,mm, we find an average rate of $3.9\pm.3$\,events/hr. The full-energy peak fraction $f_{pk}$ is then 0.06. This should be considered a lower bound, since the point-contact is partially obscured by the contact pin in these measurements, reducing the event rate. Depending on the source of alpha background events, the obstruction of the point-contact region by the contact-pin in a low-background experiment could similarly reduce the rate, or leave it unchanged (if the contamination lay between the point contact and the detector surface). 
+
 \subsubsection{Uniform-distribution Model}
+The uniform-distribution model of alpha contamination assumes a constant distribution $\sigma$ of alpha-emitters across the entire detector surface, including the point-contact region. This model mimics the distribution that would be expected if, for instance, the detector were exposed to $^{226}Rn$ during fabrication or construction, leading to a uniform distribution of $^{210}Po$ decays on the surface. This model would also be appropriate for the case of a uniform distribution of alpha emitters on the surfaces of copper parts, since the crystal mounting plate, the copper part that is closest to the passivated surface in the \MJ\ detector mount design, is roughly equidistant from all points on the passivated surface and point contact. 
+
+Beginning with the contamination model:
+$$n(r, \theta) = \sigma r \mathrm{d}r \mathrm{d}\theta. $$
+we split it into point-contact and passivated surface terms and change variables to give a rate in terms of energy. We will integrate over the entire point contact region to derive a rate for this contribution, since the energy is independent of radius in this region, and leave the passivated-surface term in terms of energy:
+$$n(E)\mathrm{d}E =  f_{pk}\delta(E-E_{pk})\sigma \int_{0}^{r_p} \int_{0}^{2\pi}r{d}r \mathrm{d}\theta \\
++ \sigma \int_{0}^{2\pi}r(E)\mathrm{d}r \mathrm{d}\theta 
+$$
+Where $f_{pk} = .06$ is the deadness fraction of the point contact derived above, $E_{pk}= 5323$\,keV is the average energy of the point-contact alpha events, and $r_p = 1.6$\,mm is the point contact radius. Substituting the radial dependence on energy (found in Sec~\ref{sssec:spec_fit}):
+\begin{equation}
+\begin{split}
+n(E) = f_{pk}\delta(E-E_{pk})\sigma \int_{0}^{r_p} \int_{0}^{2\pi}r{d}r \mathrm{d}\theta \\
++  \Theta(E_{max}-E)\int_{0}^{2\pi}\sigma(aE^4 + r_p)(4aE^3)\mathrm{d}E \mathrm{d}\theta
+\end{split}
+\end{equation}
+\vspace{1cm}
+where $a = 5.50E-14$ is the scaling parameter from the fit and $E_{max} = \sqrt[4]{\frac{r_{max}-r_p}{a}} = 4746\mathrm{keV}$. 
+Integrating with respect to $\theta$:
+\begin{equation}
+\begin{split}
+n(E)dE = \pi r_p^2 f_{pk}\sigma\delta(E-E_{pk}) \\
++ 8\pi \sigma a (aE^7 + r_pE^3) \mathrm{d}E
+\end{split}
+\end{equation}
+
+Finally, this energy spectrum should be convolved with the spectral peak shape function at each energy. Since the distribution of passivated surface events is very broad compared to the resolution of the energy peaks, this will have little effect on the shape of the passivated surface contribution. The delta function of the point-contact events, on the other hand, will become a Gaussian+low-energy tail peak like those found in the fits of point-contact events. We apply the convolution to only the point-contact events, and set $\sigma$ to 1, to plot the spectrum in Fig.~\ref{fig:spec_shape}.
+ 
 \subsubsection{Point-contact Contamination Model}
+The other contamination model studied is one in which the alpha event rate falls as $1/r^2$ across the passivated surface of the detector. This model mimics the distribution that would be expected for a point-source alpha emitter, centered at or above the point-contact of the detector. Possible sources of such a distribution in the \MJ\ \DEM\ would be contamination of the contact pin or of the PTFE bushing that holds it in place. 
+
+To avoid a divergence at $r=0$, we assume the contamination on the point-contact itself is uniform, and matches the contamination at the boundary of the point-contact region. 
+
+In this case, the contamination model is:
+$$n(r, \theta)=
+\begin{cases}
+\frac{\sigma}{r_p^2} r(E) \mathrm{d}r \mathrm{d}\theta, r<r_p \\
+\frac{\sigma}{r(E)^2} r(E) \mathrm{d}r \mathrm{d}\theta, r>r_p
+\end{cases}
+$$
+Proceeding as before, the spectral shape is:
+\begin{equation}
+\begin{split}
+n(E)dE = \pi f_{pk}\sigma\delta(E-E_{pk}) \\
++ 8\pi \sigma a \frac{E^3}{aE^4+r_p} \mathrm{d}E
+\end{split}
+\end{equation}
+Note that the point-contact contribution is identical as in the uniform contamination model, save for the numerical factor of $1/r_p^2$. Again, we convolve the delta function with the appropriate peak shape and set $\sigma$ to 1 to plot the predicted spectrum, in Fig.~\ref{fig:spec_shape}. 
+
+\begin{figure}[]
+ \centering
+ \includegraphics[width=1.\columnwidth]{figs/spec_shape.png}
+ \caption{The predicted energy spectra for the uniform (in red) and point-contact (in blue) contamination models.} 
+ \label{fig:spec_shape}
+\end{figure}
+
+One major caveat that should be taken into account is that this predicted spectral shape does not account for the radial dependence of the alpha particle's incidence angle. Though that would have a minor effect in the uniform contamination model, where most alphas would penetrate normal or nearly normal to the passivated surface, the point-contact contamination model would have a strong radial dependence of incidence angle, with primarily large-incidence-angle scatters occurring at large-radius positions. These events would likely have less energy at a given radius than those measured here, since they would traverse more of the high charge-trapping near-surface region. This would create a large enhancement in the low energy portion of the spectrum, and a corresponding reduction at the high energy portion. Future measurements using the TUBE cryostat, taken at higher alpha incidence angles, would allow a complete spectral model to be constructed.
+
+Another caveat is that this spectral shape has a dependence on the radii of the detector and the point contact. Though PONaMA-1 is a typical detector in these respects, the detectors operating in the \MJ\ \DEM\ vary in both of these dimensions. 
 
 \subsection{Projections of $\alpha$ Contamination in the \MJ\ \DEM\ Spectrum}
+\subsubsection{Modifications to the Spectral Model}
+The constructed alpha spectra are scaled to the energy of the $^{241}$Am alpha decay. To apply it to the \MJ\ \DEM\ data, we must rescale it to match the energy of the particle emitted by $^210$Po, our most significant expected alpha contaminant. The energy of that decay is 5.304\,MeV, as opposed to $^{241}$Am's most probably decay of 5.485\,MeV. 
+
+Given the charge-trapping model for alpha interactions that we have developed, it is most appropriate to simply rescale the energy in the passivated surface spectral shape function by the ratio of the two energies, so $E' = \frac{5.305}{5.485}E$.
+
+The point-contact energy function, on the other hand, is best understood as charge loss to a dead layer, which reduces the peak energy by a fixed quantity, independent of the incident alpha energy. Therefore we shift this function by the difference in the energies (180\,keV), rather than applying a scaling factor. 
+
+To account for the range in radii of the \MJ\ detectors, we allow the passivated surface spectral shape function to extend to a maximum energy equal to the projected energy of the point-contact alpha events (in this case, 5124\,keV). 
+
+\subsubsection{Fitting to the \MJ\ \DEM\ Spectrum}
+Comparing the projected alpha spectral models to the high-energy spectra in the \MJ\ \DEM\, we find several things of note. To begin with, the uniform contamination model fits the observed spectrum far worse than the point-contact contamination model. 
+
+In the highest-energy cluster of events, we that the energy distribution is broader than the single peak observed in PONaMa-1. Given the likely variation in the dead layer of different detectors, and the likely variation in the incidence angle of alpha particles observed, this is not unexpected. 
+
+Fitting the passivated-surface spectrum to all single-site events with energies between 2700 and 5124\,keV, and then scaling the point-contact contribution to the predicted amplitude, as in Fig.~\ref{fig:mjSpec_fit}, we see that the spectral fit function we derived has several important flaws. There is a large excess of events at low energies (below 3\,MeV), and fewer events than expected above 3.5\,MeV. This matches our prediction of the effects of varying background incidence angles under the point-contact contamination model. 
+
+The predicted relative fraction of events incident on the point-contact underestimates the high-energy peak rate significantly. This may be due to the obstruction of the point-contact region by the contact pin in the TUBE measurements, as discussed in Sec.~\ref{ssec:alpha_model}. The contact pins used in the \MJ\ \DEM\ detector mounts have smaller radii than that used in the TUBE detector mount, so the obstruction should be less; however, the difference seen is of over an order of magnitude, suggesting that some other factor is responsible for the excess.
+
+These results, both the preference for the point-contact contamination model and the problems with that model's fit to the data, suggest that the alpha background events seen in the \MJ\ \DEM\ are likely associated with some source which is localized near the point-contact. Given the large excess over the model of events incident on the point-contact itself, the contact pin is an interesting potential culprit; alpha particles originating there would have completely unobstructed paths to the point contact region. 
+
+\begin{figure}[]
+ \centering
+ \includegraphics[width=1.\columnwidth]{figs/fitMJspec_full.png}
+ \caption{The high-energy spectrum from the \MJ\ \DEM\, data sets 0-5, with muon, data cleaning, single-site, and multiplicity cuts applied, in blue. The point-contact contamination model for passivated surface events (in red) was fit to the data, and the predicted scaling was applied to the point-contact peak shape model.} 
+ \label{fig:mjSpec_fit}
+\end{figure}
 
 \section{Future Work}
 
