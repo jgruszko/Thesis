@@ -42,6 +42,7 @@
 \documentclass [11pt, proquest] {/Users/jgruszko/Documents/Thesis/Template/uwthesis}[2015/03/03]
 
 \usepackage{graphicx}
+\usepackage{amsmath}
  \usepackage{caption}
  \usepackage{subcaption}
  \captionsetup{compatibility=false}
@@ -56,8 +57,44 @@
 
 % ==========   Local defs and mods
 %
-\include{LocalDefs} 
+\usepackage{lineno}
+\usepackage{longtable}  
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb,bbold,bm}
+\usepackage{epstopdf}
+\usepackage{xcolor}
+\usepackage{lipsum}
+\usepackage{gensymb}
+\definecolor{blue}{RGB}{50,0,255} 	
+\colorlet{blueh}{blue!30}
+\usepackage{fancyhdr}
+\usepackage{afterpage}
+\usepackage{siunitx}
+\usepackage{booktabs}
+\usepackage{subcaption}
+\usepackage{physics}
+\usepackage{rotating}
+\usepackage{xr}
 
+\externaldocument{Ch1}
+\externaldocument{Ch2}
+\externaldocument{Ch3}
+\externaldocument{Ch5}
+\externaldocument{Ch6}
+
+\include{LocalDefs} 
+\def\ppc{P-PC}  
+\def\MJ{{\sc Majorana}}             %Majorana project name
+\def\DEM{{\sc Demonstrator}}             %Demonstrator in small caps
+\def\thttt{$^{232}\mathrm{Th}$}
+\def\thtte{$^{228}\mathrm{Th}$}
+\def\utte{$^{238}\mathrm{U}$}
+\def\am{$^{241}\mathrm{Am}$}
+\def\po{$^{210}\mathrm{Po}$}
+\def\nonubb{$\beta\beta(0\nu)$}
+\def\twonubb{$\beta\beta(2\nu)$}
 
 
 \begin{document}
@@ -71,13 +108,16 @@
  
 % ========== Chapter 1
 \include{Ch1}
- 
+\include{Ch2}
+\include{Ch3}
+ \include{Ch5}
+ \include{Ch6}
 %
 % ==========   Bibliography
 %
 
 \bibliographystyle{plain}
-\bibliography{/Users/jgruszko/Documents/Thesis/Bib/bib_v1.bib}
+%\bibliography{/Users/jgruszko/Documents/Thesis/Bib/bib_v1.bib}
 %
 % ==========   Appendices
 %
