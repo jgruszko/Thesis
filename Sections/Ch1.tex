@@ -273,23 +273,60 @@ A controversial claim of observed $0\nu\beta\beta$ in \iso{76}{Ge} was published
 
 Additional low-background techniques, developed for the \MJ\ \DEM, should allow the next generation of experiments is to search the entire inverted-hierarchy region, which requires 1 tonne of source material, given reasonably achievable backgrounds. See Fig.~\ref{IH_Discovery}. The LEGEND Collaboration, formed in October 2016, plans to pursue this via a scaled approach, building first a 200\,kg-scale detector, and then moving to a tonne-scale detector.    
 
-\begin{figure}[t]
-\hfil \includegraphics[width = \textwidth]{/Users/jgruszko/Documents/Thesis/Plots/Ch1/IH_Discovery.png} \hfil
+\begin{figure}[]
+\includegraphics[width = \textwidth]{/Users/jgruszko/Documents/Thesis/Plots/Ch1/IH_Discovery.png}
 \caption{The background requirements and exposure needed for $3\sigma$ discovery-level observation of $0\nu\beta\beta$ decay, assuming the inverted hierarchy. The various red lines indicate the increase in sensitivity with increasing exposure for different background levels, and the blue lines indicate the bottom of the inverted hierarchy band in Fig.~\ref{fig:0nBBrate} under various nuclear matrix element calculation approaches. Plot courtesy of Jason Detwiler.}
 \label{IH_Discovery}
 \end{figure}
 
 \section{The \MJ\ \DEM}\label{sec:MJD}
+\subsection{The \DEM\ Apparatus}
+The \MJ~\MJDemo, the $0\nu\beta\beta$ decay search that is the focus of much of this thesis, is an experiment made up of 44.8\,kg of PPC detectors. 29.7\,kg of this mass is enriched to 88\% \iso{76}{Ge}, and 15.1\,kg is in natural-abundance detectors. In addition to making a measurement of the \nonubb\ half-life comparable to that of other currently-operating experiments, its main experimental goals are:
+\begin{itemize}
+\item to demonstrate backgrounds low enough to justify construction of a tonne-scale experiment
+\item to establish the feasibility of and techniques needed to construct and field modular arrays of Ge detectors
+\item to search for additional physics beyond the Standard Model
+\end{itemize}
+The \DEM\ established a background goal of 3\,\cpRty\, assuming a 4\,keV ROI at the \nonubb\ Q-value. Accounting for self-shielding effects, this rate scales to 1\,\cpRty in a tonne-scale experiment, the maximum allowable background needed to fully explore the IH region with such an experiment. 
 
-The \MJ~\MJDemo, the $0\nu\beta\beta$ decay search that is the focus of much of this thesis, is an experiment made up of 40 kg of PPC detectors. 30 kg of this mass is enriched to 87\% \iso{76}{Ge}, the double-beta decay parent isotope, and 10 kg is in natural-abundance detectors. The \MJDemo~uses a staged, modular approach to construction, making its techniques naturally scalable to a tonne-scale experiment. 
+The \MJDemo~uses a staged, modular approach to construction (as seen in Fig.~\ref{fig:MJ_modular}), making its techniques naturally scalable to a tonne-scale experiment. All of the detectors in the \DEM are \ppc\ HPGe detectors, produced by ORTEC and Canberra. The detectors themselves are discussed in Ch~\ref{ch:HPGe_det}. Each of the 58 detectors is placed in a low-mass copper mount that holds the detector and a low-mass front-end (LMFE) board that provides the first stage of signal amplification. The mount provides contact to the detector for thermal cooling, high-voltage biasing, and signal readout. These detector mounts are stacked into ``strings" of three to five detectors, and each string is suspended from the cold-plate of a copper cryostat. Seven strings are housed in each of the two \MJ\ cryostats. Each cryostat has its own cooling and vacuum system; the cryostat together with its dedicated systems is called a ``module." 
 
-The largest advantage of PPCs for $0\nu\beta\beta$ decay searches is in their pulse shape characteristics. Unlike in coaxial detectors, the distance that must be traveled by a charge cloud varies depending on where in the detector it is produced, as is clear in Fig.~\ref{PPCField}. Therefore, multi-site events, in which a $\gamma$ ray deposits energy at multiple points in the crystal, have longer rise times for a given energy, and can be cut to reduce backgrounds. 
-
-\begin{figure}[h]
-\hfil \includegraphics[width = .60\textwidth]{/Users/jgruszko/Documents/Thesis/Images/Ch1/PPCField.jpg} \hfil
-\caption{A simulation of the weighting potential inside a PPC shows that charge drift paths (in white) are long and highly position-dependent. \cite{Aalseth2011}}
-\label{PPCField}
+\begin{figure}[t]
+\centering
+\includegraphics[width = \textwidth]{/Users/jgruszko/Documents/Thesis/Images/Ch1/MJD_design.pdf}
+\caption{The \MJ\ \DEM\ uses a modular design approach. The \ppc\ detector shown is similar, though not identical, to those used in the \DEM. Photos by James Loach and Matt Kapust.}
+\label{fig:MJ_modular}
 \end{figure}
 
-	- LEGeND
+The two cryostats are inserted in a compact Cu and Pb shield and surrounded by a nitrogen-purged radon exclusion enclosure. Plastic scintillator veto panels surround the shield, detecting through-going cosmic muons, and and the modules are enclosed in high density polyethylene (HDPE) shielding to limit neutron backgrounds. The inner layers of the poly shielding are made of borated HDPE to provide further neutron capture. See Fig.~\ref{MJD_shield}. The \DEM\ is housed at the Davis Campus, at the 4850' level of the Sanford Underground Research Facility (SURF) \cite{MJD2014}. 
 
+\begin{figure}[t]
+\centering
+\includegraphics[height = 3in]{/Users/jgruszko/Documents/Thesis/Images/Ch1/MJD_shield.png}
+\caption{A diagram of the \DEM\ showing the placement of the two cryostats, one of the two modules, the veto panels, and the shielding structure. The inner copper shield is made from underground electroformed copper, with the outer copper shield made from OFHC commercial copper. Diagram taken from \cite{MJD2014}.}
+\label{fig:MJ_modular}
+\end{figure}
+
+The \DEM\ relies on ultra-low-background material selection and construction for its background reduction approach, with passive shielding to limit radioactive background events from the surrounding environment. The \DEM's main innovations in this area are the use of ultra-clean underground electroformed copper and the development of extremely low-background and low-noise front-end electronics. 
+
+Electroforming copper effectively removes impurities, limiting the U and Th chain contamination of the material. By performing the electroforming and machining of the parts underground, the material's exposure to cosmic rays is also minimized. This prevents the formation of $^{60}$Co, another problematic long-lived isotope. The over-2000\,kg of copper made underground by the \MJ\ Collaboration has U and Th chain contamination levels of less than 0.1\,$\mu$Bq/kg each. This upper limit is better than the 0.3\,$\mu$Bq/kg goal set by the Collaboration \cite{MJD_assay}. This clean copper is used for almost all the parts found in the \DEM, from the mounts holding each detector to the cryostats and inner shielding layer. The use of this material, along with extensive clean material selection and assay programs, has led to an assay-based prediction of $< 3.5$ \cpRty\ of background events in the \DEM \cite{MJD_assay}. 
+
+The LMFE developed for the \DEM\ has excellent noise performance \cite{MJD2014} while maintaining high radiopurity. This allows the LMFE to be mounted directly onto each detector, reducing capacitative noise in the system, and improving the \DEM's overall noise performance. In the search for \nonubb, there are two main benefits to this design. First of all, the extremely good resolution of the \DEM\ allows the use of a 3\,keV ROI \cite{EnergyUnidoc}, rather than the planned 4\,keV window. This reduces the background for \nonubb\ detection by 75\% for an equivalent contamination level in the experiment. Second of all, the fast rise-times and low noise of the LMFE and other developed electronics allow for good performance of multi-site event discrimination, described in Ch.~\ref{ch:HPGe_det}. 
+
+The electronics design and low backgrounds of the \DEM, even at low energies, also allow the \MJ\ Collaboration to pursue additional BSM physics observations. In the search for low-mass WIMP dark matter candidates, solar axion scattering off of electrons, and a slew of other proposed new physics, the \DEM\ has shown sensitivity comparable to that of many dedicated experiments \cite{MJD_WIMP2017}. The \DEM's sensitivity to these processes will continue to increase as its exposure increases and as the analysis techniques used for near-threshold events are improved. 
+
+\subsection{Construction of the \DEM}
+To maintain material cleanliness, the \DEM\ was constructed in a class-1000 cleanroom. All parts internal to the shielding were placed under nitrogen purge immediately after surface cleaning to reduce Rn implantation. The detectors themselves were only exposed in nitrogen-purged spaces, and never to the air of the underground laboratory. The assembly of all elements internal to the cryostat, where the materials have line-of-site exposure to the detectors, was conducted in a class-10 continuously-purged glovebox. 
+
+These efforts reduces the chance of the detectors being exposed to humidity, which increases their leakage current, degrading their resolution, and of all the materials being contaminated with U- and Th-containing dust, increasing backgrounds in the \DEM. The use of nitrogen-purged environments reduces the chance of contamination by  $^{226}$Rn or other isotopes in its decay chain, which pose problematic backgrounds for \nonubb\ detection. This source of background events is the focus of this thesis. 
+
+To ensure that cleanliness standards were maintained and that the many detectors and strings were assembled in a repeatable and reliable way, extensive administrative controls were developed, as described in Appendix~\ref{app:QA}. These work-logging and quality control procedures allowed the \DEM\ to be successfully assembled by a rotating workforce, with many new researchers being trained in construction over the course of more than two years. Every part and procedure used in the experiment was also tracked in the Majorana Parts Tracking Database \cite{MJD_PTDB}, allowing the origin of any observed backgrounds to be investigated. 
+
+\subsection{Operations}
+The \DEM\ operations took a phased approach, allowing the start of low background data taking with Module 1 while Module 2 was being assembled. Module 1 began operations in May 2015, with Module 2 beginning data taking in May 2016. The \MJ\ \DEM's official transition to operations occurred in March 2017. 
+
+The \DEM\ uses a statistical blinding approach; blinded data-taking has been ongoing since Dec. 31, 2015. The results discussed in Ch.~\ref{ch:MJ_rates} are from the open part of data sets 0 through 4, summarized in Table~\ref{tab:DS_summary}. 
+
+Initial results from the \DEM, covering only the open portions of data sets 0 and 1, were reported at the XXVII International Conference on Neutrino Physics and Astrophysics in 2016 \cite{MJD_Nu16}. Using a background estimate window of 400\,keV surrounding $Q_\beta\beta$, these results reported a background index of $7.5^{+4.5}_{-3.4}$E-3\,\cpKkgy, corresponding to $23^{+13}_{-10}$\,\cpRty\ in a 3.1\,keV ROI.
+
+Recent simulations by the \MJ\ Collaboration have shown that the 400\,keV background estimate window used to report these results includes several expected gamma peaks from background sources, and over-estimates the flat background rate in the \nonubb\ ROI. The change to a 350\,keV window that excludes these peaks, along with other improvements in analysis and the \DEM's increased exposure, result in a background index of $2.7^{+4.0}_{-1.7}$E-3\,\cpKkgy. This corresponds to $8.1^{+12.0}_{-5.1}$\,\cpRty\ in the now-appropriate 3.0\,keV ROI \cite{EnergyUnidoc}. These preliminary results, which are discussed in Ch.~\ref{ch:MJ_rates}, are consistent to within 1$\sigma$ with the \DEM\ assay- and simulation-based upper limit of the expected backgrounds. 
