@@ -30,8 +30,8 @@ The DCR parameter is found by first calculating the slope of the waveform tail f
 
 \begin{figure}[h]
  \centering
- \includegraphics[height=3in]{/Users/jgruszko/Documents/Thesis/Plots/Ch3/DCR_step1}
- \caption[A sample MJD waveform, with indicated tail slope measurement points]{A sample MJD waveform. The ADC values are averaged in each of the two shaded regions. The slope between those average points is taken to be $\Delta$.} 
+ \includegraphics[height=2in]{/Users/jgruszko/Documents/Thesis/Plots/Ch3/DCR_step1}
+ \caption[A sample MJD waveform, with indicated tail slope measurement points]{A sample MJD waveform. The ADC values are averaged in each of the two shaded regions. The slope between those average points is taken to be $\delta$.} 
  \label{fig:DCR_step1}
 \end{figure}
 
@@ -81,35 +81,45 @@ The non-linearity effect will change the spectral shape of the remaining events,
 \subsection{Optimization}
 As described in \cite{Detwiler_sensitivity}, the sensitivity to the \nonubb\ decay half-life, in the presence of backgrounds, is proportional to $\frac{\epsilon}{\sqrt{N_b}}$, where $\epsilon$ is the cut acceptance and $N_b$ is the number of background events. In this case, the energy range used to find the number of background events is the disjoint 350\,keV window around the \nonubb\ Q-value that is used to estimate the background level in the ROI. The event energies included those from 1950 to 2350\,keV, with the exception of the regions from 2094 to 2127\,keV and 2195 to 2212\,keV, where the \MJ\ background model predicts the presence of gamma background peaks. 
 
-An optimization study was conducted using the open data from \MJ\ \DEM\ data sets 0-4. See Table.~\ref{tab:DS_summary} for descriptions and exposures of each data set.  :Only enriched detectors were included in the optimization study, since these detectors dominate the \DEM 's sensitivity to \nonubb . 
+An optimization study was conducted using the open data from \MJ\ \DEM\ data sets 0 to 4. See Table.~\ref{tab:DS_summary} for descriptions and exposures of each data set. Data set 5 was excluded from this study due to the known elevated noise rate in its first half, which distorts the DCR distribution and reduces the effectiveness of the analysis. Only enriched detectors were included in the optimization study, since these detectors dominate the \DEM 's sensitivity to \nonubb . 
 
-The sensitivity was evaluated at a range of DCR calibration-event acceptance levels, varying from 85\% to 100\%. See Table~\ref{tab:DCR_opt}. Based on this study, the DCR acceptance level was chosen to be 99\%. Higher acceptance levels are being studied for multi-sampled data, since the longer duration of the waveform tail leads to a more-sharply peaked DCR distribution for bulk events. See Figure~\ref{fig:DS2_DS3_comparison}. 
+For this study, the sensitivity was evaluated at a range of DCR calibration-event acceptance levels, varying from 90\% to 100\%. See Table~\ref{tab:DCR_opt}. Based on the results, the DCR acceptance level was chosen to be 99\%. 
 
-\begin{table}[h]
+Higher acceptance levels are being considered for multi-sampled data, since the longer duration of the waveform tail leads to a more-sharply peaked DCR distribution for bulk events. See Figure~\ref{fig:DS2_DS3_comparison}. Though the open exposure in this data set is low, and higher statistics are needed to make a definitive recommendation, studies of DS 2 suggest that a 99.9\% acceptance DCR cut may be the optimal choice for multi-sampled data. Acceptances over 99\% were also studied in DS 0-1 and 3-4 and were found to be suboptimal. 
+
+\begin{table}[]
 \centering
-\begin{tabular}{l l l l l l}
-DS & $\epsilon$ & N$_b$ (all) & $\frac{N_{b}}{\epsilon}$ (all) & N$_b$ (enr.) & $\frac{N_{b}}{\epsilon} $(enr.) \\ 
-           0 &   100 &                     88 &             1.07e-01$\pm$5.33e-02 &                   78 &             1.13e-01$\pm$5.66e-02 \\
-             &   99.9 &                     34 &             1.71e-01$\pm$8.57e-02 &                   29 &             1.86e-01$\pm$9.28e-02 \\
-             &   99.5 &                     29 &             1.85e-01$\pm$9.24e-02 &                   25 &             1.99e-01$\pm$9.95e-02 \\
-             &     99 &                     17 &             2.40e-01$\pm$1.20e-01 &                   13 &             2.75e-01$\pm$1.37e-01 \\
-             &     98 &                     15 &             2.53e-01$\pm$1.27e-01 &                   11 &             2.95e-01$\pm$1.48e-01 \\
-             &     95 &                     15 &             2.45e-01$\pm$1.23e-01 &                   11 &             2.86e-01$\pm$1.43e-01 \\
-             &     90 &                     15 &             2.32e-01$\pm$1.16e-01 &                   11 &             2.71e-01$\pm$1.36e-01 \\
-             &     85 &                     15 &             2.19e-01$\pm$1.10e-01 &                   11 &             2.56e-01$\pm$1.28e-01 \\
-          \hline
-          1 &    100 &                     45 &            1.491e-01$\pm$7.454e-02 &                   42 &            1.543e-01$\pm$7.715e-02 \\
-            &    99.9 &                      9 &            3.330e-01$\pm$1.665e-01 &                    6 &            4.078e-01$\pm$2.039e-01 \\
-            &    99.5 &                      7 &            3.761e-01$\pm$1.880e-01 &                    4 &            4.975e-01$\pm$2.487e-01 \\
-            &      99 &                      7 &            3.742e-01$\pm$1.871e-01 &                    4 &            4.950e-01$\pm$2.475e-01 \\
-            &      98 &                      7 &            3.704e-01$\pm$1.852e-01 &                    4 &            4.900e-01$\pm$2.450e-01 \\
-            &      95 &                      6 &            3.878e-01$\pm$1.939e-01 &                    3 &            5.485e-01$\pm$2.742e-01 \\
-            &      90 &                      6 &            3.674e-01$\pm$1.837e-01 &                    3 &            5.196e-01$\pm$2.598e-01 \\
-            &      85 &                      6 &            3.470e-01$\pm$1.735e-01 &                    3 &            4.907e-01$\pm$2.454e-01 \\
-
-
+\begin{tabular}{l l | l l l l}
+DS &  $\epsilon$ (\%) & $N_{b}$ (counts) & $\frac{N_{b}}{\epsilon}$ (arb.) & $N_{b, enr}$ (counts) &$\frac{N_{b, enr}}{\epsilon}$ (arb.) \\    
+\hline
+0 &                  100 &        79 &             1.13e-01$\pm$5.63e-02 &                   69 &             1.20e-01$\pm$6.02e-02 \\
+ &                   99 &        14 &             2.65e-01$\pm$1.32e-01 &                   10 &             3.13e-01$\pm$1.57e-01 \\
+ &                   95 &        14 &             2.54e-01$\pm$1.27e-01 &                   10 &             3.00e-01$\pm$1.50e-01 \\
+ &                   90 &        14 &             2.41e-01$\pm$1.20e-01 &                   10 &             2.85e-01$\pm$1.42e-01 \\
+\hline
+1 &                  100 &      49 &             1.43e-01$\pm$7.14e-02 &                   46 &             1.47e-01$\pm$7.37e-02 \\
+ &                   99 &       6 &             4.04e-02$\pm$2.02e-02 &                    3 &             5.72e-02$\pm$2.86e-02 \\
+ &                   95 &       6 &             3.88e-02$\pm$1.94e-02 &                    3 &             5.48e-02$\pm$2.74e-02 \\
+ &                   90 &       6 &             3.67e-02$\pm$1.84e-02 &                    3 &             5.20e-02$\pm$2.60e-02 \\
+\hline               
+2 &                  100 &      7 &             3.78e-01$\pm$1.89e-01 &                    6 &             4.08e-01$\pm$2.04e-01 \\
+ &                   99.9 &       0 &                  inf$\pm$inf &                    0 &                  inf$\pm$inf \\
+ &                   99.5 &       0 &                  inf$\pm$inf &                    0 &                  inf$\pm$inf \\
+ &                   99 &       0 &                  inf$\pm$inf &                    0 &                  inf$\pm$inf \\
+ &                   95 &       0 &                  inf$\pm$inf &                    0 &                  inf$\pm$inf \\
+ &                   90 &       0 &                  inf$\pm$inf &                    0 &                  inf$\pm$inf \\
+\hline              
+3 &                  100 &     25 &             2.00e-01$\pm$1.00e-01 &                   21 &            2.18e-01$\pm$1.09e-01 \\
+ &                   99 &      2 &             7.00e-01$\pm$3.50e-01 &                    0 &                  inf$\pm$inf \\
+ &                   95 &      2 &             6.72e-01$\pm$3.36e-01 &                    0 &                  inf$\pm$inf \\
+ &                   90 &      2 &             6.36e-01$\pm$3.18e-01 &                    0 &                  inf$\pm$inf \\
+\hline
+4 &                  100 &     17 &             2.43e-01$\pm$1.21e-01 &                   16 &             2.50e-01$\pm$1.25e-01 \\
+ &                   99 &      1 &             9.90e-01$\pm$4.95e-01 &                    0 &                  inf$\pm$inf \\
+ &                   95 &      1 &             9.50e-01$\pm$4.75e-01 &                    0 &                  inf$\pm$inf \\
+ &                   90 &      1 &             9.00e-01$\pm$4.50e-01 &                    0 &                  inf$\pm$inf \\
 \end{tabular}
- \caption{DCR optimization study in DS 1.} 
+ \caption[DCR optimization studies for the \DEM ]{DCR optimization studies in DS 0 to 4 show that the sensitivity of the cut is optimized at 99\%. Results in DS2 suggest that higher acceptances, up to 99.9\%, may be optimal when multi-sampling is used.} 
  \label{tab:DCR_opt}
 \end{table}
 
@@ -121,19 +131,6 @@ DS & $\epsilon$ & N$_b$ (all) & $\frac{N_{b}}{\epsilon}$ (all) & N$_b$ (enr.) & 
  \label{fig:DS2_DS3_comparison}
 \end{figure}
 
-\begin{table}[h]
-\centering
-\begin{tabular}{l | l l l l l l}
-\hline
-\multicolumn{7}{c}{Sensitivity, $1839 - 2239~$keV} \\
-\hline
-$\epsilon$ & 0.85 & 0.90 & 0.95 & 0.98 & 0.99 & 1.00 \\
-N$_{b}$ & 0 & 0 & 0 & 1 & 1 & 7\\
-$\frac{\epsilon}{\sqrt{N_b}}$ & $\inf$ & $\inf$ & $\inf$ & .98 & .99 & .38\\
-\end{tabular}
- \caption{DCR optimization study in DS 2.} 
- \label{tab:DCR_opt_DS2}
-\end{table}
 
 \subsection{Uncertainty Estimation}
 \subsubsection{Stability}
@@ -143,7 +140,7 @@ Only single-site (as determined by {\tt avse} and {\tt nX} cuts) events in ``{\t
 
 The DCR cut efficiency (i.e.  the percentage of events within the window with {\tt dcr90<0}) over time is plotted using the same moving-average algorithm, as in Fig.~\ref{fig:DS3_stab}, {\it bottom}. Note that this method of calculating efficiency differs from the standard efficiency calculation, which takes advantage of a weighting each detector?s efficiency by their active mass.  An effort to employ this method in the stability analysis is currently under development. A one-dimensional histogram is created out of the efficiency values over time, and the standard deviation of this distribution is taken to be the uncertainty in the efficiency of DCR over time, $\sigma_{stab}$. 
 
-This analysis is conducted for high- and low-gain channels in each data set. Results are given in Table~\ref{tab:DS_efficiencies}. If the efficiency deviates by more than $2\sigma_{stab}$ in a set of calibration runs, the DCR parameters are re-evaluated using the relevant runs and a stability correction is applied. Stability corrections to DCR are also applied when a stability correction is needed in the A vs. E analysis (see unidoc).
+This analysis is conducted for high- and low-gain channels in each data set. Results are given in Table~\ref{tab:DS_efficiencies}. If the efficiency deviates by more than $2\sigma_{stab}$ in a set of calibration runs, the DCR parameters are re-evaluated using the relevant runs and a stability correction is applied. Stability corrections to DCR are also applied when a stability correction is needed in the A vs. E analysis \cite{AvsE_unidoc}.
 
 The current version of the analysis employs one to two longer (8 to 12 hour) energy calibrations to set the cut in each data set. 
 
@@ -158,15 +155,8 @@ The current version of the analysis employs one to two longer (8 to 12 hour) ene
 \subsubsection{Statistical Uncertainty}
 In each channel, the statistical uncertainty of the cut efficiency is $\frac{\sigma}{N} = \frac{1}{\sqrt{N}}$, where $N$ is the number of events rejected by the DCR cut in the set of calibration runs used to set the cut, in the energy window being used. See Table~\ref{tab:DS_efficiencies} for the uncertainties in the \nonubb\ efficiency window.
 
-\begin{figure*}[t]
- \centering
- \includegraphics[width=1.0\textwidth]{/Users/jgruszko/Documents/Thesis/Plots/Ch3/sample_eff_dcr90}
- \caption[DCR cut efficiency and uncertainties]{Efficiency plots for the 90\% acceptance DCR cut in P42537A, DS3. {\it Left:} DCR cut efficiency. The pulse-shape systematic uncertainty for the channel can be calculated from the values indicated on this plot, and the energy-scale effect is clearly visible. {\it Right:} The charge-trapping-corrected DCR efficiency. The correction has reduced $\sigma_{PS}$, but the efficiency is lower than expected in the full-energy 2614 keV peak. This requires further study.} 
- \label{fig:singleCh_eff}
-\end{figure*}
-
 \subsubsection{Pulse-Shape Bias}
-Irregularities in the pulse shapes of events, particularly charge-trapping re-release and multi-site effects, can have an effect on the calculated DCR acceptance. Events with a transition layer multi-site component, multi-site events occurring very near the point contact, and events with high charge trapping, like those seen in \ref{fig:DCR_PS}, may be untagged by A vs. E and data cleaning analyses, but will be accepted by the DCR cut with lower-than-average efficiency. A visual examination of the DCR-rejected events shows many of them to be of this type.
+Irregularities in the pulse shapes of events, particularly charge-trapping re-release and multi-site effects, can have an effect on the calculated DCR acceptance. Events with a transition layer multi-site component, multi-site events occurring very near the point contact, and events with high charge trapping, like those seen in \ref{fig:DCR_PS}, may be untagged by A vs. E and data cleaning analyses, but will be accepted by the DCR cut with lower-than-average efficiency. A visual examination of the calibration events rejected based on their DCR values shows many of them to be of this type.
 
 To quantify the uncertainty introduced by these effects, we compare the DCR acceptance in a 3$\sigma$ window centered on the $^{228}$Th double-escape peak (DEP), a known sample of single-site events, to the average acceptance in the left- and right-hand sidebands of the peak. The difference is cited as the pulse shape-dependent bias ($\sigma_{PS}$) for each channel. This value is generally positive, indicating that the acceptance in the DEP is higher than the average acceptance, and therefore that we have taken a conservative estimate of the DCR efficiency. The overall bias is given by an exposure-weighted average of the bias in each channel, since $\sigma_{PS}$ is assumed (conservatively) to be fully correlated among the detectors. 
 
@@ -175,14 +165,14 @@ The pulse shape bias indicates that the DCR analysis is effectively tagging some
 \begin{figure}[]
  \centering
  \includegraphics[width=1.0\columnwidth]{/Users/jgruszko/Documents/Thesis/Plots/Ch3/DCR_PS}
- \caption[Sample waveforms demonstrating the effect of pulse-shape on DCR]{The effect of pulse-shape on DCR, in one channel. The event drawn in black passes the DCR cut, those in blue and red fail the cut. The event in blue is thought to be a near-point-contact multi-site event, where the late charge arrival from the second site gives it an ``incorrect" energy for its tail slope. The one in red is thought to be a transition-layer multisite event or an event with high bulk charge trapping, either of which would contribute the additional slow component that changes its tail slope. All events are normalized by their max-pickoff energy (trapENMCal), which is the energy estimator used in the DCR calculation.} 
+ \caption[Sample waveforms demonstrating the effect of pulse-shape on DCR]{The effect of pulse-shape on DCR, in one channel. The event drawn in black passes the DCR cut, those in blue and red fail the cut. The event in blue is thought to be a near-point-contact multi-site event, where the late charge arrival from the second site gives it an ``incorrect" energy for its tail slope. The one in red is thought to be a transition-layer multisite event or an event with high bulk charge trapping, either of which would contribute the additional slow component that changes its tail slope. All events are normalized by their max-pickoff energy ({\tt trapENMCal}), which is the energy estimator used in the DCR calculation.} 
  \label{fig:DCR_PS}
 \end{figure}
 
 \subsection{DCR Version 1.1}\label{ssec:dcr_ct}
-Version 1.1 of the DCR analysis is currently being tested. This version corrects for the effect of bulk charge trapping in the detectors on the tail slope. It is being developed in an attempt to reduce the pulse-shape systematic uncertainty of the cut acceptance. 
+Version 1.1 of the DCR analysis is currently being tested. This version corrects for the effect of bulk charge trapping in the detectors on the tail slope. It is being developed in an attempt to reduce the pulse-shape systematic uncertainty of the cut acceptance. Correcting for this effect will also reduce the overall width of the DCR distribution, allowing for a more effective cut at the same level of bulk-event sacrifice, and correct the slight broadening of the DCR distribution with increasing energy. 
  
-\subsubsection{Bulk Charge Trapping and DCR Uncertainty}
+\subsubsection{Bulk Charge Trapping and the DCR Distribution}
 The bulk charge trapping in a given detector can be measured by its energy resolution improvement when the effective pole-zero charge trapping correction is applied. Using this method we can comparing the DCR vs. energy distributions for high charge-trapping detectors and low charge-trapping detectors, as in Fig.~\ref{fig:ct_DCRvE}. It is clear that for detectors with minimal charge trapping, the DCR distribution is narrower and that all portions of a peak, like the $^{208}$Tl double escape peak (DEP) shown, have consistent DCR acceptance. For a detector with high charge-trapping, on the other hand, the low-energy tail, which contains the events in which charge-trapping has occurred, has higher DCR values than the bulk of the peak. This matches the effect that would be expected if bulk trapped charge were being released on a 2-3 $\mu$s timescale, adding a slow additional component to the tail slope and making it less negative. 
 
 This effect contributes to $\sigma_{PS}$ because the gaussian portion of the DEP is made up of events that are particularly unlikely to have been affected by bulk charge trapping (since if they were affected by trapping, they would occur in the low-energy tail of the peak). In detectors that have high bulk charge-trapping, this peak will therefore have higher DCR acceptance than the Compton continuum, which is made up of events with a normal incidence of charge trapping, making $\sigma_{PS}$ large for that detector. 
@@ -194,35 +184,63 @@ This effect contributes to $\sigma_{PS}$ because the gaussian portion of the DEP
  \label{fig:ct_DCRvE}
 \end{figure}
 
-\subsubsection{Correcting DCR for Charge Trapping}
-The charge trapping effect on DCR can be corrected for because the distinctive trapping and re-release timescales can be calculated from calibration data. Therefore, for a known level of charge trapping in an event, its re-release effect on the waveform tail can be subtracted from $\delta$, and then the DCR parameter can be calculated in the usual fashion from the remaining tail slope. 
-
-The amount of charge trapping in a given event can be quantified; it is given by the difference between the charge trapping-uncorrected and corrected energies, $\Delta E$:
-$$\Delta E =  trapENFCal-trapENMCal $$
-The dependence of $\delta$ on the trapping is found by plotting $\delta$ vs. $\Delta_{E}$ and fitting with a line of slope $\ell_{E}$. The energy dependence of this slope is then fit with an exponential function. See Fig.~\ref{fig:ct_corr}. Then, for a given event, the charge trapping-corrected tail slope $\delta_{CTC}$ is:
-$$\delta_{CTC} = \delta - (Ae^{\lambda E})\Delta E$$
-where $A$ and $\lambda$ are the parameters found in the exponential fit.The DCR parameters are then calculated as in Version 1.0.
-
-Preliminary tests show that the use of the charge trapping correction improves $\sigma_{PS}$ in detectors with significant charge trapping, but further study is needed to understand the energy dependence of the correction and its effect in the full-energy peak. See Fig.~\ref{fig:singleCh_eff}.
+The presence of bulk charge trapping also broadens the overall DCR distribution, increasing the tail of the distribution with high values of DCR. The amount of trapped charge in an event at a given position in the crystal is expected to be a constant fraction of the total energy, so the broadening due to this effect will increase with energy. This causes the fall in DCR cut efficiency with increasing energy observed at higher-sacrifice cuts, as seen in the left-hand plot of Fig.~\ref{fig:singleCh_eff}. 
 
 \begin{figure*}[t]
  \centering
- \includegraphics[width=1.0\textwidth]{/Users/jgruszko/Documents/Thesis/Plots/Ch3/ct_corr}
- \caption[The steps of the charge trapping tail slope correction]{The steps of the charge trapping tail slope correction, in P42537A, a high charge trapping detector in DS3. {\it Left:} $\delta$ vs. $\Delta$E is plotted and fit with a line of slope $\ell_E$ for each energy peak. The fit is shown for the 2615 keV peak. {\it Center:} $\ell_E$ is plotted with respect to E and fit with an exponential, in red. {\it Right:} When corrected using the resulting parameters, the charge-trapping-corrected DCR distribution in the 2614 keV peak, in blue, is narrower and with a smaller high-DCR tail than the uncorrected distribution, in red.} 
- \label{fig:ct_corr}
+ \includegraphics[width=1.0\textwidth]{/Users/jgruszko/Documents/Thesis/Plots/Ch3/sample_eff_dcr90}
+ \caption[DCR cut efficiency and uncertainties]{Efficiency plots for the 90\% acceptance DCR cut in P42537A, DS3. {\it Left:} DCR cut efficiency. The pulse-shape systematic uncertainty for the channel can be calculated from the values indicated on this plot, and the energy-scale effect is clearly visible. {\it Right:} The charge-trapping-corrected DCR efficiency. The correction has reduced $\sigma_{PS}$ and the overall energy dependence has been corrected, but the efficiency is lower than expected in the full-energy 2614 keV peak. This requires further study.} 
+ \label{fig:singleCh_eff}
 \end{figure*}
 
+\subsubsection{Correcting DCR for Charge Trapping}
+The charge trapping effect on DCR can be corrected because the distinctive trapping and re-release timescales can be calculated from calibration data. Therefore, for a known level of charge trapping in an event, its re-release effect on the waveform tail can be subtracted from $\delta$, and then the DCR parameter can be calculated in the usual fashion from the remaining tail slope. 
+
+The amount of charge trapping in a given event can be quantified; it is given by the difference between the charge trapping-uncorrected and corrected energies, $\Delta E$:
+$$\Delta E =  {\tt trapENFCal}-{\tt trapENMCal} $$
+The dependence of $\delta$ on the trapping is found by plotting $\delta$ vs. $\Delta_{E}$ and fitting with a line of slope $\ell_{E}$, as Fig.~\ref{fig:DeltaE}. The energy dependence of this slope is then fit with an exponential function, shown in Fig.~\ref{fig:DeltaEfit}. Then, for a given event, the charge trapping-corrected tail slope $\delta_{CTC}$ is:
+$$\delta_{CTC} = \delta - (Ae^{\lambda E})\Delta E$$
+where $A$ and $\lambda$ are the parameters found in the exponential fit.The DCR parameters are then calculated as in Version 1.0, leading to a narrower DCR distribution, with less of a high-DCR tail, as in Fig.~\ref{fig:ct_corr_DCR}.
+
+Preliminary tests show that the use of the charge trapping correction improves $\sigma_{PS}$ and the energy-dependence of the DCR cut in detectors with significant charge trapping, but further study is needed to understand its effect in the full-energy peak. See Fig.~\ref{fig:singleCh_eff}. 
+
+\begin{figure}[]
+ \begin{subfigure}[t]{.45\textwidth}
+ \includegraphics[width=1.0\columnwidth]{/Users/jgruszko/Documents/Thesis/Plots/Ch3/DeltaE}
+ \caption{$\delta$ vs. $\Delta$E is plotted and fit with a line of slope $\ell_E$, in red, for each energy peak.}
+ \label{fig:DeltaE}
+ \end{subfigure}
+~
+ \begin{subfigure}[t]{.45\textwidth}
+ \includegraphics[width=1.0\columnwidth]{/Users/jgruszko/Documents/Thesis/Plots/Ch3/DeltaEfit.png}
+ \caption{$\ell_E$ is plotted with respect to E and fit with an exponential, in red. The assumption of constant $\ell_E$, in blue, is a poor model of the observed behavior.}
+ \label{fig:DeltaEfit}
+ \end{subfigure}
+   \centering
+ \begin{subfigure}[]{.7\textwidth}
+ \includegraphics[width=1.0\columnwidth]{/Users/jgruszko/Documents/Thesis/Plots/Ch3/ct_corr_DCR}
+ \caption{When corrected using the resulting parameters, the charge-trapping-corrected DCR distribution in the 1 to 2.38\,MeV range, in blue, is narrower and with a smaller high-DCR tail than the uncorrected distribution, in red.}
+ \label{fig:ct_corr_DCR}
+ \end{subfigure}
+ \caption[The steps of the charge trapping tail slope correction]{The steps of the charge trapping tail slope correction, in P42537A, a high charge trapping detector in DS3.} 
+ \label{fig:ct_corr}
+\end{figure}
+
+These tests have also shown that the calibration of {\tt trapENM} is not reliable enough to use as an indicator of the amount of trapped charge in every detector. Depending on how the calibration of the energy is conducted, the peak positions may be offset by up to several keV in some channels, leading to unphysical negative amounts of trapped charge. 
+
+Though version 1.1 of the analysis is a good proof-of-concept, demonstrating that charge trapping is leading to significant broadening of the DCR distribution and to the large observed pulse-shape uncertainty, it is not the best path forward to reliably correcting for this effect. 
 
 \subsection{DCR Version 2.0}
-Future versions of the DCR analysis could be improved by applying de-convolving the full electronic response function for the channel from the pulse before searching for a remaining slow component. This component could be identified either using a two-point slope estimator, like the one used in version 1, or some other method. One suggested approach is to use a passivated-surface-collection waveform template, and apply the goodness-of-fit as the DCR discriminator. 
+\subsubsection{True Pole-Zero Correction}
+Future versions of the DCR analysis could be improved by applying de-convolving the full electronic response function for the channel from the pulse before searching for a remaining slow component. This component could be identified either using a two-point slope estimator, like the one used in version 1, or some other method. One possible approach is to use a passivated-surface-collection waveform template, and apply the goodness-of-fit as the DCR discriminator. 
 
-Preliminary work on the TUBE scanning system, using a two-point slope estimator after pole-zero correction, shows that this approach gives a narrower distribution for bulk events particularly for energies over 3 MeV, where muons and multisite events dominate. This approach leads to improved discrimination of passivated surface events in this system, which has a high background rates. See Fig.~\ref{fig:dcr_dcrpzc_comparison}.
+Preliminary work on the TUBE scanning system, using a two-point slope estimator after pole-zero correction, shows that this approach gives a narrower distribution for bulk events, particularly for energies over 3 MeV, where muons and multisite events dominate. This approach leads to improved discrimination of passivated surface events in this system, which has a high background rates. See Fig.~\ref{fig:dcr_dcrpzc_comparison}.
 
-If a true pole-zero correction were employed in the DCR algorithm, the stability uncertainty of the DCR parameters could be reduced by re-tuning the decay constant for each detector with each weekly energy calibration of the \DEM. In the effective correction used in version 1 of the analysis, multi-hour calibration runs are needed to re-tune the parameters; therefore, physics live time considerations preclude 
+If a true pole-zero correction were employed in the DCR algorithm, the stability uncertainty of the DCR parameters could be reduced by re-tuning the decay constant for each detector with each weekly energy calibration of the \DEM. In the effective correction used in version 1 of the analysis, multi-hour calibration runs are needed to re-tune the parameters; therefore, physics live time considerations prevent regular re-tuning. A true pole-zero correction, on the other hand, can be determined using very few (less than 500) events, allowing it to be re-tuned using the already-established weekly energy calibrations. 
 
+\subsubsection{Charge Trapping Correction}
+Further work is also being done on a waveform-by-waveform charge-trapping correction, which uses the drift time of the pulse to calculate the expected amount of charge lost in the bulk. Early results indicate that this approach is more reliable than the estimate of $\Delta E$ used in version 1.1, and dramatically reduces the width of the DCR distribution, allowing for more effective surface event discrimination. 
 
-, a true pole-zero correction can be determined using very few (less than 500) events. 
-Therefore, the multi-hour extended calibration runs needed to re-tune version 1 in each data set would not be needed 
 %
 %\begin{figure*}[]
  %\centering
@@ -234,36 +252,29 @@ Therefore, the multi-hour extended calibration runs needed to re-tune version 1 
 %%%%%% This is a results section %%%%%%
 \section{\MJ\ Analysis}
 \subsection{Efficiencies}
-In each channel, the average acceptance for single-site events (after data-cleaning) in the Compton continuum region, taken to be from 1\,MeV to 2.38\,MeV, is set to match the quoted acceptance of the cut. For instance, {\tt dcr90} has average bulk acceptance of 90\%, as nearly as is allowed by the finite statistics of the sample used to set the cut. 
+In each channel, the average acceptance for single-site events (after data-cleaning) in the Compton continuum region, taken to be from 1\,MeV to 2.38\,MeV, is set to match the quoted acceptance of the cut. For instance, {\tt dcr99} has average bulk acceptance of 99\%, as nearly as is allowed by the finite statistics of the sample used to set the cut. 
 
-The true acceptance for the \nonubb\ region should be calculated from that energy region directly, also using calibration data, due to the energy non-linearity effect, as discussed above. It is given in Table~\ref{tab:DS_efficiencies} for each of the data sets, with high- and low-gain channels treated separately.  
+The true acceptance for the \nonubb\ region is calculated from that energy region directly, also using calibration data, due to the energy non-linearity effect, as discussed above. It is given in Table~\ref{tab:DS_efficiencies} for each of the data sets.  
 
 \subsection{Uncertainties}
-As discussed, the pulse shape systematic uncertainty and uncertainty due to cut instability dominate, with the statistical uncertainties contributing about 0.5\% and the energy scale uncertainty contributing negligibly. The uncertainties for each data set are given in Table~\ref{tab:DS_efficiencies}. 
 
-\begin{table}[h]
+\begin{table}[]
 \centering
 \begin{tabular}{l l l l l l l}
+Data Set & $\epsilon_{ROI}$ (\%) & $\sigma_{PS}$ (\%) & $\sigma_{stab}$  (\%) & $\sigma_{stat}$  (\%) &$\sigma_{tot}$ (\%) \\ 
 \hline
-\multicolumn{7}{c}{DCR \nonubb\ Efficiencies} \\
-\hline
-Data Set & Gain & $\epsilon_{ROI}$ & $\sigma_{PS}$ & $\sigma_{stat}$  & $\sigma_{stab}$  &$\sigma_{tot}$\\ 
-DS0 & HG & 89.0\%  & 1.6\%  & 0.4\%  &  4.6\% & 4.9\% \\
-DS0 & LG & 90.6\%  & 1.5\%  & 0.3\%  &  & 1.5\% \\
-DS1 & HG & 88.0\%  & 4.7\%  & 0.6\%  & 3.6\%  & 6.0\% \\
-DS1 & LG & 91.5\%  & 3.2\%  & 0.5\%  &  & 3.3\% \\
-DS2 & HG & 87.7\%  & 4.3\%  & 0.6\%  & 3.4\%  & 5.5\% \\
-DS2 & LG & 89.5\%  & 2.9\%  & 0.6\%  & 3.3\%  & 4.5\% \\
-DS3 & HG & 88.3\%  & 3.1\%  & 0.5\%  & 2.5\%  & 4.1\% \\
-DS3 & LG & 90.5\%  & 2.4\%  & 0.5\%  & 2.3\%  & 3.4\% \\
-DS4 & HG & 89.5\%  & 3.5\%  & 0.6\%  & 2.5\%  & 4.3\% \\
-DS4 & LG & 91.4\%  & 2.0\%  & 0.5\%  & 1.7\%  & 2.7\% \\
-DS5 & HG & 89.4\%  & 3.8\%  & 0.5\%  & 10.1\% & 10.8\% \\
-DS5 & LG & 93.0\%  & 2.5\%  & 0.4\%  &  & 2.6\% \\
+DS0  & 99.0  &  0.7  &    &  0.1  &  0.7 \\   
+DS1  & 94.7  &  1.1  &    &  0.2  &  1.1 \\
+DS2  & 98.7  &  0.8  &    &  0.2  &  0.9 \\
+DS3  & 98.9  &  1.1  &    &  0.2  &  1.1 \\
+DS4  & 99.1  &  1.2  &    &  0.2  &  1.2 \\
+DS5  & 98.9  &  1.2  &    &  0.2  &  1.3 \\
 \end{tabular}
- \caption{\nonubb\ efficiency and uncertainties, given for high and low gain channels in each data set.} 
+ \caption[\nonubb\ efficiency and uncertainties in the \MJ\ \DEM]{\nonubb\ efficiency and uncertainties, given for high gain channels in each data set.} 
  \label{tab:DS_efficiencies}
 \end{table}
+
+As discussed, the pulse shape systematic uncertainty and uncertainty due to cut instability dominate, with the statistical uncertainties contributing about 0.2\% and the energy scale uncertainty contributing negligibly. The uncertainties for each data set are given in Table~\ref{tab:DS_efficiencies}. 
 
 \subsection{DCR Validation in Low-Background Data}
 
@@ -314,7 +325,7 @@ DS5 & LG & 93.0\%  & 2.5\%  & 0.4\%  &  & 2.6\% \\
     \label{fig:DS3_DCRrej}
   \end{figure}
 
-The DCR in each background skim data set is checked using a dedicated validation script, which is used to check for channels in which the DCR parameters are not being applied correctly, unexpected energy dependence, and other errors in the DCR parameters.  The validation script is applied first to the open data, and then, after unblinding, to the remaining data. It is applied to high and low gain channels separately. This script produces the following plots:
+The DCR in each background skim data set is checked using a dedicated validation script, which is used to check for channels in which the DCR parameters are not being applied correctly, unexpected energy dependence, and other errors in the DCR parameters.  The validation script is applied first to the open data, and then, after unblinding, to the remaining data. This script produces the following plots:
 \begin{itemize}
 \item The DCR distribution in the channel: It should have an roughly gaussian shape, with a high-DCR tail extending to the right. The peak should be centered at a DCR value less than 0. See Fig.~\ref{fig:DS3_DCR}. If a channel does not have a DCR cut available, a sharp (single-bin-width) spike will appear at 0 along with the gaussian for the correctly calculated parameters. 
 \item The DCR distribution for each channel: Each distribution should be peaked just below 0, with a tail extending to high-DCR values. All events appearing at 0, or a peak appearing in a different location, are indications of errors in the DCR parameters. See Fig.~\ref{fig:DS3_DCRvCh}.

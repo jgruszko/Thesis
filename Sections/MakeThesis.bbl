@@ -1,10 +1,392 @@
 \begin{thebibliography}{10}
 
-\bibitem{COGENT2011}
-C.~E. Aalseth et~al.
-\newblock Results from a search for light-mass dark matter with a $p$-type
-  point contact germanium detector.
-\newblock {\em Phys. Rev. Lett.}, 106:131301, Mar 2011.
+\bibitem{Pauli1930}
+W.~Pauli.
+\newblock Letter to attendees at a physics conference in Tubingen, 1930.
+
+\bibitem{Cowan1956}
+C.~L. Cowan, F.~Reines, F.~B. Harrison, H.~W. Kruse, and A.~D. McGuire.
+\newblock Detection of the free neutrino: a confirmation.
+\newblock {\em Science}, 124(3212):103--104, 1956.
+
+\bibitem{PDG2014}
+K.A. Olive et~al.
+\newblock {Review of Particle Physics}.
+\newblock {\em Chin.Phys.}, C38:090001, 2014.
+
+\bibitem{TurckChieze1993}
+S.~{Turck-Chieze} and I.~{Lopes}.
+\newblock {Toward a unified classical model of the sun - On the sensitivity of
+  neutrinos and helioseismology to the microscopic physics}.
+\newblock {\em \apj}, 408:347--367, May 1993.
+
+\bibitem{Bahcall1995}
+John~N. Bahcall, M.~H. Pinsonneault, and G.~J. Wasserburg.
+\newblock Solar models with helium and heavy-element diffusion.
+\newblock {\em Rev. Mod. Phys.}, 67:781--808, Oct 1995.
+
+\bibitem{Davis1998}
+Bruce~T. Cleveland, Timothy Daily, Jr. Raymond~Davis, James~R. Distel, Kenneth
+  Lande, C.~K. Lee, Paul~S. Wildenhain, and Jack Ullman.
+\newblock Measurement of the solar electron neutrino flux with the homestake
+  chlorine detector.
+\newblock {\em The Astrophysical Journal}, 496(1):505, 1998.
+
+\bibitem{SuperK1998}
+Y.~{Fukuda}, T.~{Hayakawa}, E.~{Ichihara}, K.~{Inoue}, K.~{Ishihara},
+  H.~{Ishino}, Y.~{Itow}, T.~{Kajita}, J.~{Kameda}, S.~{Kasuga},
+  K.~{Kobayashi}, Y.~{Kobayashi}, Y.~{Koshio}, M.~{Miura}, M.~{Nakahata},
+  S.~{Nakayama}, A.~{Okada}, K.~{Okumura}, N.~{Sakurai}, M.~{Shiozawa},
+  Y.~{Suzuki}, Y.~{Takeuchi}, Y.~{Totsuka}, S.~{Yamada}, M.~{Earl}, A.~{Habig},
+  E.~{Kearns}, M.~D. {Messier}, K.~{Scholberg}, J.~L. {Stone}, L.~R. {Sulak},
+  C.~W. {Walter}, M.~{Goldhaber}, T.~{Barszczxak}, D.~{Casper}, W.~{Gajewski},
+  P.~G. {Halverson}, J.~{Hsu}, W.~R. {Kropp}, L.~R. {Price}, F.~{Reines},
+  M.~{Smy}, H.~W. {Sobel}, M.~R. {Vagins}, K.~S. {Ganezer}, W.~E. {Keig}, R.~W.
+  {Ellsworth}, S.~{Tasaka}, J.~W. {Flanagan}, A.~{Kibayashi}, J.~G. {Learned},
+  S.~{Matsuno}, V.~J. {Stenger}, D.~{Takemori}, T.~{Ishii}, J.~{Kanzaki},
+  T.~{Kobayashi}, S.~{Mine}, K.~{Nakamura}, K.~{Nishikawa}, Y.~{Oyama},
+  A.~{Sakai}, M.~{Sakuda}, O.~{Sasaki}, S.~{Echigo}, M.~{Kohama}, A.~T.
+  {Suzuki}, T.~J. {Haines}, E.~{Blaufuss}, B.~K. {Kim}, R.~{Sanford},
+  R.~{Svoboda}, M.~L. {Chen}, Z.~{Conner}, J.~A. {Goodman}, G.~W. {Sullivan},
+  J.~{Hill}, C.~K. {Jung}, K.~{Martens}, C.~{Mauger}, C.~{McGrew},
+  E.~{Sharkey}, B.~{Viren}, C.~{Yanagisawa}, W.~{Doki}, K.~{Miyano},
+  H.~{Okazawa}, C.~{Saji}, M.~{Takahata}, Y.~{Nagashima}, M.~{Takita},
+  T.~{Yamaguchi}, M.~{Yoshida}, S.~B. {Kim}, M.~{Etoh}, K.~{Fujita},
+  A.~{Hasegawa}, T.~{Hasegawa}, S.~{Hatakeyama}, T.~{Iwamoto}, M.~{Koga},
+  T.~{Maruyama}, H.~{Ogawa}, J.~{Shirai}, A.~{Suzuki}, F.~{Tsushima},
+  M.~{Koshiba}, M.~{Nemoto}, K.~{Nishijima}, T.~{Futagami}, Y.~{Hayato},
+  Y.~{Kanaya}, K.~{Kaneyuki}, Y.~{Watanabe}, D.~{Kielczewska}, R.~A. {Doyle},
+  J.~S. {George}, A.~L. {Stachyra}, L.~L. {Wai}, R.~J. {Wilkes}, and K.~K.
+  {Young}.
+\newblock {Evidence for Oscillation of Atmospheric Neutrinos}.
+\newblock {\em Physical Review Letters}, 81:1562--1567, August 1998.
+
+\bibitem{SNO2001}
+Q.~R. {Ahmad}, R.~C. {Allen}, T.~C. {Andersen}, J.~D. {Anglin},
+  G.~{B{\"u}hler}, J.~C. {Barton}, E.~W. {Beier}, M.~{Bercovitch}, J.~{Bigu},
+  S.~{Biller}, R.~A. {Black}, I.~{Blevis}, R.~J. {Boardman}, J.~{Boger},
+  E.~{Bonvin}, M.~G. {Boulay}, M.~G. {Bowler}, T.~J. {Bowles}, S.~J. {Brice},
+  M.~C. {Browne}, T.~V. {Bullard}, T.~H. {Burritt}, K.~{Cameron}, J.~{Cameron},
+  Y.~D. {Chan}, M.~{Chen}, H.~H. {Chen}, X.~{Chen}, M.~C. {Chon}, B.~T.
+  {Cleveland}, E.~T. {Clifford}, J.~H. {Cowan}, D.~F. {Cowen}, G.~A. {Cox},
+  Y.~{Dai}, X.~{Dai}, F.~{Dalnoki-Veress}, W.~F. {Davidson}, P.~J. {Doe},
+  G.~{Doucas}, M.~R. {Dragowsky}, C.~A. {Duba}, F.~A. {Duncan}, J.~{Dunmore},
+  E.~D. {Earle}, S.~R. {Elliott}, H.~C. {Evans}, G.~T. {Ewan}, J.~{Farine},
+  H.~{Fergani}, A.~P. {Ferraris}, R.~J. {Ford}, M.~M. {Fowler}, K.~{Frame},
+  E.~D. {Frank}, W.~{Frati}, J.~V. {Germani}, S.~{Gil}, A.~{Goldschmidt}, D.~R.
+  {Grant}, R.~L. {Hahn}, A.~L. {Hallin}, E.~D. {Hallman}, A.~{Hamer}, A.~A.
+  {Hamian}, R.~U. {Haq}, C.~K. {Hargrove}, P.~J. {Harvey}, R.~{Hazama},
+  R.~{Heaton}, K.~M. {Heeger}, W.~J. {Heintzelman}, J.~{Heise}, R.~L. {Helmer},
+  J.~D. {Hepburn}, H.~{Heron}, J.~{Hewett}, A.~{Hime}, M.~{Howe}, J.~G.
+  {Hykawy}, M.~C. {Isaac}, P.~{Jagam}, N.~A. {Jelley}, C.~{Jillings},
+  G.~{Jonkmans}, J.~{Karn}, P.~T. {Keener}, K.~{Kirch}, J.~R. {Klein}, A.~B.
+  {Knox}, R.~J. {Komar}, R.~{Kouzes}, T.~{Kutter}, C.~C. {Kyba}, J.~{Law},
+  I.~T. {Lawson}, M.~{Lay}, H.~W. {Lee}, K.~T. {Lesko}, J.~R. {Leslie},
+  I.~{Levine}, W.~{Locke}, M.~M. {Lowry}, S.~{Luoma}, J.~{Lyon}, S.~{Majerus},
+  H.~B. {Mak}, A.~D. {Marino}, N.~{McCauley}, A.~B. {McDonald}, D.~S.
+  {McDonald}, K.~{McFarlane}, G.~{McGregor}, W.~{McLatchie}, R.~M. {Drees},
+  H.~{Mes}, C.~{Mifflin}, G.~G. {Miller}, G.~{Milton}, B.~A. {Moffat},
+  M.~{Moorhead}, C.~W. {Nally}, M.~S. {Neubauer}, F.~M. {Newcomer}, H.~S. {Ng},
+  A.~J. {Noble}, E.~B. {Norman}, V.~M. {Novikov}, M.~{O'Neill}, C.~E. {Okada},
+  R.~W. {Ollerhead}, M.~{Omori}, J.~L. {Orrell}, S.~M. {Oser}, A.~W. {Poon},
+  T.~J. {Radcliffe}, A.~{Roberge}, B.~C. {Robertson}, R.~G. {Robertson}, J.~K.
+  {Rowley}, V.~L. {Rusu}, E.~{Saettler}, K.~K. {Schaffer}, A.~{Schuelke}, M.~H.
+  {Schwendener}, H.~{Seifert}, M.~{Shatkay}, J.~J. {Simpson}, D.~{Sinclair},
+  P.~{Skensved}, A.~R. {Smith}, M.~W. {Smith}, N.~{Starinsky}, T.~D. {Steiger},
+  R.~G. {Stokstad}, R.~S. {Storey}, B.~{Sur}, R.~{Tafirout}, N.~{Tagg}, N.~W.
+  {Tanner}, R.~K. {Taplin}, M.~{Thorman}, P.~{Thornewell}, P.~T. {Trent}, Y.~I.
+  {Tserkovnyak}, R.~{van Berg}, R.~G. {van de Water}, C.~J. {Virtue}, C.~E.
+  {Waltham}, J.-X. {Wang}, D.~L. {Wark}, N.~{West}, J.~B. {Wilhelmy}, J.~F.
+  {Wilkerson}, J.~{Wilson}, P.~{Wittich}, J.~M. {Wouters}, and M.~{Yeh}.
+\newblock {Measurement of the Rate of {$\nu$}$_{e}$ + d --$\gt$ p + p + e$^{-}$
+  Interactions Produced by $^{8}$B Solar Neutrinos at the Sudbury Neutrino
+  Observatory}.
+\newblock {\em Physical Review Letters}, 87(7):071301, August 2001.
+
+\bibitem{Cahn2013}
+R.~N. Cahn, D.~A. Dwyer, S.~J. Freedman, W.~C. Haxton, R.~W. Kadel, {\relax
+  Yu}.~G. Kolomensky, K.~B. Luk, P.~McDonald, G.~D. Orebi~Gann, and A.~W.~P.
+  Poon.
+\newblock {White Paper: Measuring the Neutrino Mass Hierarchy}.
+\newblock In {\em {Proceedings, 2013 Community Summer Study on the Future of
+  U.S. Particle Physics: Snowmass on the Mississippi (CSS2013): Minneapolis,
+  MN, USA, July 29-August 6, 2013}}, 2013.
+
+\bibitem{Hewett2012}
+J.~L. {Hewett}, H.~{Weerts}, R.~{Brock}, J.~N. {Butler}, B.~C.~K. {Casey},
+  J.~{Collar}, A.~{de Gouvea}, R.~{Essig}, Y.~{Grossman}, W.~{Haxton}, and
+  et~al.
+\newblock {Fundamental Physics at the Intensity Frontier}.
+\newblock {\em ArXiv e-prints}, May 2012.
+
+\bibitem{Mainz2005}
+Ch~Kraus, B.~Bornschein, L.~Bornschein, J.~Bonn, B.~Flatt, A.~Kovalik,
+  B.~Ostrick, E.~W. Otten, J.~P. Schall, Th~Th{\"u}mmler, and Ch~Weinheimer.
+\newblock Final results from phase ii of the mainz neutrino mass searchin
+  tritium {\$}{\{}{\backslash}beta{\}}{\$} decay.
+\newblock {\em The European Physical Journal C - Particles and Fields},
+  40(4):447--468, Apr 2005.
+
+\bibitem{Troitsk2011}
+V.~N. Aseev, A.~I. Belesev, A.~I. Berlev, E.~V. Geraskin, A.~A. Golubev, N.~A.
+  Likhovid, V.~M. Lobashev, A.~A. Nozik, V.~S. Pantuev, V.~I. Parfenov, A.~K.
+  Skasyrskaya, F.~V. Tkachov, and S.~V. Zadorozhny.
+\newblock Upper limit on the electron antineutrino mass from the troitsk
+  experiment.
+\newblock {\em Phys. Rev. D}, 84:112003, Dec 2011.
+
+\bibitem{PlanckXVI_2013}
+{Planck Collaboration}, P.~A.~R. {Ade}, N.~{Aghanim}, C.~{Armitage-Caplan},
+  M.~{Arnaud}, M.~{Ashdown}, F.~{Atrio-Barandela}, J.~{Aumont},
+  C.~{Baccigalupi}, A.~J. {Banday}, and et~al.
+\newblock {Planck 2013 results. XVI. Cosmological parameters}.
+\newblock {\em \aap}, 571:A16, November 2014.
+
+\bibitem{KATRIN2015}
+Florian Priester, Michael Sturm, and Beate Bornschein.
+\newblock Commissioning and detailed results of \{KATRIN\} inner loop tritium
+  processing system at tritium laboratory karlsruhe.
+\newblock {\em Vacuum}, 116(0):42 -- 47, 2015.
+
+\bibitem{NOvA2016}
+M.D. Messier.
+\newblock First neutrino oscillation measurements in nova.
+\newblock {\em Nuclear Physics B}, 908:151 -- 160, 2016.
+\newblock Neutrino Oscillations: Celebrating the Nobel Prize in Physics 2015.
+
+\bibitem{DiBari2012}
+Pasquale~Di Bari.
+\newblock An introduction to leptogenesis and neutrino properties.
+\newblock {\em Contemporary Physics}, 53(4):315--338, 2012.
+
+\bibitem{Barabash2010}
+A.~S. Barabash.
+\newblock Precise half-life values for two-neutrino double-$$\beta${}$ decay.
+\newblock {\em Phys. Rev. C}, 81:035501, Mar 2010.
+
+\bibitem{Schechter1982}
+J.~Schechter and J.~W.~F. Valle.
+\newblock Neutrinoless double-$\ensuremath{\beta}$ decay in
+  su(2)\ifmmode\times\else\texttimes\fi{}u(1) theories.
+\newblock {\em Phys. Rev. D}, 25:2951--2954, Jun 1982.
+
+\bibitem{Agostini2017}
+M.~{Agostini}, G.~{Benato}, and J.~{Detwiler}.
+\newblock {Discovery probability of next-generation neutrinoless double-$\beta$
+  decay experiments}.
+\newblock {\em ArXiv e-prints}, May 2017.
+
+\bibitem{Caldwell2017}
+A.~{Caldwell}, A.~{Merle}, O.~{Schulz}, and M.~{Totzauer}.
+\newblock {A Global Bayesian Analysis of Neutrino Mass Data}.
+\newblock {\em ArXiv e-prints}, May 2017.
+
+\bibitem{ZuberINT2015}
+K.~Zuber.
+\newblock Double beta decay experiments.
+\newblock Neutrino Astrophysics and Fundamental Properties Seminar, Institute
+  for Nuclear Theory, June 2015.
+
+\bibitem{EXO2014}
+The EXO-200 Collaboration.
+\newblock Search for majorana neutrinos with the first two years of exo-200
+  data.
+\newblock {\em Nature}, 510(7504):229--234, 06 2014.
+
+\bibitem{Simkovic2009}
+Fedor \ifmmode~\check{S}\else \v{S}\fi{}imkovic, Amand Faessler, Herbert
+  M\"uther, Vadim Rodin, and Markus Stauf.
+\newblock $0$\nu${}$\beta${}$\beta${}$-decay nuclear matrix elements with
+  self-consistent short-range correlations.
+\newblock {\em Phys. Rev. C}, 79:055501, May 2009.
+
+\bibitem{MJD_WIMP2017}
+N.~{Abgrall}, I.~J. {Arnquist}, F.~T. {Avignone}, A.~S. {Barabash}, F.~E.
+  {Bertrand}, A.~W. {Bradley}, V.~{Brudanin}, M.~{Busch}, M.~{Buuck}, T.~S.
+  {Caldwell}, Y.-D. {Chan}, C.~D. {Christofferson}, P.-H. {Chu}, C.~{Cuesta},
+  J.~A. {Detwiler}, C.~{Dunagan}, Y.~{Efremenko}, H.~{Ejiri}, S.~R. {Elliott},
+  T.~{Gilliss}, G.~K. {Giovanetti}, J.~{Goett}, M.~P. {Green}, J.~{Gruszko},
+  I.~S. {Guinn}, V.~E. {Guiseppe}, C.~R.~S. {Haufe}, R.~{Henning}, E.~W.
+  {Hoppe}, S.~{Howard}, M.~A. {Howe}, B.~R. {Jasinski}, K.~J. {Keeter}, M.~F.
+  {Kidd}, S.~I. {Konovalov}, R.~T. {Kouzes}, A.~M. {Lopez}, J.~{MacMullin},
+  R.~D. {Martin}, R.~{Massarczyk}, S.~J. {Meijer}, S.~{Mertens},
+  C.~{O'Shaughnessy}, A.~W.~P. {Poon}, D.~C. {Radford}, J.~{Rager}, A.~L.
+  {Reine}, K.~{Rielage}, R.~G.~H. {Robertson}, B.~{Shanks}, M.~{Shirchenko},
+  A.~M. {Suriano}, D.~{Tedeschi}, J.~E. {Trimble}, R.~L. {Varner},
+  S.~{Vasilyev}, K.~{Vetter}, K.~{Vorren}, B.~R. {White}, J.~F. {Wilkerson},
+  C.~{Wiseman}, W.~{Xu}, E.~{Yakushev}, C.-H. {Yu}, V.~{Yumatov},
+  I.~{Zhitnikov}, B.~X. {Zhu}, and {MAJORANA Collaboration}.
+\newblock {New Limits on Bosonic Dark Matter, Solar Axions, Pauli Exclusion
+  Principle Violation, and Electron Decay from the Majorana Demonstrator}.
+\newblock {\em Physical Review Letters}, 118(16):161801, April 2017.
+
+\bibitem{GERDA_Device2013}
+K.-H. {Ackermann}, M.~{Agostini}, M.~{Allardt}, M.~{Altmann}, E.~{Andreotti},
+  A.~M. {Bakalyarov}, M.~{Balata}, I.~{Barabanov}, M.~{Barnab{\'e} Heider},
+  N.~{Barros}, L.~{Baudis}, C.~{Bauer}, N.~{Becerici-Schmidt}, E.~{Bellotti},
+  S.~{Belogurov}, S.~T. {Belyaev}, G.~{Benato}, A.~{Bettini}, L.~{Bezrukov},
+  T.~{Bode}, V.~{Brudanin}, R.~{Brugnera}, D.~{Budj{\'a}{\v s}}, A.~{Caldwell},
+  C.~{Cattadori}, A.~{Chernogorov}, O.~{Chkvorets}, F.~{Cossavella},
+  A.~{D`Andragora}, E.~V. {Demidova}, A.~{Denisov}, A.~{di Vacri}, A.~{Domula},
+  V.~{Egorov}, R.~{Falkenstein}, A.~{Ferella}, K.~{Freund}, F.~{Froborg},
+  N.~{Frodyma}, A.~{Gangapshev}, A.~{Garfagnini}, J.~{Gasparro}, S.~{Gazzana},
+  R.~{Gonzalez de Orduna}, P.~{Grabmayr}, V.~{Gurentsov}, K.~{Gusev}, K.~K.
+  {Guthikonda}, W.~{Hampel}, A.~{Hegai}, M.~{Heisel}, S.~{Hemmer},
+  G.~{Heusser}, W.~{Hofmann}, M.~{Hult}, L.~V. {Inzhechik}, L.~{Ioannucci},
+  J.~{Janicsk{\'o} Cs{\'a}thy}, J.~{Jochum}, M.~{Junker}, R.~{Kankanyan},
+  S.~{Kianovsky}, T.~{Kihm}, J.~{Kiko}, I.~V. {Kirpichnikov}, A.~{Kirsch},
+  A.~{Klimenko}, M.~{Knapp}, K.~T. {Kn{\"o}pfle}, O.~{Kochetov}, V.~N.
+  {Kornoukhov}, K.~{Kr{\"o}ninger}, V.~{Kusminov}, M.~{Laubenstein},
+  A.~{Lazzaro}, V.~I. {Lebedev}, B.~{Lehnert}, D.~{Lenz}, H.~{Liao},
+  M.~{Lindner}, I.~{Lippi}, J.~{Liu}, X.~{Liu}, A.~{Lubashevskiy},
+  B.~{Lubsandorzhiev}, A.~A. {Machado}, B.~{Majorovits}, W.~{Maneschg},
+  G.~{Marissens}, S.~{Mayer}, G.~{Meierhofer}, I.~{Nemchenok},
+  L.~{Niedermeier}, S.~{Nisi}, J.~{Oehm}, C.~{O'Shaughnessy}, L.~{Pandola},
+  P.~{Peiffer}, K.~{Pelczar}, A.~{Pullia}, S.~{Riboldi}, F.~{Ritter}, C.~{Rossi
+  Alvarez}, C.~{Sada}, M.~{Salathe}, C.~{Schmitt}, S.~{Sch{\"o}nert},
+  J.~{Schreiner}, J.~{Schubert}, O.~{Schulz}, U.~{Schwan}, B.~{Schwingenheuer},
+  H.~{Seitz}, E.~{Shevchik}, M.~{Shirchenko}, H.~{Simgen}, A.~{Smolnikov},
+  L.~{Stanco}, F.~{Stelzer}, H.~{Strecker}, M.~{Tarka}, U.~{Trunk}, C.~A. {Ur},
+  A.~A. {Vasenko}, S.~{Vogt}, O.~{Volynets}, K.~{von Sturm}, V.~{Wagner},
+  M.~{Walter}, A.~{Wegmann}, M.~{Wojcik}, E.~{Yanovich}, P.~{Zavarise},
+  I.~{Zhitnikov}, S.~V. {Zhukov}, D.~{Zinatulina}, K.~{Zuber}, and G.~{Zuzel}.
+\newblock {The Gerda experiment for the search of 0 {$\nu$}{$\beta$}{$\beta$}
+  decay in $^{76}$Ge}.
+\newblock {\em European Physical Journal C}, 73:2330, March 2013.
+
+\bibitem{KK2001}
+H.V. Klapdor-Kleingrothaus, A.~Dietz, L.~Baudis, G.~Heusser, I.V. Krivosheina,
+  B.~Majorovits, H.~Paes, H.~Strecker, V.~Alexeev, A.~Balysh, A.~Bakalyarov,
+  S.T. Belyaev, V.I. Lebedev, and S.~Zhukov.
+\newblock Latest results from the heidelberg-moscow double beta decay
+  experiment.
+\newblock {\em The European Physical Journal A - Hadrons and Nuclei},
+  12(2):147--154, 2001.
+
+\bibitem{GERDA2017}
+The~GERDA Collaboration.
+\newblock Background-free search for neutrinoless double-βdecay of 76ge with
+  gerda.
+\newblock {\em Nature}, 544(7648):47--52, 04 2017.
+
+\bibitem{MJD2014}
+N.~Abgrall, E.~Aguayo, F.~T. Avignone, A.~S. Barabash, F.~E. Bertrand,
+  M.~Boswell, V.~Brudanin, M.~Busch, A.~S. Caldwell, Y.-D. Chan, C.~D.
+  Christofferson, D.~C. Combs, J.~A. Detwiler, P.~J. Doe, Yu. Efremenko,
+  V.~Egorov, H.~Ejiri, S.~R. Elliott, J.~Esterline, J.~E. Fast, P.~Finnerty,
+  F.~M. Fraenkle, A.~Galindo-Uribarri, G.~K. Giovanetti, J.~Goett, M.~P. Green,
+  J.~Gruszko, V.~E. Guiseppe, K.~Gusev, A.~L. Hallin, R.~Hazama, A.~Hegai,
+  R.~Henning, E.~W. Hoppe, S.~Howard, M.~A. Howe, K.~J. Keeter, M.~F. Kidd,
+  A.~Knecht, O.~Kochetov, S.~I. Konovalov, R.~T. Kouzes, B.~D. LaFerriere,
+  J.~Leon, L.~E. Leviner, J.~C. Loach, P.~N. Luke, S.~MacMullin, R.~D. Martin,
+  S.~Mertens, L.~Mizouni, M.~Nomachi, J.~L. Orrell, C.~O'Shaughnessy, N.~R.
+  Overman, David Phillips, A.~W.~P. Poon, K.~Pushkin, D.~C. Radford,
+  K.~Rielage, R.~G.~H. Robertson, M.~C. Ronquest, A.~G. Schubert, B.~Shanks,
+  T.~Shima, M.~Shirchenko, K.~J. Snavely, N.~Snyder, D.~Steele, J.~Strain,
+  A.~M. Suriano, J.~Thompson, V.~Timkin, W.~Tornow, R.~L. Varner, S.~Vasilyev,
+  K.~Vetter, K.~Vorren, B.~R. White, J.~F. Wilkerson, T.~Williams, W.~Xu,
+  E.~Yakushev, A.~R. Young, C.-H. Yu, and V.~Yumatov.
+\newblock The majorana demonstrator neutrinoless double-beta decay experiment.
+\newblock {\em Advances in High Energy Physics}, 2014:18, 2014.
+
+\bibitem{MJD_assay}
+N.~Abgrall, I.J. Arnquist, F.T.~Avignone III, H.O. Back, A.S. Barabash, F.E.
+  Bertrand, M.~Boswell, A.W. Bradley, V.~Brudanin, M.~Busch, M.~Buuck,
+  D.~Byram, A.S. Caldwell, Y.-D. Chan, C.D. Christofferson, P.-H. Chu,
+  C.~Cuesta, J.A. Detwiler, J.A. Dunmore, Yu. Efremenko, H.~Ejiri, S.R.
+  Elliott, P.~Finnerty, A.~Galindo-Uribarri, V.M. Gehman, T.~Gilliss, G.K.
+  Giovanetti, J.~Goett, M.P. Green, J.~Gruszko, I.S. Guinn, V.E. Guiseppe,
+  R.~Henning, E.W. Hoppe, S.~Howard, M.A. Howe, B.R. Jasinski, R.A. Johnson,
+  K.J. Keeter, M.F. Kidd, O.~Kochetov, S.I. Konovalov, R.T. Kouzes, B.D.
+  LaFerriere, J.~Leon, J.C. Loach, J.~MacMullin, S.~MacMullin, R.D. Martin,
+  R.~Massarczyk, S.~Meijer, S.~Mertens, M.L. Miller, J.L. Orrell,
+  C.~O'Shaughnessy, N.R. Overman, A.W.P. Poon, K.~Pushkin, D.C. Radford,
+  J.~Rager, K.~Rielage, R.G.H. Robertson, E.~Romero-Romero, M.C. Ronquest, A.G.
+  Schubert, B.~Shanks, M.~Shirchenko, K.J. Snavely, N.~Snyder, D.~Steele, A.M.
+  Suriano, D.~Tedeschi, J.E. Trimble, R.L. Varner, S.~Vasilyev, K.~Vetter,
+  K.~Vorren, B.R. White, J.F. Wilkerson, C.~Wiseman, W.~Xu, E.~Yakushev, C.-H.
+  Yu, V.~Yumatov, and I.~Zhitnikov.
+\newblock The majorana demonstrator radioassay program.
+\newblock {\em Nuclear Instruments and Methods in Physics Research Section A:
+  Accelerators, Spectrometers, Detectors and Associated Equipment}, 828:22 --
+  36, 2016.
+
+\bibitem{EnergyUnidoc}
+P.~H. Chu, J.~A. Detwiler, T.~Gilliss, I.~Guinn, S.~Mertens, D.~Radford,
+  R.~Varner, and B.~Zhu.
+\newblock Energy performance of the majorana demonstrator.
+\newblock Technical Report M-TECHDOCPHYS-2017-012, Majorana Technical Report,
+  2017.
+
+\bibitem{MJD_PTDB}
+N.~Abgrall, E.~Aguayo, F.T.~Avignone III, A.S. Barabash, F.E. Bertrand,
+  V.~Brudanin, M.~Busch, D.~Byram, A.S. Caldwell, Y-D. Chan, C.D.
+  Christofferson, D.C. Combs, C.~Cuesta, J.A. Detwiler, P.J. Doe, Yu.
+  Efremenko, V.~Egorov, H.~Ejiri, S.R. Elliott, J.~Esterline, J.E. Fast,
+  P.~Finnerty, F.M. Fraenkle, A.~Galindo-Uribarri, G.K. Giovanetti, J.~Goett,
+  M.P. Green, J.~Gruszko, V.E. Guiseppe, K.~Gusev, A.L. Hallin, R.~Hazama,
+  A.~Hegai, R.~Henning, E.W. Hoppe, S.~Howard, M.A. Howe, K.J. Keeter, M.F.
+  Kidd, O.~Kochetov, S.I. Konovalov, R.T. Kouzes, B.D. LaFerriere, J.~Diaz
+  Leon, L.E. Leviner, J.C. Loach, J.~MacMullin, R.D. Martin, S.J. Meijer,
+  S.~Mertens, M.L. Miller, L.~Mizouni, M.~Nomachi, J.L. Orrell,
+  C.~O׳Shaughnessy, N.R. Overman, R.~Petersburg, D.G.~Phillips II, A.W.P.
+  Poon, K.~Pushkin, D.C. Radford, J.~Rager, K.~Rielage, R.G.H. Robertson,
+  E.~Romero-Romero, M.C. Ronquest, B.~Shanks, T.~Shima, M.~Shirchenko, K.J.
+  Snavely, N.~Snyder, A.~Soin, A.M. Suriano, D.~Tedeschi, J.~Thompson,
+  V.~Timkin, W.~Tornow, J.E. Trimble, R.L. Varner, S.~Vasilyev, K.~Vetter,
+  K.~Vorren, B.R. White, J.F. Wilkerson, C.~Wiseman, W.~Xu, E.~Yakushev, A.R.
+  Young, C.-H. Yu, V.~Yumatov, and I.~Zhitnikov.
+\newblock The majorana parts tracking database.
+\newblock {\em Nuclear Instruments and Methods in Physics Research Section A:
+  Accelerators, Spectrometers, Detectors and Associated Equipment}, 779:52 --
+  62, 2015.
+
+\bibitem{MJD_Nu16}
+S.~R. Elliott et~al.
+\newblock {Initial Results from the MAJORANA DEMONSTRATOR}.
+\newblock 2016.
+
+\bibitem{Bertolini1968}
+G.~Bertolini and A.~Coche, editors.
+\newblock {\em Semiconductor Detectors}.
+\newblock Elsevier-North Holland, Amsterdam, 1968.
+
+\bibitem{KnollText}
+G.~F. Knoll.
+\newblock {\em Radiation Detector and Measurement}.
+\newblock John Wiley and Sons, Inc., Hoboken, NJ, 3rd edition, 2000.
+
+\bibitem{Gadeken1976}
+L.~L. {Gadeken} and B.~C. {Robertson}.
+\newblock {The influence of Ge(Li) detector pulse shape variations on constant
+  fraction and snap-off timing discriminators}.
+\newblock {\em Nuclear Instruments and Methods}, 136:255--259, July 1976.
+
+\bibitem{Agostini2013}
+M.~Agostini, M.~Allardt, E.~Andreotti, A.~M. Bakalyarov, M.~Balata,
+  I.~Barabanov, M.~Barnab{\'e}~Heider, N.~Barros, L.~Baudis, C.~Bauer,
+  N.~Becerici-Schmidt, E.~Bellotti, S.~Belogurov, S.~T. Belyaev, G.~Benato,
+  A.~Bettini, L.~Bezrukov, T.~Bode, V.~Brudanin, R.~Brugnera,
+  D.~Budj{\'a}{\v{s}}, A.~Caldwell, C.~Cattadori, A.~Chernogorov,
+  F.~Cossavella, E.~V. Demidova, A.~Domula, V.~Egorov, R.~Falkenstein,
+  A.~Ferella, K.~Freund, N.~Frodyma, A.~Gangapshev, A.~Garfagnini, C.~Gotti,
+  P.~Grabmayr, V.~Gurentsov, K.~Gusev, K.~K. Guthikonda, W.~Hampel, A.~Hegai,
+  M.~Heisel, S.~Hemmer, G.~Heusser, W.~Hofmann, M.~Hult, L.~V. Inzhechik,
+  L.~Ioannucci, J.~Janicsk{\'o}~Cs{\'a}thy, J.~Jochum, M.~Junker, T.~Kihm,
+  I.~V. Kirpichnikov, A.~Kirsch, A.~Klimenko, K.~T. Kn{\"o}pfle, O.~Kochetov,
+  V.~N. Kornoukhov, V.~V. Kuzminov, M.~Laubenstein, A.~Lazzaro, V.~I. Lebedev,
+  B.~Lehnert, H.~Y. Liao, M.~Lindner, I.~Lippi, X.~Liu, A.~Lubashevskiy,
+  B.~Lubsandorzhiev, G.~Lutter, C.~Macolino, A.~A. Machado, B.~Majorovits,
+  W.~Maneschg, M.~Misiaszek, I.~Nemchenok, S.~Nisi, C.~O'Shaughnessy,
+  L.~Pandola, K.~Pelczar, G.~Pessina, A.~Pullia, S.~Riboldi, N.~Rumyantseva,
+  C.~Sada, M.~Salathe, C.~Schmitt, J.~Schreiner, O.~Schulz, B.~Schwingenheuer,
+  S.~Sch{\"o}nert, E.~Shevchik, M.~Shirchenko, H.~Simgen, A.~Smolnikov,
+  L.~Stanco, H.~Strecker, M.~Tarka, C.~A. Ur, A.~A. Vasenko, O.~Volynets,
+  K.~von Sturm, V.~Wagner, M.~Walter, A.~Wegmann, T.~Wester, M.~Wojcik,
+  E.~Yanovich, P.~Zavarise, I.~Zhitnikov, S.~V. Zhukov, D.~Zinatulina,
+  K.~Zuber, and G.~Zuzel.
+\newblock Pulse shape discrimination for gerda phase i data.
+\newblock {\em The European Physical Journal C}, 73(10):2583, Oct 2013.
 
 \bibitem{Aalseth2011}
 C.E. Aalseth, M.~Amman, F.T.~Avignone III, H.O. Back, A.S. Barabash, P.S.
@@ -33,54 +415,11 @@ C.E. Aalseth, M.~Amman, F.T.~Avignone III, H.O. Back, A.S. Barabash, P.S.
 \newblock Symposium on Radiation Measurements and Applications (SORMA) \{XII\}
   2010.
 
-\bibitem{CDMSLite2014}
-R.~Agnese, A.~J. Anderson, M.~Asai, D.~Balakishiyeva, R.~Basu~Thakur, D.~A.
-  Bauer, J.~Billard, A.~Borgland, M.~A. Bowles, D.~Brandt, P.~L. Brink,
-  R.~Bunker, B.~Cabrera, D.~O. Caldwell, D.~G. Cerdeno, H.~Chagani, J.~Cooley,
-  B.~Cornell, C.~H. Crewdson, P.~Cushman, M.~Daal, P.~C.~F. Di~Stefano,
-  T.~Doughty, L.~Esteban, S.~Fallows, E.~Figueroa-Feliciano, G.~L. Godfrey,
-  S.~R. Golwala, J.~Hall, H.~R. Harris, S.~A. Hertel, T.~Hofer, D.~Holmgren,
-  L.~Hsu, M.~E. Huber, A.~Jastram, O.~Kamaev, B.~Kara, M.~H. Kelsey,
-  A.~Kennedy, M.~Kiveni, K.~Koch, B.~Loer, E.~Lopez~Asamar, R.~Mahapatra,
-  V.~Mandic, C.~Martinez, K.~A. McCarthy, N.~Mirabolfathi, R.~A. Moffatt, D.~C.
-  Moore, P.~Nadeau, R.~H. Nelson, K.~Page, R.~Partridge, M.~Pepin, A.~Phipps,
-  K.~Prasad, M.~Pyle, H.~Qiu, W.~Rau, P.~Redl, A.~Reisetter, Y.~Ricci, T.~Saab,
-  B.~Sadoulet, J.~Sander, K.~Schneck, R.~W. Schnee, S.~Scorza, B.~Serfass,
-  B.~Shank, D.~Speller, A.~N. Villano, B.~Welliver, D.~H. Wright, S.~Yellin,
-  J.~J. Yen, B.~A. Young, and J.~Zhang.
-\newblock Search for low-mass weakly interacting massive particles using
-  voltage-assisted calorimetric ionization detection in the supercdms
-  experiment.
-\newblock {\em Phys. Rev. Lett.}, 112:041302, Jan 2014.
-
-\bibitem{LUX_2013}
-D.S. Akerib et~al.
-\newblock {First results from the LUX dark matter experiment at the Sanford
-  Underground Research Facility}.
-\newblock {\em Phys.Rev.Lett.}, 112:091303, 2014.
-
-\bibitem{CoherentSnowmassWP}
-D.~{Akimov}, A.~{Bernstein}, P.~{Barbeau}, P.~{Barton}, A.~{Bolozdynya},
-  B.~{Cabrera-Palmer}, F.~{Cavanna}, V.~{Cianciolo}, J.~{Collar}, R.~J.
-  {Cooper}, D.~{Dean}, Y.~{Efremenko}, A.~{Etenko}, N.~{Fields}, M.~{Foxe},
-  E.~{Figueroa-Feliciano}, N.~{Fomin}, F.~{Gallmeier}, I.~{Garishvili},
-  M.~{Gerling}, M.~{Green}, G.~{Greene}, A.~{Hatzikoutelis}, R.~{Henning},
-  R.~{Hix}, D.~{Hogan}, D.~{Hornback}, I.~{Jovanovic}, T.~{Hossbach},
-  E.~{Iverson}, S.~R. {Klein}, A.~{Khromov}, J.~{Link}, W.~{Louis}, W.~{Lu},
-  C.~{Mauger}, P.~{Marleau}, D.~{Markoff}, R.~D. {Martin}, P.~{Mueller},
-  J.~{Newby}, J.~{Orrell}, C.~{O'Shaughnessy}, S.~{Pentilla}, K.~{Patton},
-  A.~W. {Poon}, D.~{Radford}, D.~{Reyna}, H.~{Ray}, K.~{Scholberg},
-  V.~{Sosnovtsev}, R.~{Tayloe}, K.~{Vetter}, C.~{Virtue}, J.~{Wilkerson},
-  J.~{Yoo}, and C.~H. {Yu}.
-\newblock {Coherent Scattering Investigations at the Spallation Neutron Source:
-  a Snowmass White Paper}.
-\newblock {\em ArXiv e-prints}, September 2013.
-
-\bibitem{BarbeauThesis}
-P.~Barbeau.
-\newblock {\em Neutrino and Astroparticle Physics with P-Type Point Contact
-  High Purity Germanium Detectors}.
-\newblock PhD thesis, The University of Chicago, 2009.
+\bibitem{Luke1989}
+P.N. Luke, F.S. Goulding, N.W. Madden, and R.H. Pehl.
+\newblock Low capacitance large volume shaped-field germanium detector.
+\newblock {\em Nuclear Science, IEEE Transactions on}, 36(1):926--930, Feb
+  1989.
 
 \bibitem{Barbeau2007}
 P~S Barbeau, J~I Collar, and O~Tench.
@@ -89,53 +428,28 @@ P~S Barbeau, J~I Collar, and O~Tench.
 \newblock {\em Journal of Cosmology and Astroparticle Physics}, 2007(09):009,
   2007.
 
-\bibitem{DiBari2012}
-Pasquale~Di Bari.
-\newblock An introduction to leptogenesis and neutrino properties.
-\newblock {\em Contemporary Physics}, 53(4):315--338, 2012.
+\bibitem{Cooper2011}
+R.J. Cooper, D.C. Radford, K.~Lagergren, James~F. Colaresi, Larry Darken,
+  R.~Henning, M.G. Marino, and K.~Michael Yocum.
+\newblock A pulse shape analysis technique for the majorana experiment.
+\newblock {\em Nuclear Instruments and Methods in Physics Research Section A:
+  Accelerators, Spectrometers, Detectors and Associated Equipment}, 629(1):303
+  -- 310, 2011.
 
-\bibitem{BulletCluster2004}
-D.~{Clowe}, A.~{Gonzalez}, and M.~{Markevitch}.
-\newblock {Weak-Lensing Mass Reconstruction of the Interacting Cluster 1E
-  0657-558: Direct Evidence for the Existence of Dark Matter}.
-\newblock {\em \apj}, 604:596--603, April 2004.
+\bibitem{Budjas2009}
+Du{\v s}an Budj{\'a}{\v s}, Marik~Barnab{\'e} Heider, Oleg Chkvorets, Nikita
+  Khanbekov, and Stefan Sch{\"o}nert.
+\newblock Pulse shape discrimination studies with a broad-energy germanium
+  detector for signal identification and background suppression in the gerda
+  double beta decay experiment.
+\newblock {\em Journal of Instrumentation}, 4(10):P10007, 2009.
 
-\bibitem{EXO2014}
-The EXO-200 Collaboration.
-\newblock Search for majorana neutrinos with the first two years of exo-200
-  data.
-\newblock {\em Nature}, 510(7504):229--234, 06 2014.
-
-\bibitem{Corbelli2000}
-Edvige Corbelli and Paolo Salucci.
-\newblock The extended rotation curve and the dark matter halo of m33.
-\newblock {\em Monthly Notices of the Royal Astronomical Society},
-  311(2):441--447, 2000.
-
-\bibitem{Cowan1956}
-C.~L. Cowan, F.~Reines, F.~B. Harrison, H.~W. Kruse, and A.~D. McGuire.
-\newblock Detection of the free neutrino: a confirmation.
-\newblock {\em Science}, 124(3212):103--104, 1956.
-
-\bibitem{Drukier1984}
-A.~Drukier and L.~Stodolsky.
-\newblock Principles and applications of a neutral-current detector for
-  neutrino physics and astronomy.
-\newblock {\em Phys. Rev. D}, 30:2295--2309, Dec 1984.
-
-\bibitem{Eitel2005}
-K.~Eitel.
-\newblock Direct neutrino mass experiments.
-\newblock {\em Nuclear Physics B - Proceedings Supplements}, 143(0):197 -- 204,
-  2005.
-\newblock \{NEUTRINO\} 2004 Proceedings of the \{XXIst\} International
-  Conference on Neutrino Physics and Astrophysics.
-
-\bibitem{Moe1987}
-S.~R. Elliott, A.~A. Hahn, and M.~K. Moe.
-\newblock Direct evidence for two-neutrino double-beta decay in
-  $^{82}\mathrm{Se}$.
-\newblock {\em Phys. Rev. Lett.}, 59:2020--2023, Nov 1987.
+\bibitem{AvsE_unidoc}
+C.~Cuesta.
+\newblock {Multi-site event discrimination for the MAJORANA DEMONSTRATOR;
+  draft}.
+\newblock Technical Report M-TECHDOCUNIDOC-2017-014, Majorana Technical Report,
+  Apr 2017.
 
 \bibitem{MALBEK2015}
 G.~K. {Giovanetti}, N.~{Abgrall}, E.~{Aguayo}, F.~T. {Avignone}, A.~S.
@@ -160,79 +474,96 @@ G.~K. {Giovanetti}, N.~{Abgrall}, E.~{Aguayo}, F.~T. {Avignone}, A.~S.
 \newblock {A Dark Matter Search with MALBEK}.
 \newblock {\em Physics Procedia}, 61:77--84, 2015.
 
-\bibitem{Hewett2012}
-J.~L. {Hewett}, H.~{Weerts}, R.~{Brock}, J.~N. {Butler}, B.~C.~K. {Casey},
-  J.~{Collar}, A.~{de Gouvea}, R.~{Essig}, Y.~{Grossman}, W.~{Haxton}, and
-  et~al.
-\newblock {Fundamental Physics at the Intensity Frontier}.
-\newblock {\em ArXiv e-prints}, May 2012.
+\bibitem{MJD_slowpulses}
+E.~Aguayo, M.~Amman, F.T. Avignone, A.S. Barabash, P.J. Barton, J.R. Beene,
+  F.E. Bertrand, M.~Boswell, V.~Brudanin, M.~Busch, Y.-D. Chan, C.D.
+  Christofferson, J.I. Collar, D.C. Combs, R.J. Cooper, J.A. Detwiler, P.J.
+  Doe, Yu. Efremenko, V.~Egorov, H.~Ejiri, S.R. Elliott, J.~Esterline, J.E.
+  Fast, N.~Fields, P.~Finnerty, F.M. Fraenkle, A.~Galindo-Uribarri, V.M.
+  Gehman, G.K. Giovanetti, M.P. Green, V.E. Guiseppe, K.~Gusey, A.L. Hallin,
+  R.~Hazama, R.~Henning, E.W. Hoppe, M.~Horton, S.~Howard, M.A. Howe, R.A.
+  Johnson, K.J. Keeter, M.F. Kidd, A.~Knecht, O.~Kochetov, S.I. Konovalov, R.T.
+  Kouzes, B.D. LaFerriere, J.~Leon, L.E. Leviner, J.C. Loach, Q.~Looker, P.N.
+  Luke, S.~MacMullin, M.G. Marino, R.D. Martin, J.H. Merriman, M.L. Miller,
+  L.~Mizouni, M.~Nomachi, J.L. Orrell, N.R. Overman, G.~Perumpilly, D.G.
+  Phillips, A.W.P. Poon, D.C. Radford, K.~Rielage, R.G.H. Robertson, M.C.
+  Ronquest, A.G. Schubert, T.~Shima, M.~Shirchenko, K.J. Snavely, D.~Steele,
+  J.~Strain, V.~Timkin, W.~Tornow, R.L. Varner, K.~Vetter, K.~Vorren, J.F.
+  Wilkerson, E.~Yakushev, H.~Yaver, A.R. Young, C.-H. Yu, and V.~Yumatov.
+\newblock Characteristics of signals originating near the lithium-diffused n+
+  contact of high purity germanium p-type point contact detectors.
+\newblock {\em Nuclear Instruments and Methods in Physics Research Section A:
+  Accelerators, Spectrometers, Detectors and Associated Equipment}, 701:176 --
+  185, 2013.
 
-\bibitem{Simkovic2009}
-Fedor \ifmmode~\check{S}\else \v{S}\fi{}imkovic, Amand Faessler, Herbert
-  M\"uther, Vadim Rodin, and Markus Stauf.
-\newblock $0$\nu${}$\beta${}$\beta${}$-decay nuclear matrix elements with
-  self-consistent short-range correlations.
-\newblock {\em Phys. Rev. C}, 79:055501, May 2009.
+\bibitem{TUBE_GERDA}
+M.~Agostini, M.~Barnabe-Heider, T.~Bode, D.~Budj{\'a}{\v s}, A.~Lazzaro, and
+  S.~Sch{\"o}nert.
+\newblock Bege detector response to alpha-induced energy depositions on the p+
+  electrode and groove surfaces. bege detector response to alpha-induced energy
+  depositions on the p+ electrode and groove surfaces.
+\newblock GERDA Scientific/Technical Report GSTR-13-006, Physik Department E15,
+  Technische Universit{\"a}t M{\"u}nchen, July 2013.
 
-\bibitem{JohnsonThesis2010}
-Robert~A. Johnson.
-\newblock {\em Alpha backgrounds and their implications for neutrinoless
-  double-beta decay experiments using HPGe detectors}.
-\newblock PhD thesis, 2010.
+\bibitem{Abt2017}
+I.~Abt, L.~Garbini, C.~Gooch, S.~Irlbeck, X.~Liu, M.~Palermo, and O.~Schulz.
+\newblock Alpha-event and surface characterisation in segmented true-coaxial
+  \{HPGe\} detectors.
+\newblock {\em Nuclear Instruments and Methods in Physics Research Section A:
+  Accelerators, Spectrometers, Detectors and Associated Equipment}, 858:80 --
+  89, 2017.
 
-\bibitem{KK2001}
-H.V. Klapdor-Kleingrothaus, A.~Dietz, L.~Baudis, G.~Heusser, I.V. Krivosheina,
-  B.~Majorovits, H.~Paes, H.~Strecker, V.~Alexeev, A.~Balysh, A.~Bakalyarov,
-  S.T. Belyaev, V.I. Lebedev, and S.~Zhukov.
-\newblock Latest results from the heidelberg-moscow double beta decay
-  experiment.
-\newblock {\em The European Physical Journal A - Hadrons and Nuclei},
-  12(2):147--154, 2001.
+\bibitem{Mullowney2012}
+P.~{Mullowney}, M.-C. {Lin}, K.~{Paul}, C.~{Ahrens}, M.~{Loh}, R.~J. {Cooper},
+  D.~C. {Radford}, and E.~{Hull}.
+\newblock {Computational models of germanium point contact detectors}.
+\newblock {\em Nuclear Instruments and Methods in Physics Research A},
+  662:33--44, January 2012.
 
-\bibitem{Luke1989}
-P.N. Luke, F.S. Goulding, N.W. Madden, and R.H. Pehl.
-\newblock Low capacitance large volume shaped-field germanium detector.
-\newblock {\em Nuclear Science, IEEE Transactions on}, 36(1):926--930, Feb
-  1989.
+\bibitem{SRIM}
+J.~F. {Ziegler}, M.~D. {Ziegler}, and J.~P. {Biersack}.
+\newblock {SRIM - The stopping and range of ions in matter (2010)}.
+\newblock {\em Nuclear Instruments and Methods in Physics Research B},
+  268:1818--1823, June 2010.
 
-\bibitem{PDG2014}
-K.A. Olive et~al.
-\newblock {Review of Particle Physics}.
-\newblock {\em Chin.Phys.}, C38:090001, 2014.
+\bibitem{Guiseppe2011}
+V.~E. Guiseppe, S.~R. Elliott, A.~Hime, K.~Rielage, and S.~Westerdale.
+\newblock {A Radon Progeny Deposition Model}.
+\newblock {\em AIP Conf. Proc.}, 1338:95--100, 2011.
 
-\bibitem{Pauli1930}
-W.~Pauli.
-\newblock Letter to attendees at a physics conference in Tubingen, 1930.
+\bibitem{Hoppe2007}
+E.~W. Hoppe, A.~Seifert, C.~E. Aalseth, P.~P. Bachelor, A.~R. Day, D.~J.
+  Edwards, T.~W. Hossbach, K.~E. Litke, J.~I. McIntyre, H.~S. Miley, S.~M.
+  Schulte, J.~E. Smart, and G.~A. Warren.
+\newblock Cleaning and passivation of copper surfaces to remove surface
+  radioactivity and prevent oxide formation.
+\newblock {\em Nuclear Instruments and Methods in Physics Research Section A,
+  Accelerators, Spectrometers, Detectors and Associated Equipment},
+  579(1):486--489, Aug 2007.
 
-\bibitem{PlanckXVI_2013}
-{Planck Collaboration}, P.~A.~R. {Ade}, N.~{Aghanim}, C.~{Armitage-Caplan},
-  M.~{Arnaud}, M.~{Ashdown}, F.~{Atrio-Barandela}, J.~{Aumont},
-  C.~{Baccigalupi}, A.~J. {Banday}, and et~al.
-\newblock {Planck 2013 results. XVI. Cosmological parameters}.
-\newblock {\em \aap}, 571:A16, November 2014.
+\bibitem{Zuzel2012}
+G.~{Zuzel} and M.~{W{\'o}jcik}.
+\newblock {Removal of the long-lived $^{222}$Rn daughters from copper and
+  stainless steel surfaces}.
+\newblock {\em Nuclear Instruments and Methods in Physics Research A},
+  676:140--148, June 2012.
 
-\bibitem{PlanckXIV2015}
-{Planck Collaboration}, P.~A.~R. {Ade}, N.~{Aghanim}, M.~{Arnaud},
-  M.~{Ashdown}, J.~{Aumont}, C.~{Baccigalupi}, A.~J. {Banday}, R.~B.
-  {Barreiro}, N.~{Bartolo}, and et~al.
-\newblock {Planck 2015 results. XIV. Dark energy and modified gravity}.
-\newblock {\em ArXiv e-prints}, February 2015.
+\bibitem{Overman2013}
+N.~R. Overman, E.~W. Hoppe, and R.~S. Addleman.
+\newblock Surface cleaning techniques: ultra-trace icp-ms sample preparation
+  and assay of hdpe.
+\newblock {\em Journal of Radioanalytical and Nuclear Chemistry},
+  296(3):1303--1310, Jun 2013.
 
-\bibitem{KATRIN2015}
-Florian Priester, Michael Sturm, and Beate Bornschein.
-\newblock Commissioning and detailed results of \{KATRIN\} inner loop tritium
-  processing system at tritium laboratory karlsruhe.
-\newblock {\em Vacuum}, 116(0):42 -- 47, 2015.
+\bibitem{GERDA_Background2013}
+M.~Agostini et~al.
+\newblock {The background in the $0 \nu \beta \beta$ experiment GERDA}.
+\newblock {\em Eur. Phys. J.}, C74(4):2764, 2014.
 
-\bibitem{Supergravity1979}
-P.~van Nieuwenhuizen and D.~Z. Freedman, editors.
-\newblock {\em Supergravity}. North-Holland Publishing Co., Amsterdam-New York,
-  1979.
-
-\bibitem{ZuberINT2015}
-K.~Zuber.
-\newblock Double beta decay experiments.
-\newblock Neutrino Astrophysics and Fundamental Properties Seminar, Institute
-  for Nuclear Theory, June 2015.
+\bibitem{Detwiler_sensitivity}
+J.~A. Detwiler.
+\newblock {MJD 0nbb Decay Sensitivity Calculations; final}.
+\newblock Technical Report M-TECHDOCPHYS-2011-043, Majorana Technical Report,
+  Sep 2011.
 
 \end{thebibliography}
