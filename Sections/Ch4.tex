@@ -194,15 +194,23 @@ where $N_a$  is the number $^{76}$Ge atoms, $t$ is the live time, $\varepsilon$ 
 
 To calculate the expected background level in the \nonubb\ ROI, we assume that the background spectrum is flat, except for the excised gamma peak regions, in the 400\,keV window around the 2039\,keV Q-value. Since the enriched detectors drive the \MJ\ \DEM 's sensitivity, we are most interested in the decrease in the backgrounds due to the DCR cut in these detectors. We do not consider Data Set 0 in this analysis, since it was taken with incomplete shielding and is known to have higher gamma backgrounds than the final configuration of the \DEM. 
 
-In data sets 1 through 4, the use of the 90\% bulk-acceptance DCR cut reduces the enriched detector event rate in the \nonubb\ ROI background-estimate window from from 93 counts to 3 counts, a factor of 31 reduction. As seen in Table~\ref{tab:bkg_rates}, this corresponds to a reduction in the rate from 2.3e-4$^{+ 2.4e-5}_{-2.4e-5}$\,\cpKkgd\ to 7.3e-6$^{1.1e-5}_{-4.6e-6}$\,\cpKkgd . 
+In data sets 1 through 4, the use of the 99\% bulk-acceptance DCR cut reduces the enriched detector event rate in the \nonubb\ ROI background-estimate window from from 93 counts to 3 counts, a factor of 31 reduction. As seen in Table~\ref{tab:bkg_rates}, this corresponds to a reduction in the rate from 2.3e-4$^{+ 2.4e-5}_{-2.4e-5}$\,\cpKkgd\ to 7.3e-6$^{1.1e-5}_{-4.6e-6}$\,\cpKkgd . 
 
 To calculate $\langle$UL$(B)\rangle$ we must first find $B$, the expected number of background events in the ROI in time $t$. For the purposes of this calculation, we take $mt$ to be the accumulated enriched exposure of Data Sets 1-4, 1166.505\,kg days. The background index given above must be multiplied by the width of the ROI in keV. Given small changes in the detector resolution between data sets, the optimal width of the ROI has changed slightly over the course of the experiment; we take it to be the exposure-weighted average of the ROI widths in each of the data sets, 2.99\,keV. 
 
-Multiplying by these values, we find an expected number of background events of 0.80$^{0.08}_{0.08}$ without the DCR cut, and 25E-3$^{39E-3}_{16E-3}$ with the DCR cut.  Therefore the average upper limit in the absence of a signal, $\langle$UL$(B)\rangle$, is 1.72 without the DCR cut, or 2.41 with it. Given that the 90\% bulk acceptance of the DCR cut gives $\varepsilon \prime = 0.9\varepsilon$, the sensitivity without the DCR cut is:
-$$T^{0\nu}_{1/2} >  \ln 2 \frac{N_a t \varepsilon }{1.72},$$
+Multiplying by these values, we find an expected number of background events of 0.80$\pm$0.08 without the DCR cut, and 25E-3$^{39E-3}_{16E-3}$ with the DCR cut. Since no events are observed in the ROI, the sensitivity $\langle$UL$(B)\rangle$, defined as the average upper limit that would be obtained by an ensemble of experiments with the expected background and no true signal, with 90\% confidence, is 3.12 without the DCR cut, or 2.46 with it. Given that the 90\% bulk acceptance of the DCR cut gives $\varepsilon \prime = 0.9\varepsilon$, the sensitivity without the DCR cut is:
+$$T^{0\nu}_{1/2} >  \ln 2 \frac{N_a t \varepsilon }{3.12},$$
 and with the DCR cut it is:
-$$T^{0\nu \prime}_{1/2}  >  \ln 2 \frac{N_a t 0.9\varepsilon }{2.41} = 0.64\,T^{0\nu}_{1/2}. $$
-We conclude the the application of the DCR cut improves the \nonubb\ sensitivity of the \MJ\ \DEM\ by a factor of 1.6. In other words, the experiment is sensitive to decay lifetimes about two-thirds as long as the lifetimes it would be sensitive to without the DCR cut in place. 
+$$T^{0\nu \prime}_{1/2}  >  \ln 2 \frac{N_a t 0.99\varepsilon }{2.46} = 1.24\,T^{0\nu}_{1/2}. $$
+We conclude the the application of the DCR cut improves the \nonubb\ sensitivity of the \MJ\ \DEM\ at its current exposure by 24\%. 
+
+Another calculation of interest is the expected increase in sensitivity after 5 years of operation. To calculate the total expected enriched exposure, we can assume that the operating active mass is the sum of M1's active mass in DS3 and M2's active mass in DS4, giving a total of 18.1\,kg. As an estimate of the livetime fraction and duty cycle, we use the values found for DS3, 99.0\% and 92.4\%, respectively \cite{Livetime_unidoc} \cite{RunSel_DS3_unidoc}. Therefore, over 5 years of operations, the expected active enriched exposure of the \DEM\ is $3.02E4$\,kg\,days (or 82.8\,kg\,yrs). 
+
+Assuming the background rates found in DS 1 - 4 remain constant through the life of the experiment, 21$\pm$2 background events would be expected in the ROI over the lifetime of the experiment without the DCR cut, and 0.7$^{1.0}_{0.4}$ events would be expected with the DCR cut. Therefore $\langle$UL$(B)\rangle$ is 9.20 without the DCR cut, and 3.03 with it. Therefore, over the life of the \DEM, the DCR cut improves its sensitivity by a factor of 3. 
+
+To get a better sense of the value of this increased sensitivity, we can convert it to an increased effective $^{76}$Ge mass, and to a monetary value of the increased effective mass of the experiment. With both Modules 1 and 2 taking data, the \DEM\ has approximately 18\,kg of enriched active mass of fully operating detectors that contribute to the \nonubb\ limit. These detectors have an average total mass per detector of 0.85\,kg, and an active mass fraction of 92.6\%. The approximate costs associated with them are a price of \$100 per gram of enriched germanium, and \$100,000 per detector of manufacturing costs. 
+
+The increase in sensitivity by a factor of 3 corresponds to an additional 36\,kg of enriched active mass, which would require the addition of 39\,kg of total enriched mass, in 46 additional detectors. At current prices, this would have represented an additional cost of \$8.5 million.  
 
 \section{Identifying the Source of Alpha Events in the \MJ\ \DEM\ }
 \subsection{Projected Alpha Energy Spectrum}\label{ssec:alpha_model}
@@ -305,8 +313,8 @@ n(E_f)dE_f &= \pi f_{pk}\sigma\delta(E-E_{pk}) \\
 where, writing $r$ rather than $r(E_i)$ for the sake of concision:
 \begin{equation}
 \begin{split}
-\mathrm{d}E_f &= E_i\mathrm{d}u(r)+u(r)\mathrm{d}E_i + \mathrm{d}v \\
-&= (-r(\frac{\sin\theta_0}{h})(\frac{E_0-E_i}{\sqrt{h^2+r^2}})(4aE_i^3)+\frac{\sin\theta_0}{h}\sqrt{h^2+r^2})\mathrm{d}E_i
+\mathrm{d}E_f &= E_i\mathrm{d}u(r)+u(r)\mathrm{d}E_i - \mathrm{d}v \\
+&= (r(\frac{\sin\theta_0}{h})(\frac{E_0+E_i}{\sqrt{h^2+r^2}})(4aE_i^3)+\frac{\sin\theta_0}{h}\sqrt{h^2+r^2})\mathrm{d}E_i
 \end{split}
 \label{eqn:r2_jac}
 \end{equation}
@@ -340,29 +348,29 @@ Using the spectral shape model given by Eqns.~\ref{eqn:r2_spec} and ~\ref{eqn:r2
 
 The p+ contact event contribution is not used to fit the spectrum, it is simply drawn with the scaling determined by the passivated surface fit. The background level for the peak is set to the rate at the endpoint of the passivated surface spectrum. 
 
-The alpha activity parameter $\sigma$ fits to a value of 2400$\pm$200\,mm$^{-1}$, and the height $h$ fits to a value of 4.07$\pm$0.06\,mm. The fit is done using the MINUIT log-likelihood fitting algorithm, given the low count rates in the high-energy data.  The predicted spectrum fit the data quite well, as seen in Fig.~\ref{fig:r2spec_orig}; it actually overfits the data, giving a $\chi^2/N_{DF}$ of 0.52. This is because the Gaussian error assumption of the $\chi$ estimator fails at these low count rates. 
+The alpha activity parameter $\sigma$ fits to a value of 430$\pm$30\,mm$^{-1}$, and the height $h$ fits to a value of 3.75$\pm$0.03\,mm. The fit is done using the MINUIT log-likelihood fitting algorithm, given the low count rates in the high-energy data.  The predicted spectrum fit the data quite well, as seen in Fig.~\ref{fig:r2spec_orig}; it actually overfits the data, giving a $\chi^2/N_{DF}$ of 189/269 = 0.70. This is because the Gaussian error assumption of the $\chi$ estimator fails at these low count rates. 
 
 In the highest-energy cluster of events, we that the energy distribution is broader than the single peak observed in PONaMa-1. Since we have modeled the point-contact events as having no incidence angle dependence, and the surface of the dimple has a dramatic curve to it, some energy broadening is expected based on the varying path lengths through the dead region. Given the complicated geometry of this region, a simple analytical model cannot correctly model this behavior, and a full simulation would be needed to reproduce the peak shape. There is also the possibility of variation in the dead layer of different detectors, which are being summed together here. 
 
-The amplitude of the point-contact event spectrum does at least roughly match the observed event rate, as seen in Fig.~\ref{fig:r2spec_mod}. In this figure $\sigma$ of the point-contact peak has been set to 70\,keV (rather than the expected 9\,keV) and the centroid of the Gaussian has been shifted to 5064\,keV (from 5164\,keV). All other peak shape parameters are as in Table\ref{tab:highE_fit}. 
+The amplitude of the point-contact event spectrum does at least roughly match the observed event rate, as seen in Fig.~\ref{fig:r2spec_mod}. In this figure $\sigma$ of the point-contact peak has been set to 40\,keV (rather than the expected 9\,keV) and the centroid of the Gaussian has been shifted to 5064\,keV (from 5164\,keV). All other peak shape parameters are as in Table\ref{tab:highE_fit}. 
 
-These results suggest that the alpha background events seen in the \MJ\ \DEM\ are likely associated with the plastic bushing that holds the contact pin. This part, with a 6.35\,mm diameter, is 3.70\,mm above the passivated surface, centered on the contact pin position. Given the simple point-source contamination model used to create the spectral function, this agreement, to within 11\% of the bushing position, is extremely suggestive.   
+These results suggest that the alpha background events seen in the \MJ\ \DEM\ are likely associated with the plastic bushing that holds the contact pin. This part, with a 6.35\,mm diameter, is 3.65\,mm above the passivated surface, centered on the contact pin position. Given the simple point-source contamination model used to create the spectral function, this agreement, to within 5\% of the bushing position, is extremely suggestive.   
 
 \begin{figure}[]
  \centering
  \begin{subfigure}[]{\textwidth}
  \centering
- \includegraphics[height=3in]{/Users/jgruszko/Documents/Thesis/Plots/Ch6/MJ_fit_wCorrectFunc_TUBEpk.png}
+ \includegraphics[height=3in]{/Users/jgruszko/Documents/Thesis/Plots/Ch4/r2fitDS1to4_10keVbins.png}
  \caption{The fit result with an unmodified point-contact even peak shape.}
  \label{fig:r2spec_orig}
   \end{subfigure}
  \begin{subfigure}[]{\textwidth}
  \centering
- \includegraphics[height=3in]{/Users/jgruszko/Documents/Thesis/Plots/Ch6/MJ_fit_wCorrectFunc_mu5064sig70pk.png}
+ \includegraphics[height=3in]{/Users/jgruszko/Documents/Thesis/Plots/Ch4/r2fitDS1to4_10keVbins_modifiedp.png}
   \caption{The same passivated-surface spectrum fit result with the width and centroid of the point-contact event peak shape adjusted to approximate the observed shape.}
  \label{fig:r2spec_mod}
  \end{subfigure}
- \caption[A fit of the point contact contamination model to the \MJ\ \DEM\ energy spectrum]{The high-energy spectrum from the \MJ\ \DEM\, data sets 0-5, with muon, data cleaning, single-site, and multiplicity cuts applied, in blue. The point-contact contamination model for passivated surface events (in red) was fit to the data, and the predicted scaling was applied to the point-contact peak shape model.} 
+ \caption[A fit of the point contact contamination model to the \MJ\ \DEM\ energy spectrum]{The high-energy spectrum from the \MJ\ \DEM\, data sets 1-4, with muon, data cleaning, single-site, and multiplicity cuts applied, in blue. Bins are 10\,keV wide. The point-contact contamination model for passivated surface events (in red) was fit to the data, and the predicted scaling was applied to the point-contact peak shape model.} 
  \label{fig:mjSpec_fit}
 \end{figure}
 

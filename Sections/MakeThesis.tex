@@ -73,16 +73,20 @@
 \usepackage{afterpage}
 \usepackage{siunitx}
 \usepackage{booktabs}
+\usepackage{tabularx}
 \usepackage{subcaption}
 \usepackage{physics}
 \usepackage{rotating}
 \usepackage{xr}
+\usepackage{sidecap}
 
 \externaldocument{Ch1}
 \externaldocument{Ch2}
 \externaldocument{Ch3}
+\externaldocument{Ch4}
 \externaldocument{Ch5}
 \externaldocument{Ch6}
+\externaldocument{Ch7}
 
 \include{LocalDefs} 
 \def\ppc{P-PC}  
@@ -93,9 +97,14 @@
 \def\utte{$^{238}\mathrm{U}$}
 \def\am{$^{241}\mathrm{Am}$}
 \def\po{$^{210}\mathrm{Po}$}
-\def\nonubb{$\beta\beta(0\nu)$}
-\def\twonubb{$\beta\beta(2\nu)$}
+\def\nonubb{$0\nu\beta\beta$}
+\def\twonubb{$2\nu\beta\beta$}
+\def\cpKkgd{cnts/(keV kg d)}
+\def\cpKkgy{cnts/(keV kg y)}
+\def\cpRty{cnts/(ROI t y)}
+\def\ppc{P-PC} 
 
+\sidecaptionvpos{figure}{c}
 
 \begin{document}
  
@@ -106,23 +115,30 @@
 
 \textpages
  
-% ========== Chapter 1
+% ========== Chapters
 \include{Ch1}
 \include{Ch2}
 \include{Ch3}
- \include{Ch5}
- \include{Ch6}
+\include{Ch5}
+\include{Ch6}
+\include{Ch4}
+\include{Ch7}
 %
 % ==========   Bibliography
 %
 
-\bibliographystyle{plain}
-%\bibliography{/Users/jgruszko/Documents/Thesis/Bib/bib_v1.bib}
+\bibliographystyle{unsrt}
+%\nocite{*}
+\bibliography{/Users/jgruszko/Documents/Thesis/Sections/JG_bib}
 %
 % ==========   Appendices
 %
 \appendix
 \raggedbottom\sloppy
+
+\include{App1}
+
+
  
 
 \end{document}

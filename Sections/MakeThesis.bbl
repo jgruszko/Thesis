@@ -2,7 +2,7 @@
 
 \bibitem{Pauli1930}
 W.~Pauli.
-\newblock Letter to attendees at a physics conference in Tubingen, 1930.
+\newblock Letter to attendees at a physics conference in tubingen, 1930.
 
 \bibitem{Cowan1956}
 C.~L. Cowan, F.~Reines, F.~B. Harrison, H.~W. Kruse, and A.~D. McGuire.
@@ -18,7 +18,7 @@ K.A. Olive et~al.
 S.~{Turck-Chieze} and I.~{Lopes}.
 \newblock {Toward a unified classical model of the sun - On the sensitivity of
   neutrinos and helioseismology to the microscopic physics}.
-\newblock {\em \apj}, 408:347--367, May 1993.
+\newblock {\em Astrophysical Journal}, 408:347--367, May 1993.
 
 \bibitem{Bahcall1995}
 John~N. Bahcall, M.~H. Pinsonneault, and G.~J. Wasserburg.
@@ -98,9 +98,9 @@ Q.~R. {Ahmad}, R.~C. {Allen}, T.~C. {Andersen}, J.~D. {Anglin},
   {Tserkovnyak}, R.~{van Berg}, R.~G. {van de Water}, C.~J. {Virtue}, C.~E.
   {Waltham}, J.-X. {Wang}, D.~L. {Wark}, N.~{West}, J.~B. {Wilhelmy}, J.~F.
   {Wilkerson}, J.~{Wilson}, P.~{Wittich}, J.~M. {Wouters}, and M.~{Yeh}.
-\newblock {Measurement of the Rate of {$\nu$}$_{e}$ + d --$\gt$ p + p + e$^{-}$
-  Interactions Produced by $^{8}$B Solar Neutrinos at the Sudbury Neutrino
-  Observatory}.
+\newblock {Measurement of the Rate of $\nu$$_{e}$ + d $\rightarrow$ p + p +
+  e$^{-}$ Interactions Produced by $^{8}$B Solar Neutrinos at the Sudbury
+  Neutrino Observatory}.
 \newblock {\em Physical Review Letters}, 87(7):071301, August 2001.
 
 \bibitem{Cahn2013}
@@ -122,8 +122,8 @@ J.~L. {Hewett}, H.~{Weerts}, R.~{Brock}, J.~N. {Butler}, B.~C.~K. {Casey},
 \bibitem{Mainz2005}
 Ch~Kraus, B.~Bornschein, L.~Bornschein, J.~Bonn, B.~Flatt, A.~Kovalik,
   B.~Ostrick, E.~W. Otten, J.~P. Schall, Th~Th{\"u}mmler, and Ch~Weinheimer.
-\newblock Final results from phase ii of the mainz neutrino mass searchin
-  tritium {\$}{\{}{\backslash}beta{\}}{\$} decay.
+\newblock Final results from phase ii of the mainz neutrino mass search in
+  tritium $\beta$ decay.
 \newblock {\em The European Physical Journal C - Particles and Fields},
   40(4):447--468, Apr 2005.
 
@@ -140,7 +140,7 @@ V.~N. Aseev, A.~I. Belesev, A.~I. Berlev, E.~V. Geraskin, A.~A. Golubev, N.~A.
   M.~{Arnaud}, M.~{Ashdown}, F.~{Atrio-Barandela}, J.~{Aumont},
   C.~{Baccigalupi}, A.~J. {Banday}, and et~al.
 \newblock {Planck 2013 results. XVI. Cosmological parameters}.
-\newblock {\em \aap}, 571:A16, November 2014.
+\newblock {\em Astronomy and Astrophysics}, 571:A16, November 2014.
 
 \bibitem{KATRIN2015}
 Florian Priester, Michael Sturm, and Beate Bornschein.
@@ -161,7 +161,7 @@ Pasquale~Di Bari.
 
 \bibitem{Barabash2010}
 A.~S. Barabash.
-\newblock Precise half-life values for two-neutrino double-$$\beta${}$ decay.
+\newblock Precise half-life values for two-neutrino double-$\beta$ decay.
 \newblock {\em Phys. Rev. C}, 81:035501, Mar 2010.
 
 \bibitem{Schechter1982}
@@ -196,8 +196,8 @@ The EXO-200 Collaboration.
 \bibitem{Simkovic2009}
 Fedor \ifmmode~\check{S}\else \v{S}\fi{}imkovic, Amand Faessler, Herbert
   M\"uther, Vadim Rodin, and Markus Stauf.
-\newblock $0$\nu${}$\beta${}$\beta${}$-decay nuclear matrix elements with
-  self-consistent short-range correlations.
+\newblock 0$\nu \beta \beta$-decay nuclear matrix elements with self-consistent
+  short-range correlations.
 \newblock {\em Phys. Rev. C}, 79:055501, May 2009.
 
 \bibitem{MJD_WIMP2017}
@@ -565,5 +565,19 @@ J.~A. Detwiler.
 \newblock {MJD 0nbb Decay Sensitivity Calculations; final}.
 \newblock Technical Report M-TECHDOCPHYS-2011-043, Majorana Technical Report,
   Sep 2011.
+
+\bibitem{nudat_Am}
+M.~S. Basunia.
+\newblock Nuclear data sheets.
+\newblock {\em 107}, (3323), 2006.
+
+\bibitem{ORCA}
+{G. Adam} Cox, {Charles A.} Duba, {Mark A.} Howe, Sean McGee, {Alan W.} Myers,
+  Keith Rielage, {R. G Hamish} Robertson, {Laura C.} Stonehill, {Brandon L.}
+  Wall, {John F.} Wilkerson, and {Tim D.} {Van Wechel}.
+\newblock Sudbury neutrino observatory neutral current detectors signal readout
+  system.
+\newblock {\em IEEE Transactions on Nuclear Science}, 51(5 I):2227--2230, 10
+  2004.
 
 \end{thebibliography}

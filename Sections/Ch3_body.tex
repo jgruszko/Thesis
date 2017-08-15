@@ -138,7 +138,7 @@ To study DCR stability over time, calibration skim files are chained together an
 
 Only single-site (as determined by {\tt avse} and {\tt nX} cuts) events in ``{\tt isGood}" detectors that pass data-cleaning cuts are included in the analysis. The energy window used for the \nonubb\ analysis is 2028\,keV - 2050\,keV. A second analysis of the $^{208}$Tl DEP (1590\,keV - 1595\,keV) is also conducted. A 40-minute moving average of the DCR values within the closed range [-0.003,0.035] is calculated. The larger upper bound was chosen to catch events with a high DCR due to mis-calibrations in the energy parameter {\tt trapENMCal}. The mean DCR value is then plotted at the central time value within each forty-minute window (see Fig.~\ref{fig:DS3_stab}, {\it middle}). Data points from the first and last forty minutes are excluded to eliminate bias due to window effects. 
 
-The DCR cut efficiency (i.e.  the percentage of events within the window with {\tt dcr90<0}) over time is plotted using the same moving-average algorithm, as in Fig.~\ref{fig:DS3_stab}, {\it bottom}. Note that this method of calculating efficiency differs from the standard efficiency calculation, which takes advantage of a weighting each detector?s efficiency by their active mass.  An effort to employ this method in the stability analysis is currently under development. A one-dimensional histogram is created out of the efficiency values over time, and the standard deviation of this distribution is taken to be the uncertainty in the efficiency of DCR over time, $\sigma_{stab}$. 
+The DCR cut efficiency (i.e.  the percentage of events within the window with {\tt dcr90<0}) over time is plotted using the same moving-average algorithm, as in Fig.~\ref{fig:DS3_stab}, {\it bottom}. Note that this method of calculating efficiency differs from the standard efficiency calculation, which weights each detector's efficiency by its active mass.  An effort to employ this method in the stability analysis is currently under development. A one-dimensional histogram is created out of the efficiency values over time, and the standard deviation of this distribution is taken to be the uncertainty in the efficiency of DCR over time, $\sigma_{stab}$. 
 
 This analysis is conducted for high- and low-gain channels in each data set. Results are given in Table~\ref{tab:DS_efficiencies}. If the efficiency deviates by more than $2\sigma_{stab}$ in a set of calibration runs, the DCR parameters are re-evaluated using the relevant runs and a stability correction is applied. Stability corrections to DCR are also applied when a stability correction is needed in the A vs. E analysis \cite{AvsE_unidoc}.
 
@@ -263,14 +263,15 @@ The true acceptance for the \nonubb\ region is calculated from that energy regio
 \begin{tabular}{l l l l l l l}
 Data Set & $\epsilon_{ROI}$ (\%) & $\sigma_{PS}$ (\%) & $\sigma_{stab}$  (\%) & $\sigma_{stat}$  (\%) &$\sigma_{tot}$ (\%) \\ 
 \hline
-DS0  & 99.0  &  0.7  &    &  0.1  &  0.7 \\   
-DS1  & 94.7  &  1.1  &    &  0.2  &  1.1 \\
-DS2  & 98.7  &  0.8  &    &  0.2  &  0.9 \\
-DS3  & 98.9  &  1.1  &    &  0.2  &  1.1 \\
-DS4  & 99.1  &  1.2  &    &  0.2  &  1.2 \\
-DS5  & 98.9  &  1.2  &    &  0.2  &  1.3 \\
+DS0  & 98.1  &  0.8  &    &  0.1  &  0.9 \\   
+DS1  & 95.6  &  1.1  &    &  0.1  &  1.1 \\
+DS2  & 98.6  &  0.9  &    &  0.2  &  1.0 \\
+DS3  & 99.1  &  0.9  &    &  0.1  &  0.9 \\
+DS4  & 98.9  &  1.2  &    &  0.1  &  1.2 \\
+DS5a  & 92.1  &  0.7  &    &  0.3  &  0.8 \\
+DS5b  & 95.8  &  1.4  &    &  0.2  &  1.4 \\
 \end{tabular}
- \caption[\nonubb\ efficiency and uncertainties in the \MJ\ \DEM]{\nonubb\ efficiency and uncertainties, given for high gain channels in each data set.} 
+ \caption[\nonubb\ efficiency and uncertainties in the \MJ\ \DEM]{\nonubb\ efficiency and uncertainties, given for high gain channels in each data set. DS5 was split into DS5a and DS5b because the presence of elevated electronic noise in DS5a (due to known ground loop problems) drastically reduced the effectiveness of the DCR cut in these runs.} 
  \label{tab:DS_efficiencies}
 \end{table}
 
